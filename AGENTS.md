@@ -1,4 +1,7 @@
-# Create Project structure based ob below directories.
+# Instructions for Codex
+This project would be built on Windows 11 system and codex needs to perform the file operations on this repository with powershell command and NOT with Linux commands.
+
+# Create Project structure based on below directories.
 
  00_inbox
  01_project-charter
