@@ -3,17 +3,17 @@ requires = ["setuptools>=65.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lcm-automation"
+name = "Code4Ved-automation"
 version = "0.1.0"
-description = "LCM (Life Cycle Management) Automation Project"
+description = "Code4Ved (Life Cycle Management) Automation Project"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "LCM Team", email = "team@lcm.com"},
+    {name = "Code4Ved Team", email = "team@Code4Ved.com"},
 ]
 maintainers = [
-    {name = "LCM Team", email = "team@lcm.com"},
+    {name = "Code4Ved Team", email = "team@Code4Ved.com"},
 ]
 keywords = ["automation", "lifecycle", "management"]
 classifiers = [
@@ -68,20 +68,20 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/LindeBasis/LCM.Automation"
-Documentation = "https://lcm-automation.readthedocs.io/"
-Repository = "https://github.com/LindeBasis/LCM.Automation.git"
-"Bug Tracker" = "https://github.com/LindeBasis/LCM.Automation/issues"
+Homepage = "https://github.com/LindeBasis/Code4Ved.Automation"
+Documentation = "https://Code4Ved-automation.readthedocs.io/"
+Repository = "https://github.com/LindeBasis/Code4Ved.Automation.git"
+"Bug Tracker" = "https://github.com/LindeBasis/Code4Ved.Automation/issues"
 
 [project.scripts]
-lcm = "lcm_automation.cli.main:main"
-lcm-admin = "lcm_automation.cli.admin:main"
+Code4Ved = "Code4Ved_automation.cli.main:main"
+Code4Ved-admin = "Code4Ved_automation.cli.admin:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-lcm_automation = ["*.yaml", "*.yml", "*.json", "*.toml"]
+Code4Ved_automation = ["*.yaml", "*.yml", "*.json", "*.toml"]
 
 # Black configuration
 [tool.black]
@@ -107,7 +107,7 @@ extend-exclude = '''
 profile = "black"
 multi_line_output = 3
 line_length = 88
-known_first_party = ["lcm_automation"]
+known_first_party = ["Code4Ved_automation"]
 known_third_party = ["click", "pydantic", "typer", "rich"]
 
 # MyPy configuration

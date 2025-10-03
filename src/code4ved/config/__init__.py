@@ -1,4 +1,4 @@
-"""Configuration management for LCM Automation."""
+"""Configuration management for Code4Ved Automation."""
 
 from .settings import settings
 
