@@ -1,161 +1,239 @@
 # Risk Register
 
 ## Document Information
-**Project**: [Project Name]
-**Version**: [Version]
-**Date**: [Date]
-**Risk Manager**: [Name]
-**Review Frequency**: [Weekly/Monthly]
+**Project**: Code4Ved - Vedic Texts Analysis Platform
+**Version**: 1.0
+**Date**: 2025-10-04
+**Risk Manager**: Project Lead
 
-## Risk Management Overview
-### Purpose
-This document tracks all identified risks for the project, their potential impact, likelihood, and mitigation strategies.
+## Risk Summary Dashboard
 
-### Risk Categories
-- **Technical**: Technology, integration, performance risks
-- **Business**: Market, stakeholder, requirements risks
-- **Operational**: Resource, process, timeline risks
-- **External**: Regulatory, vendor, environmental risks
-- **Financial**: Budget, cost overrun, funding risks
+| Risk Level | Count | Percentage |
+|------------|-------|------------|
+| High | 2 | 22% |
+| Medium | 5 | 56% |
+| Low | 2 | 22% |
+| **Total** | **9** | **100%** |
 
-### Risk Scoring
-#### Impact Scale (1-5)
-- **1 - Very Low**: Minimal impact on project
-- **2 - Low**: Minor delays or cost increases
-- **3 - Medium**: Moderate impact on timeline/budget
-- **4 - High**: Significant impact, major replanning needed
-- **5 - Very High**: Project failure or cancellation
+## Risk Matrix
 
-#### Likelihood Scale (1-5)
-- **1 - Very Low**: Less than 10% chance
-- **2 - Low**: 10-30% chance
-- **3 - Medium**: 30-50% chance
-- **4 - High**: 50-70% chance
-- **5 - Very High**: Over 70% chance
+```
+Impact
+High    │  R3, R5  │  R1, R2  │
+        │          │          │
+Medium  │   R7     │  R4, R6  │
+        │          │          │
+Low     │   R9     │   R8     │
+        └──────────┴──────────┘
+         Low      Medium    High
+              Probability
+```
 
-#### Risk Score = Impact × Likelihood
+## Detailed Risk Register
 
-## Active Risks
+### R1: Copyright and Licensing Violations
+**Risk ID**: R1
+**Category**: Legal/Compliance
+**Probability**: Medium
+**Impact**: High
+**Risk Level**: **HIGH**
 
-| ID | Risk Description | Category | Impact | Likelihood | Score | Priority | Mitigation Strategy | Owner | Status | Target Date |
-|----|------------------|----------|--------|------------|-------|----------|-------------------|-------|--------|-------------|
-| R-001 | Key team member may leave during critical phase | Operational | 4 | 2 | 8 | Medium | Cross-train team members, document processes | [PM] | Open | [Date] |
-| R-002 | Third-party API changes breaking integration | Technical | 3 | 3 | 9 | Medium | Monitor API deprecation notices, build abstraction layer | [Dev Lead] | Open | [Date] |
-| R-003 | Requirements may change significantly | Business | 4 | 3 | 12 | High | Regular stakeholder reviews, change control process | [BA] | Open | [Date] |
-| R-004 | [Risk Description] | [Category] | [1-5] | [1-5] | [Score] | [Priority] | [Strategy] | [Owner] | [Status] | [Date] |
+**Description**:
+Scraping copyrighted texts without permission could result in legal action, takedown notices, or reputational damage.
 
-## Risk Priority Matrix
-### High Priority (Score: 15-25)
-- Immediate attention required
-- Weekly monitoring
-- Escalation to project sponsor
+**Mitigation Strategy**:
+- Only scrape from verified public domain sources
+- Check website terms of service before scraping
+- Prioritize government and academic sources
+- Maintain clear attribution for all texts
 
-### Medium Priority (Score: 8-14)
-- Regular monitoring
-- Monthly review
-- Proactive mitigation
+**Risk Owner**: Project Lead
+**Status**: Active - Monitoring
 
-### Low Priority (Score: 1-7)
-- Periodic monitoring
-- Quarterly review
-- Accept or minimal mitigation
+---
 
-## Risk Mitigation Strategies
-### Risk ID: R-001
-**Risk**: Key team member may leave during critical phase
-**Current Mitigation**:
-- [ ] Cross-train at least 2 team members on critical components
-- [ ] Document all key processes and decisions
-- [ ] Regular 1:1s to address concerns
-- [ ] Retention bonus consideration
+### R2: Sanskrit NLP Accuracy Limitations
+**Risk ID**: R2
+**Category**: Technical/Quality
+**Probability**: High
+**Impact**: Medium
+**Risk Level**: **HIGH**
 
-**Contingency Plan**:
-- Accelerate hiring process
-- Engage contractor for short-term coverage
-- Reduce scope if necessary
+**Description**:
+Automated concept extraction may have low accuracy due to Sanskrit's linguistic complexity.
 
-### Risk ID: R-002
-**Risk**: Third-party API changes breaking integration
-**Current Mitigation**:
-- [ ] Subscribe to API change notifications
-- [ ] Implement API versioning strategy
-- [ ] Build abstraction layer
-- [ ] Regular API health monitoring
+**Mitigation Strategy**:
+- Start with English translations for initial NLP
+- Set confidence thresholds for automated tagging
+- Implement manual validation workflow
+- Accept higher manual curation burden
 
-**Contingency Plan**:
-- Rapid response team for API issues
-- Alternative API provider evaluation
-- Temporary workaround implementation
+**Risk Owner**: Project Lead
+**Status**: Active
 
-## Closed/Resolved Risks
+---
 
-| ID | Risk Description | Resolution Date | Resolution Summary | Lessons Learned |
-|----|------------------|-----------------|-------------------|-----------------|
-| R-999 | [Resolved Risk] | [Date] | [How it was resolved] | [What we learned] |
+### R3: Website Structure Changes Breaking Scrapers
+**Risk ID**: R3
+**Category**: Technical
+**Probability**: Medium
+**Impact**: Medium
+**Risk Level**: **MEDIUM**
 
-## Risk Trends
-### New Risks This Period
-- [Risk ID]: [Brief description]
-- [Risk ID]: [Brief description]
+**Description**:
+Target websites may change HTML structure, breaking existing scrapers.
 
-### Risks Escalated
-- [Risk ID]: [Reason for escalation]
-- [Risk ID]: [Reason for escalation]
+**Mitigation Strategy**:
+- Build flexible scrapers using multiple selectors
+- Regular testing of all scrapers
+- Maintain scraper test suite
+- Have backup sources for critical texts
 
-### Risks De-escalated
-- [Risk ID]: [Reason for de-escalation]
-- [Risk ID]: [Reason for de-escalation]
+**Risk Owner**: Project Lead
+**Status**: Active
 
-## Risk Review Actions
-| Date | Reviewer | Risk ID | Action Taken | Next Review |
-|------|----------|---------|--------------|-------------|
-| [Date] | [Name] | [ID] | [Action] | [Date] |
+---
 
-## Escalation Criteria
-### To Project Manager
-- Any risk with score > 12
-- New high-impact risks
-- Mitigation strategies failing
+### R4: Scope Creep
+**Risk ID**: R4
+**Category**: Project Management
+**Probability**: High
+**Impact**: Medium
+**Risk Level**: **MEDIUM**
 
-### To Steering Committee
-- Any risk with score > 20
-- Risks affecting project viability
-- Cross-project dependencies
+**Description**:
+Project scope may expand beyond original plan, delaying core deliverables.
 
-### To Executive Sponsor
-- Project-threatening risks
-- Resource escalation needed
-- Scope change requirements
+**Mitigation Strategy**:
+- Strict feature prioritization
+- MVP mindset
+- Track new ideas in "future enhancements" backlog
+- Regular scope reviews
 
-## Risk Monitoring Schedule
-| Risk ID | Owner | Review Frequency | Last Review | Next Review |
-|---------|-------|------------------|-------------|-------------|
-| R-001 | [Owner] | Weekly | [Date] | [Date] |
-| R-002 | [Owner] | Monthly | [Date] | [Date] |
+**Risk Owner**: Project Lead
+**Status**: Active - High Vigilance Required
 
-## Risk Reports
-### Weekly Summary
-**Date**: [Date]
-**New Risks**: [Count]
-**Closed Risks**: [Count]
-**High Priority Risks**: [Count]
-**Key Concerns**: [List]
+---
 
-### Monthly Analysis
-**Risk Trend**: [Increasing/Stable/Decreasing]
-**Top 3 Risks**: [List with IDs]
-**Mitigation Effectiveness**: [Assessment]
-**Recommendations**: [Key recommendations]
+### R5: Time Commitment Conflicts
+**Risk ID**: R5
+**Category**: Resource/Schedule
+**Probability**: Medium
+**Impact**: Medium
+**Risk Level**: **MEDIUM**
 
-## Contact Information
-| Role | Name | Email | Phone |
-|------|------|-------|-------|
-| Risk Manager | [Name] | [Email] | [Phone] |
-| Project Manager | [Name] | [Email] | [Phone] |
-| Escalation Contact | [Name] | [Email] | [Phone] |
+**Description**:
+Personal or professional commitments may reduce available time below planned 10 hours/week.
 
-## Document Control
-| Version | Date | Changes | Author | Approved By |
-|---------|------|---------|--------|-------------|
-| 1.0 | [Date] | Initial version | [Author] | [Approver] |
-| 1.1 | [Date] | [Changes] | [Author] | [Approver] |
+**Mitigation Strategy**:
+- Realistic scheduling with buffer time
+- Modular development
+- Accept longer timeline if needed (18-24 months)
+- Focus on most valuable components first
+
+**Risk Owner**: Project Lead
+**Status**: Active
+
+---
+
+### R6: Technical Complexity Exceeds Skill Level
+**Risk ID**: R6
+**Category**: Technical/Skills
+**Probability**: Low
+**Impact**: Medium
+**Risk Level**: **LOW**
+
+**Description**:
+Some components (graph databases, advanced NLP) may exceed current skill level.
+
+**Mitigation Strategy**:
+- Start with known technologies (Python, SQL)
+- Progressive learning curve
+- Extensive use of tutorials and documentation
+- Simplify architecture if needed
+
+**Risk Owner**: Project Lead
+**Status**: Active
+
+---
+
+### R7: Data Quality Issues
+**Risk ID**: R7
+**Category**: Data Quality
+**Probability**: Medium
+**Impact**: Medium
+**Risk Level**: **MEDIUM**
+
+**Description**:
+Text sources may have varying quality, formats, and encoding issues.
+
+**Mitigation Strategy**:
+- Prioritize high-quality sources
+- Implement data validation rules
+- Standardize text preprocessing
+- Manual quality checks on samples
+
+**Risk Owner**: Project Lead
+**Status**: Active
+
+---
+
+### R8: Database Performance Issues
+**Risk ID**: R8
+**Category**: Technical/Performance
+**Probability**: Low
+**Impact**: Low
+**Risk Level**: **LOW**
+
+**Description**:
+Database queries may become slow as data volume grows.
+
+**Mitigation Strategy**:
+- Proper indexing from the start
+- Query optimization
+- Monitor query performance
+- Implement caching if needed
+
+**Risk Owner**: Project Lead
+**Status**: Active - Low Priority
+
+---
+
+### R9: Loss of Data or Code
+**Risk ID**: R9
+**Category**: Data Security
+**Probability**: Low
+**Impact**: High
+**Risk Level**: **MEDIUM**
+
+**Description**:
+Accidental deletion or hardware failure could result in data/code loss.
+
+**Mitigation Strategy**:
+- Git version control for all code
+- GitHub remote repository
+- Regular database backups
+- Export scraped texts to files
+- Test restore procedures
+
+**Risk Owner**: Project Lead
+**Status**: Active - Mitigation Required
+
+---
+
+## Risk Action Plan
+
+### Immediate Actions
+- [ ] Set up Git repository with GitHub remote (R9)
+- [ ] Document copyright verification process (R1)
+- [ ] Create list of verified public domain sources (R1)
+
+### Short-term Actions
+- [ ] Implement database backup automation (R9)
+- [ ] Build robust error handling in scrapers (R3)
+- [ ] Set up time tracking (R5)
+
+### Ongoing
+- [ ] Weekly time commitment review (R5)
+- [ ] Monthly scraper tests (R3)
+- [ ] Bi-weekly scope management (R4)
