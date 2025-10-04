@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     """Application settings."""
 
     # Application Settings
-    APP_NAME: str = Field(default="lcm-automation", env="APP_NAME")
+    APP_NAME: str = Field(default="Code4Ved-automation", env="APP_NAME")
     APP_VERSION: str = Field(default="0.1.0", env="APP_VERSION")
     APP_ENV: str = Field(default="development", env="APP_ENV")
     DEBUG: bool = Field(default=False, env="DEBUG")

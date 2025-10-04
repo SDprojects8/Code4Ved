@@ -1,29 +1,29 @@
-"""Core LCM Manager implementation."""
+"""Core Code4Ved Manager implementation."""
 
 import logging
 from typing import Any, Dict, List, Optional
 
 from ..config import settings
-from ..exceptions import LCMError, LCMConfigError
-from .models import LCMConfig, LifecycleStage, Resource
+from ..exceptions import Code4VedError, Code4VedConfigError
+from .models import Code4VedConfig, LifecycleStage, Resource
 
 logger = logging.getLogger(__name__)
 
 
-class LCMManager:
-    """Main LCM Manager for lifecycle automation."""
+class Code4VedManager:
+    """Main Code4Ved Manager for lifecycle automation."""
 
-    def __init__(self, config: Optional[LCMConfig] = None):
-        """Initialize LCM Manager.
+    def __init__(self, config: Optional[Code4VedConfig] = None):
+        """Initialize Code4Ved Manager.
 
         Args:
-            config: Optional LCM configuration object
+            config: Optional Code4Ved configuration object
         """
-        self.config = config or LCMConfig.from_settings()
+        self.config = config or Code4VedConfig.from_settings()
         self.resources: Dict[str, Resource] = {}
         self.stages: List[LifecycleStage] = []
 
-        logger.info(f"LCM Manager initialized with config: {self.config.name}")
+        logger.info(f"Code4Ved Manager initialized with config: {self.config.name}")
 
     def add_resource(self, resource: Resource) -> None:
         """Add a resource to be managed.
@@ -32,10 +32,10 @@ class LCMManager:
             resource: Resource to add
 
         Raises:
-            LCMError: If resource already exists
+            Code4VedError: If resource already exists
         """
         if resource.id in self.resources:
-            raise LCMError(f"Resource {resource.id} already exists")
+            raise Code4VedError(f"Resource {resource.id} already exists")
 
         self.resources[resource.id] = resource
         logger.info(f"Added resource: {resource.id}")
@@ -47,10 +47,10 @@ class LCMManager:
             resource_id: ID of resource to remove
 
         Raises:
-            LCMError: If resource not found
+            Code4VedError: If resource not found
         """
         if resource_id not in self.resources:
-            raise LCMError(f"Resource {resource_id} not found")
+            raise Code4VedError(f"Resource {resource_id} not found")
 
         del self.resources[resource_id]
         logger.info(f"Removed resource: {resource_id}")
@@ -65,10 +65,10 @@ class LCMManager:
             Resource object
 
         Raises:
-            LCMError: If resource not found
+            Code4VedError: If resource not found
         """
         if resource_id not in self.resources:
-            raise LCMError(f"Resource {resource_id} not found")
+            raise Code4VedError(f"Resource {resource_id} not found")
 
         return self.resources[resource_id]
 
@@ -100,7 +100,7 @@ class LCMManager:
             Execution result
 
         Raises:
-            LCMError: If stage or resource not found
+            Code4VedError: If stage or resource not found
         """
         # Find stage
         stage = None
@@ -110,7 +110,7 @@ class LCMManager:
                 break
 
         if not stage:
-            raise LCMError(f"Stage {stage_name} not found")
+            raise Code4VedError(f"Stage {stage_name} not found")
 
         # Get resource
         resource = self.get_resource(resource_id)
@@ -124,7 +124,7 @@ class LCMManager:
             return result
         except Exception as e:
             logger.error(f"Stage {stage_name} failed for {resource_id}: {e}")
-            raise LCMError(f"Stage execution failed: {e}")
+            raise Code4VedError(f"Stage execution failed: {e}")
 
     def validate_config(self) -> bool:
         """Validate the current configuration.
@@ -133,24 +133,24 @@ class LCMManager:
             True if configuration is valid
 
         Raises:
-            LCMConfigError: If configuration is invalid
+            Code4VedConfigError: If configuration is invalid
         """
         try:
             # Validate configuration
             if not self.config.name:
-                raise LCMConfigError("Configuration name is required")
+                raise Code4VedConfigError("Configuration name is required")
 
             if not self.config.environment:
-                raise LCMConfigError("Environment is required")
+                raise Code4VedConfigError("Environment is required")
 
             logger.info("Configuration validation passed")
             return True
 
         except Exception as e:
-            raise LCMConfigError(f"Configuration validation failed: {e}")
+            raise Code4VedConfigError(f"Configuration validation failed: {e}")
 
     def get_status(self) -> Dict[str, Any]:
-        """Get current status of LCM Manager.
+        """Get current status of Code4Ved Manager.
 
         Returns:
             Status information

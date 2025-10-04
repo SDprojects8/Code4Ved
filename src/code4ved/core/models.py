@@ -1,4 +1,4 @@
-"""Core data models for LCM Automation."""
+"""Core data models for Code4Ved Automation."""
 
 from datetime import datetime
 from enum import Enum
@@ -33,8 +33,8 @@ class StageStatus(str, Enum):
     SKIPPED = "skipped"
 
 
-class LCMConfig(BaseModel):
-    """LCM Configuration model."""
+class Code4VedConfig(BaseModel):
+    """Code4Ved Configuration model."""
 
     name: str = Field(..., description="Configuration name")
     environment: EnvironmentType = Field(default=EnvironmentType.DEVELOPMENT)
@@ -45,11 +45,11 @@ class LCMConfig(BaseModel):
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
     @classmethod
-    def from_settings(cls) -> "LCMConfig":
+    def from_settings(cls) -> "Code4VedConfig":
         """Create configuration from settings.
 
         Returns:
-            LCMConfig instance
+            Code4VedConfig instance
         """
         from ..config import settings
 

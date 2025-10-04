@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Basic usage example for LCM Automation."""
+"""Basic usage example for Code4Ved Automation."""
 
 import logging
-from lcm_automation import LCMManager
-from lcm_automation.core.models import Resource, LifecycleStage, ResourceStatus
+from Code4Ved_automation import Code4VedManager
+from Code4Ved_automation.core.models import Resource, LifecycleStage, ResourceStatus
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-    """Demonstrate basic LCM Automation usage."""
-    print("🚀 LCM Automation - Basic Usage Example")
+    """Demonstrate basic Code4Ved Automation usage."""
+    print("🚀 Code4Ved Automation - Basic Usage Example")
     print("=" * 50)
 
-    # Create LCM Manager
-    manager = LCMManager()
-    print(f"✅ Created LCM Manager: {manager.config.name}")
+    # Create Code4Ved Manager
+    manager = Code4VedManager()
+    print(f"✅ Created Code4Ved Manager: {manager.config.name}")
 
     # Create some resources
     resources = [
@@ -82,7 +82,7 @@ def main():
     print("\n" + "=" * 50)
 
     # Show current status
-    print("📊 Current LCM Status:")
+    print("📊 Current Code4Ved Status:")
     status = manager.get_status()
     for key, value in status.items():
         if isinstance(value, list):

@@ -1,148 +1,106 @@
 # Project Estimates
 
 ## Document Information
-**Project**: [Project Name]  
-**Version**: [Version]  
-**Date**: [Date]  
-**Estimator**: [Name]  
-**Estimation Method**: [Method used]
+**Project**: Code4Ved - Vedic Texts Analysis Platform  
+**Version**: 1.0  
+**Date**: 2025-10-04  
+**Estimator**: Sumit Das  
+**Estimation Method**: Expert Judgment + Historical Data + Three-Point Estimation
 
 ## Estimation Approach
-[Description of the estimation methodology and techniques used]
+This estimation combines expert judgment based on research findings, historical data from similar projects, and three-point estimation (optimistic, most likely, pessimistic) to provide realistic effort and duration estimates for the Code4Ved project.
 
 ## Effort Estimates
 
 ### Summary by Phase
 | Phase | Optimistic | Most Likely | Pessimistic | Expected | Confidence |
 |-------|------------|-------------|-------------|----------|------------|
-| Requirements | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
-| Design | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
-| Development | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
-| Testing | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
-| Deployment | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
-| **Total** | [Hours] | [Hours] | [Hours] | [Hours] | [%] |
+| Requirements | 20 | 30 | 40 | 30 | 80% |
+| Design | 40 | 60 | 80 | 60 | 75% |
+| Development | 200 | 300 | 400 | 300 | 70% |
+| Testing | 40 | 60 | 80 | 60 | 80% |
+| Deployment | 20 | 30 | 40 | 30 | 85% |
+| Documentation | 30 | 40 | 50 | 40 | 85% |
+| **Total** | **350** | **520** | **690** | **520** | **75%** |
 
 ### Detailed Work Package Estimates
 | WBS ID | Work Package | Method | Size | Effort (hrs) | Confidence |
 |--------|-------------|--------|------|-------------|------------|
-| 1.2.1 | [Work Package] | [Method] | [Size] | [Hours] | [%] |
-| 1.2.2 | [Work Package] | [Method] | [Size] | [Hours] | [%] |
-| 1.3.1 | [Work Package] | [Method] | [Size] | [Hours] | [%] |
+| 1.2.1 | Web Scraping Module | Expert Judgment | Large | 80 | 70% |
+| 1.2.2 | Database Architecture | Expert Judgment | Large | 100 | 75% |
+| 1.2.3 | Text Classification | Expert Judgment | Medium | 60 | 80% |
+| 1.3.1 | NLP Pipeline | Expert Judgment | Large | 90 | 65% |
+| 1.3.2 | Knowledge Graph | Expert Judgment | Medium | 70 | 75% |
+| 1.4.1 | Visualization Tools | Expert Judgment | Medium | 50 | 80% |
+| 1.4.2 | Performance Optimization | Expert Judgment | Large | 80 | 70% |
+| 1.5.1 | Testing & Validation | Expert Judgment | Medium | 60 | 80% |
+| 1.6.1 | Documentation | Expert Judgment | Medium | 40 | 85% |
 
 ## Duration Estimates
 
 ### Project Timeline
 | Phase | Start Date | End Date | Duration (days) | Dependencies |
 |-------|------------|----------|----------------|--------------|
-| Requirements | [Date] | [Date] | [Days] | [Dependencies] |
-| Design | [Date] | [Date] | [Days] | [Dependencies] |
-| Development | [Date] | [Date] | [Days] | [Dependencies] |
-| Testing | [Date] | [Date] | [Days] | [Dependencies] |
-| **Total** | [Date] | [Date] | [Days] | |
+| Requirements | 2025-10-04 | 2025-10-18 | 14 | Project initiation |
+| Design | 2025-10-18 | 2025-11-15 | 28 | Requirements complete |
+| Development | 2025-11-15 | 2026-02-15 | 90 | Design complete |
+| Testing | 2026-02-15 | 2026-03-15 | 28 | Development complete |
+| Deployment | 2026-03-15 | 2026-03-30 | 15 | Testing complete |
+| **Total** | **2025-10-04** | **2026-03-30** | **175** | |
 
 ### Resource Loading
-| Resource | Week 1 | Week 2 | Week 3 | Week 4 | Total |
-|----------|--------|--------|--------|--------|-------|
-| [Resource 1] | [Hours] | [Hours] | [Hours] | [Hours] | [Hours] |
-| [Resource 2] | [Hours] | [Hours] | [Hours] | [Hours] | [Hours] |
+| Resource | Week 1-4 | Week 5-8 | Week 9-12 | Week 13-16 | Total |
+|----------|---------|---------|---------|-----------|-------|
+| Developer (Self) | 10 hrs | 12 hrs | 15 hrs | 12 hrs | 520 hrs |
+| Learning Time | 5 hrs | 8 hrs | 10 hrs | 8 hrs | 200 hrs |
+| Development Time | 5 hrs | 4 hrs | 5 hrs | 4 hrs | 320 hrs |
 
 ## Cost Estimates
 
 ### Labor Costs
 | Role | Rate (/hour) | Hours | Total Cost |
 |------|-------------|-------|------------|
-| [Role 1] | [Rate] | [Hours] | [Cost] |
-| [Role 2] | [Rate] | [Hours] | [Cost] |
-| **Subtotal** | | | [Cost] |
+| Developer (Self) | $0 | 520 | $0 |
+| Learning Time | $0 | 200 | $0 |
+| **Subtotal** | | | **$0** |
 
 ### Non-Labor Costs
 | Category | Item | Quantity | Unit Cost | Total Cost |
 |----------|------|----------|-----------|------------|
-| Software | [Item] | [Qty] | [Cost] | [Total] |
-| Hardware | [Item] | [Qty] | [Cost] | [Total] |
-| Services | [Item] | [Qty] | [Cost] | [Total] |
-| **Subtotal** | | | | [Cost] |
+| Software | Python, PostgreSQL, MongoDB, Neo4j | 1 | $0 | $0 |
+| Hardware | Development machine | 1 | $0 | $0 |
+| Learning | Books, courses | 1 | $100 | $100 |
+| **Subtotal** | | | | **$100** |
 
 ### Total Project Cost
 | Category | Cost |
 |----------|------|
-| Labor | [Cost] |
-| Non-Labor | [Cost] |
-| Contingency ([%]%) | [Cost] |
-| **Total** | [Cost] |
+| Labor | $0 |
+| Non-Labor | $100 |
+| Contingency (20%) | $20 |
+| **Total** | **$120** |
 
 ## Estimation Basis
 
 ### Assumptions
-- [Assumption 1]
-- [Assumption 2]
-- [Assumption 3]
+- Consistent 10-15 hours per week commitment
+- Progressive learning approach (Python → GoLang → Rust)
+- Single-user system (no authentication complexity)
+- Local development environment
+- Open source tools and databases
+- No external dependencies or integrations
 
 ### Historical Data Used
 | Similar Project | Size | Effort | Duration | Relevance |
 |----------------|------|--------|----------|-----------|
-| [Project 1] | [Size] | [Effort] | [Duration] | [High/Med/Low] |
-| [Project 2] | [Size] | [Effort] | [Duration] | [High/Med/Low] |
+| Web Scraping Project | Small | 40 hrs | 2 weeks | High |
+| Database Design | Medium | 60 hrs | 3 weeks | High |
+| NLP Analysis | Medium | 80 hrs | 4 weeks | Medium |
+| Learning New Language | Large | 100 hrs | 8 weeks | High |
 
 ### Estimation Techniques
 
 #### Function Point Analysis
-- **Total Function Points**: [Number]
-- **Productivity Rate**: [FP/hour]
-- **Calculated Effort**: [Hours]
-
-#### Story Point Estimation
-- **Total Story Points**: [Number]
-- **Team Velocity**: [Points/sprint]
-- **Calculated Duration**: [Sprints]
-
-#### Expert Judgment
-- **Expert**: [Name/Role]
-- **Experience**: [Years/Projects]
-- **Estimate**: [Hours/Duration]
-
-## Risk Adjustments
-
-### Risk Factors
-| Risk Factor | Impact | Probability | Adjustment |
-|-------------|--------|-------------|------------|
-| [Risk 1] | [H/M/L] | [H/M/L] | [+/- %] |
-| [Risk 2] | [H/M/L] | [H/M/L] | [+/- %] |
-
-### Contingency Analysis
-- **Base Estimate**: [Amount]
-- **Risk Adjustment**: [Amount] ([%]%)
-- **Management Reserve**: [Amount] ([%]%)
-- **Total with Contingency**: [Amount]
-
-## Estimate Accuracy
-
-### Confidence Levels
-| Estimate Type | -50% | -25% | Most Likely | +25% | +50% |
-|---------------|------|------|-------------|------|------|
-| Effort | [Hours] | [Hours] | [Hours] | [Hours] | [Hours] |
-| Duration | [Days] | [Days] | [Days] | [Days] | [Days] |
-| Cost | [Amount] | [Amount] | [Amount] | [Amount] | [Amount] |
-
-### Estimation Quality
-- **Estimation Method Maturity**: [Level]
-- **Historical Data Quality**: [High/Medium/Low]
-- **Team Experience**: [High/Medium/Low]
-- **Requirements Stability**: [High/Medium/Low]
-
-## Baseline and Change Control
-
-### Baseline Estimates
-| Estimate | Baseline Value | Date |
-|----------|----------------|------|
-| Total Effort | [Hours] | [Date] |
-| Total Duration | [Days] | [Date] |
-| Total Cost | [Amount] | [Date] |
-
-### Estimate Changes
-| Date | Change | Reason | Old Value | New Value | Approved By |
-|------|--------|--------|-----------|-----------|-------------|
-| [Date] | [Change] | [Reason] | [Value] | [Value] | [Name] |
-
-## Tracking and Updates
-[Process for tracking actual vs estimated and updating estimates]
+- **Total Function Points**: 150
+- **Productivity Rate**: 3.5 FP/hour
+- **Calculated Effort**: 43 hours (underestimated due 

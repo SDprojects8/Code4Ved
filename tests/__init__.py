@@ -1,1 +1,1 @@
-"""Tests for LCM Automation package."""
+"""Tests for Code4Ved Automation package."""

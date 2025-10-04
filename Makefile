@@ -27,7 +27,7 @@ test:
 	pytest tests/
 
 test-coverage:
-	pytest --cov=src/lcm_automation --cov-report=html --cov-report=term tests/
+	pytest --cov=src/Code4Ved_automation --cov-report=html --cov-report=term tests/
 
 test-unit:
 	pytest tests/unit/

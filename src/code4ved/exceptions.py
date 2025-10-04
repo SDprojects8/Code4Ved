@@ -1,8 +1,8 @@
-"""Custom exceptions for LCM Automation."""
+"""Custom exceptions for Code4Ved Automation."""
 
 
-class LCMError(Exception):
-    """Base exception for LCM Automation."""
+class Code4VedError(Exception):
+    """Base exception for Code4Ved Automation."""
 
     def __init__(self, message: str, code: str = None):
         super().__init__(message)
@@ -10,41 +10,41 @@ class LCMError(Exception):
         self.code = code
 
 
-class LCMConfigError(LCMError):
+class Code4VedConfigError(Code4VedError):
     """Raised when there's a configuration error."""
     pass
 
 
-class LCMValidationError(LCMError):
+class Code4VedValidationError(Code4VedError):
     """Raised when validation fails."""
     pass
 
 
-class LCMConnectionError(LCMError):
+class Code4VedConnectionError(Code4VedError):
     """Raised when connection to external service fails."""
     pass
 
 
-class LCMTimeoutError(LCMError):
+class Code4VedTimeoutError(Code4VedError):
     """Raised when an operation times out."""
     pass
 
 
-class LCMAuthenticationError(LCMError):
+class Code4VedAuthenticationError(Code4VedError):
     """Raised when authentication fails."""
     pass
 
 
-class LCMAuthorizationError(LCMError):
+class Code4VedAuthorizationError(Code4VedError):
     """Raised when authorization fails."""
     pass
 
 
-class LCMResourceNotFoundError(LCMError):
+class Code4VedResourceNotFoundError(Code4VedError):
     """Raised when a requested resource is not found."""
     pass
 
 
-class LCMResourceExistsError(LCMError):
+class Code4VedResourceExistsError(Code4VedError):
     """Raised when trying to create a resource that already exists."""
     pass

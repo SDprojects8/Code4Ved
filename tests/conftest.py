@@ -2,14 +2,14 @@
 
 import pytest
 
-from lcm_automation.core import LCMManager
-from lcm_automation.core.models import LCMConfig, Resource, LifecycleStage, ResourceStatus
+from Code4Ved_automation.core import Code4VedManager
+from Code4Ved_automation.core.models import Code4VedConfig, Resource, LifecycleStage, ResourceStatus
 
 
 @pytest.fixture
 def sample_config():
-    """Sample LCM configuration for testing."""
-    return LCMConfig(
+    """Sample Code4Ved configuration for testing."""
+    return Code4VedConfig(
         name="test-config",
         environment="test",
         debug=True,
@@ -18,9 +18,9 @@ def sample_config():
 
 
 @pytest.fixture
-def lcm_manager(sample_config):
-    """LCM Manager instance for testing."""
-    return LCMManager(config=sample_config)
+def Code4Ved_manager(sample_config):
+    """Code4Ved Manager instance for testing."""
+    return Code4VedManager(config=sample_config)
 
 
 @pytest.fixture
@@ -46,8 +46,8 @@ def sample_stage():
 
 
 @pytest.fixture
-def populated_manager(lcm_manager, sample_resource, sample_stage):
-    """LCM Manager with sample data for testing."""
-    lcm_manager.add_resource(sample_resource)
-    lcm_manager.add_stage(sample_stage)
-    return lcm_manager
+def populated_manager(Code4Ved_manager, sample_resource, sample_stage):
+    """Code4Ved Manager with sample data for testing."""
+    Code4Ved_manager.add_resource(sample_resource)
+    Code4Ved_manager.add_stage(sample_stage)
+    return Code4Ved_manager

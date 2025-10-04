@@ -1,4 +1,4 @@
-"""CLI modules for LCM Automation."""
+"""CLI modules for Code4Ved Automation."""
 
 from .main import main
 

@@ -1,67 +1,75 @@
 # Non-Functional Requirements (NFR)
 
 ## Document Information
-**Document Title**: [Project Name] Non-Functional Requirements  
-**Version**: [Version Number]  
-**Date**: [Date]  
-**Author**: [Author Name]  
-**Status**: [Draft/Review/Approved]
+**Document Title**: Code4Ved Non-Functional Requirements  
+**Version**: 1.0  
+**Date**: 2025-10-04  
+**Author**: Sumit Das  
+**Status**: Draft
 
 ## Introduction
-[Purpose of this document and scope of non-functional requirements]
+This document specifies the non-functional requirements for the Code4Ved platform, a comprehensive system for accessing, analyzing, and exploring Vedic literature through web scraping, database management, NLP analysis, and knowledge graph visualization.
 
 ## Performance Requirements
 
 ### Response Time
 | Operation | Target Response Time | Acceptable Response Time | Measurement Method |
 |-----------|---------------------|-------------------------|-------------------|
-| [Operation 1] | [Time] | [Time] | [Method] |
-| [Operation 2] | [Time] | [Time] | [Method] |
+| Text Search | < 2 seconds | < 5 seconds | Database query timing |
+| Concept Extraction | < 30 seconds | < 60 seconds | NLP processing timing |
+| Graph Queries | < 5 seconds | < 10 seconds | Neo4j query timing |
+| Web Scraping | < 10 seconds per page | < 30 seconds per page | HTTP request timing |
+| Visualization Generation | < 10 seconds | < 30 seconds | Chart rendering timing |
 
 ### Throughput
 | Metric | Target | Peak Load | Measurement Period |
 |--------|--------|-----------|-------------------|
-| Transactions/sec | [Number] | [Number] | [Period] |
-| Concurrent Users | [Number] | [Number] | [Period] |
+| Texts Processed/hour | 100 | 500 | Hourly |
+| Concurrent Users | 1 (single-user) | 5 (future) | Continuous |
+| Database Queries/sec | 50 | 200 | Peak usage |
+| Web Scraping Requests/sec | 1 | 5 | Respecting rate limits |
 
 ### Resource Utilization
 | Resource | Normal Load | Peak Load | Acceptable Limit |
 |----------|-------------|-----------|------------------|
-| CPU | [Percentage] | [Percentage] | [Percentage] |
-| Memory | [Amount] | [Amount] | [Amount] |
-| Storage | [Amount] | [Amount] | [Amount] |
+| CPU | 50% | 80% | 90% |
+| Memory | 4 GB | 8 GB | 16 GB |
+| Storage | 50 GB | 100 GB | 200 GB |
+| Network | 10 Mbps | 50 Mbps | 100 Mbps |
 
 ## Scalability Requirements
 
 ### Horizontal Scaling
-- **User Growth**: Support [X]% annual user growth
-- **Data Growth**: Support [X]% annual data growth
-- **Transaction Volume**: Scale to [X] transactions per second
+- **User Growth**: Support 100% annual user growth (1 to 2 users)
+- **Data Growth**: Support 200% annual data growth (500 to 1500 texts)
+- **Transaction Volume**: Scale to 1000 text processing operations per day
 
 ### Vertical Scaling
-- **Resource Scaling**: Ability to increase resources by [X]% without code changes
-- **Database Scaling**: Support database scaling to [X] concurrent connections
+- **Resource Scaling**: Ability to increase resources by 100% without code changes
+- **Database Scaling**: Support database scaling to 50 concurrent connections
 
 ## Availability Requirements
 
 ### Uptime
-- **Target Availability**: [Percentage]% (e.g., 99.9%)
-- **Planned Downtime**: Maximum [X] hours per month
-- **Unplanned Downtime**: Maximum [X] hours per month
-- **Recovery Time Objective (RTO)**: [Time]
-- **Recovery Point Objective (RPO)**: [Time]
+- **Target Availability**: 95% (personal development project)
+- **Planned Downtime**: Maximum 4 hours per month
+- **Unplanned Downtime**: Maximum 2 hours per month
+- **Recovery Time Objective (RTO)**: 1 hour
+- **Recovery Point Objective (RPO)**: 4 hours
 
 ### Business Hours
-- **Critical Hours**: [Time range]
-- **Maintenance Windows**: [Time range]
+- **Critical Hours**: 9 AM - 5 PM (development hours)
+- **Maintenance Windows**: Weekends, 2 AM - 6 AM
 
 ## Reliability Requirements
 
 ### Error Rates
 | Component | Maximum Error Rate | Measurement Period |
 |-----------|-------------------|-------------------|
-| [Component 1] | [Percentage] | [Period] |
-| [Component 2] | [Percentage] | [Period] |
+| Web Scraping | 5% | Per scraping session |
+| Database Operations | 1% | Per day |
+| NLP Processing | 10% | Per text processing |
+| Graph Queries | 2% | Per query session |
 
 ### Fault Tolerance
 - **Single Point of Failure**: No component should be a single point of failure
@@ -71,68 +79,69 @@
 ## Security Requirements
 
 ### Authentication
-- **Multi-Factor Authentication**: Required for [user types]
-- **Password Policy**: [Minimum requirements]
-- **Session Management**: [Session timeout and security requirements]
+- **Multi-Factor Authentication**: Not required (single-user system)
+- **Password Policy**: Strong passwords for database access
+- **Session Management**: 8-hour session timeout
 
 ### Authorization
-- **Role-Based Access**: Support for role-based access control
-- **Principle of Least Privilege**: Users should have minimum necessary permissions
-- **Audit Trail**: All access attempts should be logged
+- **Role-Based Access**: Single developer role
+- **Principle of Least Privilege**: Minimum necessary permissions
+- **Audit Trail**: All operations logged for debugging
 
 ### Data Protection
-- **Encryption at Rest**: All sensitive data must be encrypted
-- **Encryption in Transit**: All data transmission must use TLS 1.3+
-- **Data Masking**: PII must be masked in non-production environments
+- **Encryption at Rest**: Database encryption enabled
+- **Encryption in Transit**: TLS 1.3+ for all communications
+- **Data Masking**: Not required (no PII)
 
 ### Compliance
-- **Standards**: Must comply with [relevant standards]
-- **Regulations**: Must comply with [relevant regulations]
-- **Audit Requirements**: System must support compliance audits
+- **Standards**: Open source best practices
+- **Regulations**: Respect copyright and licensing
+- **Audit Requirements**: Code review and documentation
 
 ## Usability Requirements
 
 ### User Interface
-- **Response Feedback**: Users should receive feedback within [X] seconds
+- **Response Feedback**: Users should receive feedback within 2 seconds
 - **Error Messages**: Error messages should be clear and actionable
-- **Accessibility**: Must comply with [accessibility standards]
+- **Accessibility**: Basic accessibility compliance
 
 ### Learning Curve
-- **New User Training**: New users should be productive within [X] hours
-- **Help System**: Context-sensitive help must be available
-- **Documentation**: User documentation must be comprehensive and current
+- **New User Training**: New users should be productive within 4 hours
+- **Help System**: Comprehensive documentation available
+- **Documentation**: Technical documentation must be comprehensive and current
 
 ### Browser Support
 | Browser | Version | Support Level |
 |---------|---------|---------------|
-| Chrome | [Version+] | Full |
-| Firefox | [Version+] | Full |
-| Safari | [Version+] | Limited |
-| Edge | [Version+] | Full |
+| Chrome | 90+ | Full |
+| Firefox | 88+ | Full |
+| Safari | 14+ | Limited |
+| Edge | 90+ | Full |
 
 ## Compatibility Requirements
 
 ### Operating Systems
 | OS | Version | Support Level |
 |----|---------|---------------|
-| [OS 1] | [Version] | [Full/Limited] |
-| [OS 2] | [Version] | [Full/Limited] |
+| Windows 11 | Latest | Full |
+| Linux | Ubuntu 20.04+ | Full |
+| macOS | 11+ | Limited |
 
 ### Integration Compatibility
-- **Database Versions**: [Supported versions]
-- **API Versions**: [Supported versions]
-- **Third-Party Services**: [Compatibility requirements]
+- **Database Versions**: PostgreSQL 13+, MongoDB 4.4+, Neo4j 4.0+
+- **API Versions**: REST API v1
+- **Third-Party Services**: Web scraping targets
 
 ## Maintainability Requirements
 
 ### Code Quality
-- **Code Coverage**: Minimum [X]% test coverage
-- **Code Complexity**: Maximum cyclomatic complexity of [X]
+- **Code Coverage**: Minimum 80% test coverage
+- **Code Complexity**: Maximum cyclomatic complexity of 10
 - **Documentation**: All APIs must be documented
 
 ### Deployment
-- **Deployment Time**: Deployments should complete within [X] minutes
-- **Rollback Time**: Rollbacks should complete within [X] minutes
+- **Deployment Time**: Deployments should complete within 30 minutes
+- **Rollback Time**: Rollbacks should complete within 15 minutes
 - **Zero Downtime**: Deployments should not cause service interruption
 
 ### Monitoring
@@ -148,50 +157,52 @@
 - **Cloud Provider**: Solution should not be tied to a specific cloud provider
 
 ### Data Portability
-- **Export Formats**: Data must be exportable in standard formats
+- **Export Formats**: Data must be exportable in JSON, CSV, XML
 - **Migration Tools**: Tools must be provided for data migration
 - **Backup Formats**: Backups must use standard, recoverable formats
 
 ## Capacity Requirements
 
 ### User Capacity
-- **Initial Users**: [Number] concurrent users
-- **Growth Projection**: [Number] users by [Date]
-- **Peak Usage**: [Number] concurrent users during peak times
+- **Initial Users**: 1 concurrent user (developer)
+- **Growth Projection**: 5 users by 2026
+- **Peak Usage**: 2 concurrent users during peak times
 
 ### Data Capacity
-- **Initial Data Volume**: [Amount]
-- **Growth Rate**: [Rate] per month
-- **Retention Period**: Data must be retained for [Period]
+- **Initial Data Volume**: 500 texts, 1 GB
+- **Growth Rate**: 100 texts per month
+- **Retention Period**: Data must be retained for 5 years
 
 ### Storage Requirements
 | Data Type | Initial Volume | Growth Rate | Retention |
 |-----------|----------------|-------------|-----------|
-| [Data Type 1] | [Volume] | [Rate] | [Period] |
-| [Data Type 2] | [Volume] | [Rate] | [Period] |
+| Text Content | 1 GB | 200 MB/month | 5 years |
+| Database | 500 MB | 100 MB/month | 5 years |
+| Logs | 100 MB | 50 MB/month | 1 year |
+| Backups | 2 GB | 500 MB/month | 1 year |
 
 ## Regulatory Requirements
 
 ### Data Privacy
-- **GDPR Compliance**: [Requirements if applicable]
-- **Data Residency**: Data must be stored in [geographic regions]
+- **GDPR Compliance**: Not applicable (personal project)
+- **Data Residency**: Data stored locally
 - **Right to be Forgotten**: Users must be able to delete their data
 
 ### Industry Standards
-- **Compliance Standards**: [List relevant standards]
-- **Certification Requirements**: [Required certifications]
-- **Audit Requirements**: [Audit frequency and scope]
+- **Compliance Standards**: Open source licensing
+- **Certification Requirements**: None required
+- **Audit Requirements**: Self-audit quarterly
 
 ## Testing Requirements
 
 ### Performance Testing
 - **Load Testing**: System must be tested under expected load
 - **Stress Testing**: System must be tested beyond expected capacity
-- **Endurance Testing**: System must run continuously for [period]
+- **Endurance Testing**: System must run continuously for 24 hours
 
 ### Security Testing
-- **Penetration Testing**: Required [frequency]
-- **Vulnerability Scanning**: Required [frequency]
+- **Penetration Testing**: Required annually
+- **Vulnerability Scanning**: Required monthly
 - **Code Security Analysis**: Required before each release
 
 ## Documentation Requirements
@@ -207,10 +218,18 @@
 - **Help System**: Must be integrated into the application
 
 ## Acceptance Criteria
-[How these non-functional requirements will be validated and accepted]
+These non-functional requirements will be validated through:
+- Performance testing with realistic data volumes
+- Load testing with expected user scenarios
+- Security testing with vulnerability scans
+- Documentation review and user testing
+- Monitoring and logging verification
 
 ## Traceability Matrix
 | NFR ID | Requirement | Test Method | Acceptance Criteria | Priority |
 |--------|-------------|-------------|-------------------|----------|
-| NFR-001 | [Requirement] | [Method] | [Criteria] | [H/M/L] |
-| NFR-002 | [Requirement] | [Method] | [Criteria] | [H/M/L] |
+| NFR-001 | Response Time < 5 seconds | Performance testing | 95% of queries under 5 seconds | High |
+| NFR-002 | 95% Availability | Uptime monitoring | 95% uptime over 30 days | High |
+| NFR-003 | 80% Test Coverage | Code analysis | 80% line coverage | Medium |
+| NFR-004 | Data Encryption | Security testing | All data encrypted at rest | High |
+| NFR-005 | Error Rate < 5% | Error monitoring | Error rate below 5% | Medium |
