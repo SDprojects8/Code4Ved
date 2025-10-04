@@ -7,7 +7,7 @@ Identify and document all project stakeholders, their interests, influence, and 
 
 | Name | Role/Title | Organization | Influence | Interest | Impact | Engagement Strategy |
 |------|------------|--------------|-----------|----------|--------|-------------------|
-| Project Lead | Developer/Learner | Self | High | High | Positive | Direct ownership and execution |
+| Sumit Das | Developer/Learner | Self | High | High | Positive | Direct ownership and execution |
 | Sanskrit Scholars | Subject Experts | Academic Community | Medium | High | Positive | Consultation for validation |
 | Programming Community | Peer Developers | GitHub/Open Source | Low | Medium | Positive | Code review and contributions |
 | Sanskrit Students | End Users | Global | Low | High | Positive | Feedback and testing |
@@ -17,7 +17,7 @@ Identify and document all project stakeholders, their interests, influence, and 
 
 ### Primary Stakeholders
 *Directly affected by the project outcome*
-- **Project Lead** - Direct beneficiary of learning outcomes and skill development
+- **Sumit Das** - Direct beneficiary of learning outcomes and skill development
 - **Sanskrit Students & Researchers** - Will use tools for studying Vedic literature
 - **Programming Enthusiasts** - Interested in applying technical skills to cultural projects
 
@@ -30,14 +30,14 @@ Identify and document all project stakeholders, their interests, influence, and 
 
 ### Key Stakeholders
 *High influence and high interest*
-- **Project Lead** - Owner, developer, primary user; drives all decisions and implementation
+- **Sumit Das** - Owner, developer, primary user; drives all decisions and implementation
 - **Sanskrit Academic Community** - Validators of accuracy and cultural sensitivity; influence authenticity
 
 ## Influence/Interest Grid
 
 ```
 High Interest  |  MANAGE CLOSELY           |  KEEP SATISFIED
-              |   - Project Lead           |  - Website Admins
+              |   - Sumit Das           |  - Website Admins
               |   - Sanskrit Students      |
               |                            |
 Low Interest  |  MONITOR                   |  KEEP INFORMED
@@ -49,7 +49,7 @@ Low Interest  |  MONITOR                   |  KEEP INFORMED
 
 ## Stakeholder Engagement Plan
 
-### Project Lead (Self)
+### Sumit Das (Self)
 **Current Engagement Level**: Leading
 **Desired Engagement Level**: Leading
 **Engagement Strategy**: Self-directed learning with structured milestones
@@ -83,7 +83,7 @@ Low Interest  |  MONITOR                   |  KEEP INFORMED
 
 ## Stakeholder Roles and Responsibilities
 
-### Project Lead
+### Sumit Das
 **Name**: Self
 **Responsibilities**:
 - Define project requirements and scope
@@ -122,7 +122,7 @@ Low Interest  |  MONITOR                   |  KEEP INFORMED
 
 | Stakeholder | Information Needed | Format | Frequency | Delivery Method |
 |-------------|-------------------|--------|-----------|----------------|
-| Project Lead | Technical progress, challenges | Personal notes, Git commits | Daily | Local documentation |
+| Sumit Das | Technical progress, challenges | Personal notes, Git commits | Daily | Local documentation |
 | Sanskrit Scholars | Classification accuracy, cultural sensitivity | Email, forums | Quarterly | Direct contact |
 | Programming Community | Technical architecture, contribution guidelines | Documentation | As needed | GitHub README, Wiki |
 | End Users | Feature availability, usage guides | User documentation | Major releases | GitHub releases |
@@ -131,7 +131,7 @@ Low Interest  |  MONITOR                   |  KEEP INFORMED
 
 | Date | Stakeholder | Issue | Impact | Resolution | Status |
 |------|-------------|-------|--------|------------|--------|
-| 2025-04-18 | Project Lead | Multiple AI sources consulted | Medium | Synthesized responses into project plan | Closed |
+| 2025-04-18 | Sumit Das | Multiple AI sources consulted | Medium | Synthesized responses into project plan | Closed |
 | - | - | - | - | - | - |
 
 ## Stakeholder Feedback

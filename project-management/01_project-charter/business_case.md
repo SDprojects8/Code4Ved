@@ -4,7 +4,7 @@
 **Project**: Code4Ved - Vedic Texts Analysis Platform
 **Business Case Version**: 1.0
 **Date**: 2025-04-18
-**Prepared By**: Project Lead
+**Prepared By**: Sumit Das
 **Approved By**: Self-Directed Learning Initiative
 
 ## Business Problem/Opportunity

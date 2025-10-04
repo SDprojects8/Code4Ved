@@ -4,7 +4,7 @@
 **Document Title**: Code4Ved Functional Specification
 **Version**: 1.0
 **Date**: 2025-10-04
-**Author**: Project Lead
+**Author**: Sumit Das
 **Reviewers**: Self-Review
 **Status**: Draft
 

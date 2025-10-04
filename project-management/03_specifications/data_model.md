@@ -4,7 +4,7 @@
 **Project**: Code4Ved - Vedic Texts Analysis Platform
 **Version**: 1.0
 **Date**: 2025-10-04
-**Author**: Project Lead
+**Author**: Sumit Das
 
 ## Conceptual Data Model
 

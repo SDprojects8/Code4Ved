@@ -128,4 +128,4 @@ To create a comprehensive digital infrastructure that:
 ## Charter Change Control
 | Version | Date | Changed By | Description of Changes |
 |---------|------|------------|----------------------|
-| 1.0 | 2025-04-18 | Project Lead | Initial charter based on Obsidian research notes |
+| 1.0 | 2025-04-18 | Sumit Das | Initial charter based on Obsidian research notes |
