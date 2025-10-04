@@ -224,9 +224,9 @@ Accidental deletion or hardware failure could result in data/code loss.
 ## Risk Action Plan
 
 ### Immediate Actions
-- [ ] Set up Git repository with GitHub remote (R9)
+- [X] Set up Git repository with GitHub remote (R9)
 - [ ] Document copyright verification process (R1)
-- [ ] Create list of verified public domain sources (R1)
+- [X] Create list of verified public domain sources (R1)
 
 ### Short-term Actions
 - [ ] Implement database backup automation (R9)

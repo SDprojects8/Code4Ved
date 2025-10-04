@@ -36,10 +36,11 @@ Identify and document all project stakeholders, their interests, influence, and 
 ## Influence/Interest Grid
 
 ```
-High Interest  |  MANAGE CLOSELY           |  KEEP SATISFIED
-              |   - Sumit Das           |  - Website Admins
+High Interest |  MANAGE CLOSELY            |  KEEP SATISFIED
+              |   - Sumit Das              |  - Website Admins
               |   - Sanskrit Students      |
               |                            |
+-------------------------------------------------------------------------             
 Low Interest  |  MONITOR                   |  KEEP INFORMED
               |   - General Public         |  - Programming Community
               |                            |  - Open Source Contributors
