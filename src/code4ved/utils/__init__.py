@@ -1,4 +1,4 @@
-"""Utility modules for LCM Automation."""
+"""Utility modules for Code4Ved Automation."""
 
 from .logging import setup_logging
 from .helpers import generate_id, format_datetime

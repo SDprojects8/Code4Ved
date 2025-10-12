@@ -20,115 +20,102 @@ This project would be built on Windows 11 system and codex needs to perform the 
 
  # Create releavant files in each subfloder.
 
- ./10_documentation:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 user_guide.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 admin_guide.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 api_docs.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 faq.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 training.md
+  ./10_documentation:
+    user_guide.md
+    admin_guide.md
+    api_docs.md
+    faq.md
+    training.md
 
 ./11_retrospective:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 retro.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 postmortem.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 lessons_learned.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 metrics.md
+    retro.md
+    postmortem.md
+    lessons_learned.md
+    metrics.md
 
 ./03_specifications:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 FSD.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 TSD.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 NFR.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 data_model.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 acceptance_criteria.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 API_contracts.md
+    FSD.md
+    TSD.md
+    NFR.md
+    data_model.md
+    acceptance_criteria.md
+    API_contracts.md
 
 ./09_operations:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 sla_slo_sli.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 runbook.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 monitoring.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 incident_response.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 alerts.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 oncall_guide.md
+    sla_slo_sli.md
+    runbook.md
+    monitoring.md
+    incident_response.md
+    alerts.md
+    oncall_guide.md
 
 ./00_inbox:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 triage.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 meeting_notes.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 inbox.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 ideas.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 backlog.md
+    triage.md
+    meeting_notes.md
+    inbox.md
+    ideas.md
+    backlog.md
 
 ./01_project-charter:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 stakeholders.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 scope.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 constraints_assumptions.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 charter.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 business_case.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 README.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 communication_plan.md
+    stakeholders.md
+    scope.md
+    constraints_assumptions.md
+    charter.md
+    business_case.md
+    README.md
+    communication_plan.md
 
 ./02_research:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 research_notes.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 literature_review.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 feasibility_spike.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 references.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 competitive_analysis.md
+    research_notes.md
+    literature_review.md
+    feasibility_spike.md
+    references.md
+    competitive_analysis.md
 
 ./07_testing:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 test_strategy.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 test_plan.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 test_cases.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 test_results.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 test_data.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 qa_report.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 bug_log.md
+    test_strategy.md
+    test_plan.md
+    test_cases.md
+    test_results.md
+    test_data.md
+    qa_report.md
+    bug_log.md
 
 ./06_implementation:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 development_plan.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 tasks_breakdown.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 coding_standards.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 dev_environment.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 branching_strategy.md
+    development_plan.md
+    tasks_breakdown.md
+    coding_standards.md
+    dev_environment.md
+    branching_strategy.md
 
 ./04_planning:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 roadmap.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 milestones.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 WBS.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 estimates.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 schedule.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 risk_register.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 RAID_log.md
+    roadmap.md
+    milestones.md
+    WBS.md
+    estimates.md
+    schedule.md
+    risk_register.md
+    RAID_log.md
 
 ./08_release:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 rollback_plan.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 release_plan.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 release_notes.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 deployment_checklist.md
+    rollback_plan.md
+    release_plan.md
+    release_notes.md
+    deployment_checklist.md
 
 ./12_risks:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 risk_register.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 assumptions.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 dependencies.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 decisions_log.md
+    risk_register.md
+    assumptions.md
+    dependencies.md
+    decisions_log.md
 
 ./05_design:
-total 0
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 solution_design.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 sequence_diagrams.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 component_design.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 architecture.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 ui_wireframes.md
--rwxrwxrwx 1 h9ns28 adminsap 7 Sep 12 10:00 data_flow_diagrams.md
+    solution_design.md
+    sequence_diagrams.md
+    component_design.md
+    architecture.md
+    ui_wireframes.md
+    data_flow_diagrams.md
 
 
 # Create a template for each file in each subfolder, based on folder name and file name.

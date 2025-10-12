@@ -1,4 +1,4 @@
-"""Main CLI interface for LCM Automation."""
+"""Main CLI interface for Code4Ved Automation."""
 
 import logging
 from typing import Optional
@@ -8,37 +8,37 @@ from rich.console import Console
 from rich.table import Table
 
 from .. import __version__
-from ..core import LCMManager
+from ..core import Code4VedManager
 from ..core.models import Resource, LifecycleStage, ResourceStatus
 
-app = typer.Typer(help="LCM Automation CLI")
+app = typer.Typer(help="Code4Ved Automation CLI")
 console = Console()
 
 # Global manager instance
-manager: Optional[LCMManager] = None
+manager: Optional[Code4VedManager] = None
 
 
-def get_manager() -> LCMManager:
-    """Get or create LCM manager instance."""
+def get_manager() -> Code4VedManager:
+    """Get or create Code4Ved manager instance."""
     global manager
     if manager is None:
-        manager = LCMManager()
+        manager = Code4VedManager()
     return manager
 
 
 @app.command()
 def version():
     """Show version information."""
-    console.print(f"LCM Automation version: {__version__}")
+    console.print(f"Code4Ved Automation version: {__version__}")
 
 
 @app.command()
 def status():
-    """Show current LCM status."""
+    """Show current Code4Ved status."""
     mgr = get_manager()
     status_info = mgr.get_status()
 
-    table = Table(title="LCM Status")
+    table = Table(title="Code4Ved Status")
     table.add_column("Property", style="cyan")
     table.add_column("Value", style="green")
 

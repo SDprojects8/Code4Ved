@@ -1,0 +1,2889 @@
+
+╭─── Claude Code v2.0.5 ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                 │ Tips for getting started                                          │
+│               Welcome back Sumit!               │ Run /init to create a CLAUDE.md file with instructions for Claude │
+│                                                 │ ───────────────────────────────────────────────────────────────── │
+│                     ▐▛███▜▌                     │ Recent activity                                                   │
+│                    ▝▜█████▛▘                    │ No recent activity                                                │
+│                      ▘▘ ▝▝                      │                                                                   │
+│                                                 │                                                                   │
+│             Sonnet 4.5 · Claude Pro             │                                                                   │
+│   C:\Users\f5br38\github\RustyNails8\Code4Ved   │                                                                   │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+> /init is analyzing your codebase…
+
+● I'll analyze the codebase to create a CLAUDE.md file with relevant information about commands, architecture, and structure.
+
+● Search(pattern: "**/*.md")
+  ⎿  Found 100 files (ctrl+o to expand)
+
+● Search(pattern: "**/*.json")
+  ⎿  Found 6 files (ctrl+o to expand)
+
+● Search(pattern: "**/*.{yml,yaml}")
+  ⎿  Found 0 files
+
+● Search(pattern: "**/*.{js,ts,py,ps1,sh}")
+  ⎿  Found 19 files (ctrl+o to expand)
+
+● Bash(find . -maxdepth 3 -type d | head -20)
+  ⎿  .
+     ./.git
+     ./.git/hooks
+     … +17 lines (ctrl+o to expand)
+
+● Read(README.md)
+  ⎿  Read 1 line (ctrl+o to expand)
+
+● Read(project-management\01_project-charter\charter.md)
+  ⎿  Read 81 lines (ctrl+o to expand)
+
+● Read(project-management\05_design\architecture.md)
+  ⎿  Read 227 lines (ctrl+o to expand)
+
+● Read(docs\agents\README.md)
+  ⎿  Read 34 lines (ctrl+o to expand)
+
+● Read(docs\agents\Introduction.md)
+  ⎿  Read 101 lines (ctrl+o to expand)
+
+● Read(docs\agents\Workflow_Overview.md)
+  ⎿  Read 427 lines (ctrl+o to expand)
+
+● Read(src\code4ved\cli\main.py)
+  ⎿  Read 211 lines (ctrl+o to expand)
+
+● Search(pattern: "pyproject.toml")
+  ⎿  Found 1 file (ctrl+o to expand)
+
+● Search(pattern: "setup.py")
+  ⎿  Found 0 files
+
+● Search(pattern: "requirements.txt")
+  ⎿  Found 1 file (ctrl+o to expand)
+
+● Read(pyproject.toml)
+  ⎿  Read 170 lines (ctrl+o to expand)
+
+● Read(requirements.txt)
+  ⎿  Read 25 lines (ctrl+o to expand)
+
+● Read(src\code4ved\core\manager.py)
+  ⎿  Read 165 lines (ctrl+o to expand)
+
+● Read(src\code4ved\core\models.py)
+  ⎿  Read 201 lines (ctrl+o to expand)
+
+╭─── Claude Code v2.0.5 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                 │ Tips for getting started                                                                                                                                                               │
+│               Welcome back Sumit!               │ Run /init to create a CLAUDE.md file with instructions for Claude                                                                                                                      │
+│                                                 │ ─────────────────────────────────────────────────────────────────                                                                                                                      │
+│                     ▐▛███▜▌                     │ Recent activity                                                                                                                                                                        │
+│                    ▝▜█████▛▘                    │ No recent activity                                                                                                                                                                     │
+│                      ▘▘ ▝▝                      │                                                                                                                                                                                        │
+│                                                 │                                                                                                                                                                                        │
+│             Sonnet 4.5 · Claude Pro             │                                                                                                                                                                                        │
+│   C:\Users\f5br38\github\RustyNails8\Code4Ved   │                                                                                                                                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────── Ctrl+E to show 37 previous messages ───────────────────────────────────────────────────────────────────────────────────────────────────
+
+● Read(file_path: "C:\Users\f5br38\github\RustyNails8\Code4Ved\pyproject.toml")
+  ⎿  Read 170 lines (ctrl+o to expand)
+
+● Read(file_path: "C:\Users\f5br38\github\RustyNails8\Code4Ved\requirements.txt")
+  ⎿  Read 25 lines (ctrl+o to expand)
+
+● Read(file_path: "C:\Users\f5br38\github\RustyNails8\Code4Ved\src\code4ved\core\manager.py")
+  ⎿  Read 165 lines (ctrl+o to expand)
+
+● Read(file_path: "C:\Users\f5br38\github\RustyNails8\Code4Ved\src\code4ved\core\models.py")
+  ⎿  Read 201 lines (ctrl+o to expand)
+
+╭─── Claude Code v2.0.5 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                 │ Tips for getting started                                                                                                                                                               │
+│               Welcome back Sumit!               │ Run /init to create a CLAUDE.md file with instructions for Claude                                                                                                                      │
+│                                                 │ ─────────────────────────────────────────────────────────────────                                                                                                                      │
+│                     ▐▛███▜▌                     │ Recent activity                                                                                                                                                                        │
+│                    ▝▜█████▛▘                    │ No recent activity                                                                                                                                                                     │
+│                      ▘▘ ▝▝                      │                                                                                                                                                                                        │
+│                                                 │                                                                                                                                                                                        │
+│             Sonnet 4.5 · Claude Pro             │                                                                                                                                                                                        │
+│   C:\Users\f5br38\github\RustyNails8\Code4Ved   │                                                                                                                                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+> /init is analyzing your codebase…
+
+● I'll analyze the codebase to create a CLAUDE.md file with relevant information about commands, architecture, and structure.
+
+● Search(pattern: "**/*.md")
+  ⎿  Found 100 files (ctrl+o to expand)
+
+● Search(pattern: "**/*.json")
+  ⎿  Found 6 files (ctrl+o to expand)
+
+● Search(pattern: "**/*.{yml,yaml}")
+  ⎿  Found 0 files
+
+● Search(pattern: "**/*.{js,ts,py,ps1,sh}")
+  ⎿  Found 19 files (ctrl+o to expand)
+
+● Bash(find . -maxdepth 3 -type d | head -20)
+  ⎿  .
+     ./.git
+     ./.git/hooks
+     … +17 lines (ctrl+o to expand)
+
+● Read(README.md)
+  ⎿  Read 1 line (ctrl+o to expand)
+
+● Read(project-management\01_project-charter\charter.md)
+  ⎿  Read 81 lines (ctrl+o to expand)
+
+● Read(project-management\05_design\architecture.md)
+  ⎿  Read 227 lines (ctrl+o to expand)
+
+● Read(docs\agents\README.md)
+  ⎿  Read 34 lines (ctrl+o to expand)
+
+● Read(docs\agents\Introduction.md)
+  ⎿  Read 101 lines (ctrl+o to expand)
+
+● Read(docs\agents\Workflow_Overview.md)
+  ⎿  Read 427 lines (ctrl+o to expand)
+
+● Read(src\code4ved\cli\main.py)
+  ⎿  Read 211 lines (ctrl+o to expand)
+
+● Search(pattern: "pyproject.toml")
+  ⎿  Found 1 file (ctrl+o to expand)
+
+● Search(pattern: "setup.py")
+  ⎿  Found 0 files
+
+● Search(pattern: "requirements.txt")
+  ⎿  Found 1 file (ctrl+o to expand)
+
+● Read(pyproject.toml)
+  ⎿  Read 170 lines (ctrl+o to expand)
+
+● Read(requirements.txt)
+  ⎿  Read 25 lines (ctrl+o to expand)
+
+● Read(src\code4ved\core\manager.py)
+  ⎿  Read 165 lines (ctrl+o to expand)
+
+● Read(src\code4ved\core\models.py)
+  ⎿  Read 201 lines (ctrl+o to expand)
+
+● Search(pattern: ".cursorrules")
+  ⎿  Found 0 files
+
+● Search(pattern: ".cursor/rules/*")
+  ⎿  Found 0 files
+
+● Search(pattern: ".github/copilot-instructions.md")
+  ⎿  Found 0 files
+
+● Read(examples\basic_usage.py)
+  ⎿  Read 117 lines (ctrl+o to expand)
+
+● Write(CLAUDE.md)
+  ⎿  Wrote 1 lines to CLAUDE.md
+     # CLAUDE.md
+     This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+     ## Project Overview
+     Code4Ved is an LCM (Life Cycle Management) Automation project with an integrated Agentic Project Management (APM) framework. The project combines lifecycle automation capabilities with a sophisticated multi-agent workflow
+     system designed for managing complex projects with AI assistants.
+     ### Dual Purpose Architecture
+
+● CLAUDE.md created with essential information about commands, architecture, and codebase structure.
+
+> Read the files in @data\  folder and suggest how the files in sub-folders of @project-management\  can be udpated.
+
+● I'll analyze the data folder contents and suggest how to update the project-management files.
+
+● Bash(find data/external -type f -name "*.md" | head -20)
+  ⎿  data/external/2025-04-18-Friday.md
+     data/external/2025-04-19-Saturday.md
+     data/external/2025-04-26-Saturday.md
+     … +3 lines (ctrl+o to expand)
+
+● Read(data\external\Vedas.md)
+  ⎿  Read 13 lines (ctrl+o to expand)
+
+● Read(data\external\2025-04-18-Friday.md)
+  ⎿  Read 846 lines (ctrl+o to expand)
+
+● Read(data\external\2025-04-19-Saturday.md)
+  ⎿  Read 72 lines (ctrl+o to expand)
+
+● Read(data\external\2025-04-26-Saturday.md)
+  ⎿  Error: File content (27642 tokens) exceeds maximum allowed tokens (25000). Please use offset and limit parameters to read specific portions of the file, or use the GrepTool to search for specific content.
+
+● Read(data\external\2025-04-26-Saturday.md)
+  ⎿  Read 200 lines (ctrl+o to expand)
+
+● Read(data\external\2025-04-27-Sunday.md)
+  ⎿  Read 123 lines (ctrl+o to expand)
+
+● Read(data\external\2025-05-19-Monday.md)
+  ⎿  Read 37 lines (ctrl+o to expand)
+
+● Based on my analysis of the data files in the data/external/ folder, here's a comprehensive suggestion for updating the project-management/ subfolders:
+
+  Analysis Summary
+
+  The Obsidian notes reveal a project called "Code4Ved" (Code for Vedas) focused on combining programming skills with the study of ancient Indian texts (Vedas, Puranas, Upanishads). The project involves:
+
+  1. Text extraction and classification
+  2. Database design for storing scriptural content
+  3. NLP/text analysis applications
+  4. Knowledge graph creation
+  5. Learning path development
+  6. Connections between ancient concepts and modern science
+
+  ---
+  Suggested Updates to Project-Management Folders
+
+  01_project-charter/
+
+  charter.md:
+  - Project Name: Code4Ved - Vedic Texts Analysis Platform
+  - Project Purpose: Combine programming expertise with study of Vedas, Puranas, and Upanishads through digital text analysis, classification, and knowledge graph creation
+  - Primary Objectives:
+    - Create comprehensive database of Vedic literature
+    - Build NLP tools for Sanskrit text analysis
+    - Develop learning roadmap visualization
+    - Establish philosophical concept graph database
+    - Connect ancient wisdom with modern science
+
+  business_case.md:
+  - Educational value of making ancient texts accessible
+  - Preservation of cultural heritage through digitization
+  - Innovation in combining traditional knowledge with modern technology
+  - Skill development in Python, SQL, web scraping, NLP, graph databases
+
+  stakeholders.md:
+  - Sanskrit scholars
+  - Programmers interested in cultural projects
+  - Students of philosophy and ancient texts
+  - Digital humanities researchers
+
+  ---
+  02_research/
+
+  research_notes.md:
+  - AI responses from Gemini, Copilot, Meta, Claude, Perplexity, DeepSeek, Grok, Khoj
+  - Project ideas and approaches from multiple AI assistants
+  - Links to Sanskrit text repositories and resources
+
+  references.md:
+  Key websites identified:
+  - https://vedicheritage.gov.in/
+  - https://gretil.sub.uni-goettingen.de/
+  - https://github.com/ambuda-org
+  - https://sanskritdocuments.org/
+  - https://www.sacred-texts.com/
+  - https://adhyeta.org.in/
+
+  competitive_analysis.md:
+  - Existing tools: Veducation App, Sanskrit Library
+  - Open-source projects: GRETIL, Ambuda.org
+  - Indian Army's Project Udbhav (analyzing Vedas for war tactics)
+
+  ---
+  03_specifications/
+
+  FSD.md (Functional Specification):
+
+  Core Features:
+  1. Web Scraping Module
+    - Extract text/PDFs from Sanskrit websites
+    - Tools: Python (BeautifulSoup, Scrapy), wget/curl
+  2. Text Classification System
+    - Classify by: language (English/Hindi/Sanskrit), format (PDF/text/HTML), category (Vedas/Puranas/Upanishads), philosophical concepts, themes
+  3. Database Layer
+    - SQLite3 for initial development
+    - PostgreSQL for production
+    - MongoDB for unstructured commentary data
+    - Neo4j for knowledge graph
+  4. NLP Analysis Engine
+    - Keyword extraction
+    - Topic modeling
+    - Sentiment analysis
+    - Named entity recognition
+    - Sanskrit text processing
+  5. Visualization Tools
+    - Learning path flowcharts (following GitHub roadmap patterns)
+    - Mermaid chart generation (already implemented)
+    - Concept relationship graphs
+
+  data_model.md:
+  -- Core tables
+  CREATE TABLE texts (
+      id SERIAL PRIMARY KEY,
+      title VARCHAR(500),
+      language VARCHAR(50),
+      format VARCHAR(50),
+      category VARCHAR(100),
+      url TEXT,
+      created_at TIMESTAMP
+  );
+
+  CREATE TABLE philosophical_concepts (
+      id SERIAL PRIMARY KEY,
+      concept_name VARCHAR(200),
+      description TEXT
+  );
+
+  CREATE TABLE themes (
+      id SERIAL PRIMARY KEY,
+      theme_name VARCHAR(200)
+  );
+
+  CREATE TABLE text_concepts (
+      text_id INT REFERENCES texts(id),
+      concept_id INT REFERENCES philosophical_concepts(id)
+  );
+
+  CREATE TABLE text_themes (
+      text_id INT REFERENCES texts(id),
+      theme_id INT REFERENCES themes(id)
+  );
+
+  ---
+  04_planning/
+
+  WBS.md (Work Breakdown Structure):
+
+  Phase 1: Data Collection
+  - 1.1 Identify source websites
+  - 1.2 Develop web scrapers (Python/GoLang/Rust)
+  - 1.3 Extract PDFs and text content
+  - 1.4 Create comprehensive text inventory
+
+  Phase 2: Database Design
+  - 2.1 Design relational schema (PostgreSQL)
+  - 2.2 Design NoSQL schema (MongoDB)
+  - 2.3 Implement data ingestion pipeline
+  - 2.4 Classify texts by metadata
+
+  Phase 3: NLP Analysis
+  - 3.1 Implement text preprocessing
+  - 3.2 Build keyword extraction tools
+  - 3.3 Develop topic modeling
+  - 3.4 Create Sanskrit processing pipeline
+
+  Phase 4: Knowledge Graph
+  - 4.1 Extract philosophical concepts
+  - 4.2 Identify relationships
+  - 4.3 Build Neo4j graph database
+  - 4.4 Connect ancient concepts to modern science
+
+  Phase 5: Visualization
+  - 5.1 Create learning roadmap flowchart
+  - 5.2 Generate Mermaid diagrams (already done)
+  - 5.3 Build interactive concept explorer
+
+  roadmap.md:
+  - Q1: Data collection and database setup
+  - Q2: NLP pipeline development
+  - Q3: Knowledge graph implementation
+  - Q4: Visualization and user interface
+
+  ---
+  05_design/
+
+  architecture.md:
+
+  System Architecture:
+  - Data Layer: PostgreSQL + MongoDB + Neo4j
+  - Processing Layer: Python NLP pipeline (NLTK, spaCy)
+  - Extraction Layer: Web scrapers (Python/GoLang/Rust)
+  - API Layer: FastAPI/Flask REST endpoints
+  - Presentation Layer: Web interface for search/visualization
+
+  Technology Stack:
+  - Languages: Python, Bash, SQL, (learning: C++, GoLang, Rust)
+  - Databases: SQLite3, PostgreSQL, MongoDB, Neo4j
+  - NLP: NLTK, spaCy, Sanskrit NLP libraries
+  - Web: BeautifulSoup, Scrapy, requests
+  - Visualization: Mermaid, D3.js, NetworkX
+
+  ---
+  06_implementation/
+
+  development_plan.md:
+
+  Sprint 1: Web Scraping
+  - Implement Python scrapers for key websites
+  - PDF download and text extraction (PyPDF2, pdfminer.six)
+  - Store raw data
+
+  Sprint 2: Classification
+  - Build classification pipeline
+  - Populate PostgreSQL database
+  - Implement tagging system
+
+  Sprint 3: NLP Foundation
+  - Text preprocessing
+  - Keyword extraction
+  - Basic Sanskrit processing
+
+  Sprint 4: Graph Database
+  - Neo4j setup
+  - Concept extraction
+  - Relationship mapping
+
+  tasks_breakdown.md:
+  - Use existing Python script: extract_mermaid_charts_final.py as starting point
+  - Expand to full text processing pipeline
+  - Integrate multiple data sources
+
+  ---
+  07_testing/
+
+  test_plan.md:
+  - Unit tests for scraping functions
+  - Data validation for database entries
+  - NLP accuracy testing (concept extraction)
+  - Graph query performance testing
+  - Integration tests for end-to-end pipeline
+
+  ---
+  10_documentation/
+
+  user_guide.md:
+  - How to search Vedic texts
+  - Using classification filters
+  - Exploring knowledge graph
+  - Understanding philosophical concept relationships
+
+  api_docs.md:
+  - REST endpoints for text retrieval
+  - Query API for filtered searches
+  - Graph traversal endpoints
+
+  ---
+  12_risks/
+
+  risk_register.md:
+
+  | Risk                               | Probability | Impact | Mitigation                                      |
+  |------------------------------------|-------------|--------|-------------------------------------------------|
+  | Copyright issues with text sources | Medium      | High   | Use only open-source/public domain texts        |
+  | Sanskrit NLP accuracy              | High        | Medium | Manual validation, multiple translation sources |
+  | Data quality/consistency           | Medium      | Medium | Implement validation rules, data cleaning       |
+  | Scope creep                        | High        | Medium | Prioritize core features, iterative approach    |
+  | Learning curve (new languages)     | Medium      | Low    | Start with Python, gradually introduce Go/Rust  |
+
+  dependencies.md:
+  - Access to Sanskrit text repositories
+  - NLP libraries for Sanskrit
+  - Neo4j installation
+  - External APIs (if used for translation/analysis)
+
+  ---
+  Immediate Next Steps
+
+  1. Populate 01_project-charter/ with project vision from Obsidian notes
+  2. Update 02_research/ with all AI responses and resource links
+  3. Create detailed specifications in 03_specifications/ based on the 5 project ideas
+  4. Build out 04_planning/ with phased approach to implementation
+  5. Document architecture decisions in 05_design/
+  6. Track development tasks in 06_implementation/
+  7. Leverage existing Mermaid chart code from 2025-05-19 note
+
+  This transformation converts your research and ideation from Obsidian into a structured project management framework ready for APM workflow execution.
+
+> Please edit these suggestions to the respective files.
+
+● Read(project-management\01_project-charter\charter.md)
+  ⎿  Read 81 lines (ctrl+o to expand)
+
+● Read(project-management\01_project-charter\business_case.md)
+  ⎿  Read 100 lines (ctrl+o to expand)
+
+● Read(project-management\01_project-charter\stakeholders.md)
+  ⎿  Read 113 lines (ctrl+o to expand)
+
+● Update(project-management\01_project-charter\charter.md)
+  ⎿  Updated project-management\01_project-charter\charter.md with 88 additions and 37 removals
+         1    # Project Charter
+         2
+         3    ## Project Information
+         4 -  **Project Name**: [Project Name]
+         5 -  **Project Code**: [Project Code/ID]
+         6 -  **Charter Date**: [Date]
+         7 -  **Charter Version**: [Version]
+         8 -  **Project Manager**: [Name]
+         9 -  **Project Sponsor**: [Name]
+         4 +  **Project Name**: Code4Ved - Vedic Texts Analysis Platform
+         5 +  **Project Code**: C4V-001
+         6 +  **Charter Date**: 2025-04-18
+         7 +  **Charter Version**: 1.0
+         8 +  **Project Manager**: Self-Directed Learning Project
+         9 +  **Project Sponsor**: Personal Development Initiative
+        10
+        11    ## Executive Summary
+        12 -  [Provide a brief overview of the project, its purpose, and expected outcomes]
+        12 +  Code4Ved is a comprehensive digital platform that combines programming expertise with the study of ancient Indian texts (Vedas, Puranas, Upanishads). The project aims to create a modern, accessible, and analytically
+           +  rich environment for exploring Vedic literature through web scraping, database design, natural language processing, and knowledge graph visualization. This initiative bridges ancient wisdom with modern technology,
+           + creating tools for text analysis, classification, and conceptual exploration.
+        13
+        14    ## Project Purpose and Justification
+        15    ### Business Need
+        16 -  [Describe the business problem or opportunity that this project addresses]
+        16 +  Ancient Sanskrit texts are scattered across multiple websites, in various formats, and lack unified classification systems. Students, researchers, and enthusiasts face challenges in accessing, organizing, and
+           + analyzing these texts systematically. There is a gap between traditional study methods and modern computational tools that could enhance understanding and accessibility.
+        17
+        18    ### Project Purpose
+        19 -  [Explain why this project is being undertaken]
+        19 +  To create a comprehensive digital infrastructure that:
+        20 +  - Centralizes access to Vedic literature from multiple sources
+        21 +  - Provides structured classification and searchable databases
+        22 +  - Enables NLP-based analysis of philosophical concepts
+        23 +  - Visualizes relationships between ancient wisdom and modern science
+        24 +  - Develops programming skills in Python, SQL, web scraping, NLP, and graph databases
+        25
+        26    ### Project Justification
+        27 -  [Provide the business rationale for the project]
+        27 +  - **Educational Value**: Makes ancient texts more accessible to modern learners
+        28 +  - **Cultural Preservation**: Digitizes and preserves cultural heritage
+        29 +  - **Technical Innovation**: Applies cutting-edge NLP and database technologies to traditional texts
+        30 +  - **Skill Development**: Provides practical experience in Python, GoLang, Rust, PostgreSQL, MongoDB, Neo4j
+        31 +  - **Knowledge Integration**: Creates bridges between philosophy, spirituality, and modern science
+        32
+        33    ## Project Objectives
+        34    ### Primary Objectives
+        35 -  - [Objective 1]
+        36 -  - [Objective 2]
+        37 -  - [Objective 3]
+        35 +  - Create a comprehensive database of Vedas, Puranas, Upanishads, epic poems, and Samhitas
+        36 +  - Build automated web scraping tools to extract texts from major Sanskrit repositories
+        37 +  - Develop NLP pipeline for Sanskrit text analysis and concept extraction
+        38 +  - Implement knowledge graph database connecting philosophical concepts with modern science
+        39 +  - Design learning path visualization following GitHub roadmap patterns
+        40
+        41    ### Success Criteria
+        42 -  - [Measurable success criterion 1]
+        43 -  - [Measurable success criterion 2]
+        44 -  - [Measurable success criterion 3]
+        42 +  - Successfully extract and classify 100+ texts from at least 10 major Sanskrit websites
+        43 +  - Database contains texts classified by language, format, category, concepts, and themes
+        44 +  - NLP tools achieve >80% accuracy in concept extraction and classification
+        45 +  - Knowledge graph contains >500 nodes and >1000 relationships
+        46 +  - Interactive learning roadmap flowchart created and accessible
+        47 +  - Project codebase well-documented and reusable for future enhancements
+        48
+        49    ## High-Level Project Description
+        50    ### Scope Overview
+        51 -  [High-level description of what the project will and will not include]
+        51 +  **In Scope:**
+        52 +  - Web scraping from identified Sanskrit text repositories
+        53 +  - Text extraction from PDFs and HTML sources
+        54 +  - Database design (PostgreSQL, MongoDB, SQLite3)
+        55 +  - Text classification by multiple dimensions
+        56 +  - NLP analysis (keyword extraction, topic modeling, concept identification)
+        57 +  - Knowledge graph implementation (Neo4j)
+        58 +  - Visualization tools (Mermaid charts, flowcharts, relationship graphs)
+        59 +  - Documentation and code repository
+        60
+        61 +  **Out of Scope:**
+        62 +  - Sanskrit-to-English translation engine (use existing translations)
+        63 +  - Mobile application development
+        64 +  - Real-time collaborative editing features
+        65 +  - Commercial distribution or monetization
+        66 +  - Audio/video content analysis
+        67 +
+        68    ### Key Deliverables
+        69 -  - [Deliverable 1]
+        70 -  - [Deliverable 2]
+        71 -  - [Deliverable 3]
+        69 +  - **Web Scraping Module**: Python/GoLang/Rust scripts for automated text extraction
+        70 +  - **Relational Database**: PostgreSQL schema with classified text metadata
+        71 +  - **NoSQL Database**: MongoDB for unstructured commentary and annotations
+        72 +  - **Graph Database**: Neo4j knowledge graph linking concepts
+        73 +  - **NLP Pipeline**: Python-based text analysis tools using NLTK, spaCy
+        74 +  - **Visualization Suite**: Mermaid charts, learning roadmaps, concept graphs
+        75 +  - **Documentation**: Technical documentation, user guides, API references
+        76 +  - **Code Repository**: Well-organized GitHub repository with version control
+        77
+        78    ### Major Milestones
+        79    | Milestone | Target Date | Description |
+        80    |-----------|-------------|-------------|
+        81 -  | [Milestone 1] | [Date] | [Description] |
+        82 -  | [Milestone 2] | [Date] | [Description] |
+        83 -  | [Milestone 3] | [Date] | [Description] |
+        81 +  | Data Collection Complete | Q1 2025 | All major websites scraped, texts downloaded |
+        82 +  | Database Schema Implemented | Q2 2025 | PostgreSQL, MongoDB, SQLite3 schemas created |
+        83 +  | Text Classification Done | Q2 2025 | All texts classified by language, format, category |
+        84 +  | NLP Pipeline Functional | Q3 2025 | Keyword extraction, topic modeling operational |
+        85 +  | Knowledge Graph Built | Q3 2025 | Neo4j graph with philosophical-scientific connections |
+        86 +  | Visualization Complete | Q4 2025 | Learning roadmap and concept visualizations ready |
+        87 +  | Documentation Published | Q4 2025 | All documentation complete and accessible |
+        88
+        89    ## Project Requirements
+        90    ### High-Level Requirements
+        91 -  - [Requirement 1]
+        92 -  - [Requirement 2]
+        93 -  - [Requirement 3]
+        91 +  - Extract text content from websites: vedicheritage.gov.in, gretil.sub.uni-goettingen.de, sanskritdocuments.org, sacred-texts.com, ambuda.org
+        92 +  - Support multiple input formats: PDF, HTML, plain text
+        93 +  - Classify texts by: language (English/Hindi/Sanskrit), format, category (Vedas/Puranas/Upanishads), philosophical concepts, themes
+        94 +  - Implement searchable database with query capabilities
+        95 +  - Extract and analyze philosophical concepts: Atman, Brahman, Karma, Dharma, Moksha
+        96 +  - Create visual learning path following established roadmap patterns
+        97 +  - Establish connections between ancient concepts and modern scientific topics
+        98
+        99    ### Compliance Requirements
+       100 -  - [Compliance requirement 1]
+       101 -  - [Compliance requirement 2]
+       100 +  - Respect copyright and use only public domain or openly licensed texts
+       101 +  - Implement ethical web scraping (respect robots.txt, rate limiting)
+       102 +  - Maintain data integrity and source attribution
+       103 +  - Follow open-source licensing best practices
+       104
+       105    ## Budget and Resource Summary
+       106 -  **Estimated Budget**: [Amount]
+       107 -  **Duration**: [Timeline]
+       108 -  **Key Resources Required**: [Resource types]
+       106 +  **Estimated Budget**: $0 (open-source tools and personal infrastructure)
+       107 +  **Duration**: 12 months (part-time development)
+       108 +  **Key Resources Required**:
+       109 +  - Development machine with Python, PostgreSQL, MongoDB, Neo4j
+       110 +  - Internet access for web scraping
+       111 +  - Personal time commitment: 10-15 hours/week
+       112 +  - GitHub repository for version control
+       113
+       114    ## High-Level Risks
+       115    | Risk | Probability | Impact | Mitigation Strategy |
+       116    |------|-------------|--------|-------------------|
+       117 -  | [Risk 1] | [H/M/L] | [H/M/L] | [Strategy] |
+       118 -  | [Risk 2] | [H/M/L] | [H/M/L] | [Strategy] |
+       117 +  | Copyright/licensing issues | Medium | High | Use only public domain/open-source texts |
+       118 +  | Sanskrit NLP accuracy challenges | High | Medium | Manual validation, multiple sources |
+       119 +  | Website structure changes breaking scrapers | Medium | Medium | Build flexible scrapers, regular maintenance |
+       120 +  | Scope creep and feature expansion | High | Medium | Strict prioritization, iterative releases |
+       121 +  | Learning curve for new technologies | Medium | Low | Start with Python, gradual adoption of Go/Rust |
+       122
+       123    ## Project Approval
+       124 -  **Approved By**: [Name] [Title]
+       125 -  **Date**: [Date]
+       126 -  **Signature**: ________________
+       124 +  **Approved By**: Personal Development Initiative
+       125 +  **Date**: 2025-04-18
+       126 +  **Signature**: Self-Approved Learning Project
+       127
+       128    ## Charter Change Control
+       129    | Version | Date | Changed By | Description of Changes |
+       130    |---------|------|------------|----------------------|
+       131 -  | 1.0 | [Date] | [Name] | Initial charter |
+       131 +  | 1.0 | 2025-04-18 | Project Lead | Initial charter based on Obsidian research notes |
+
+● Update(project-management\01_project-charter\business_case.md)
+  ⎿  Updated project-management\01_project-charter\business_case.md with 24 additions and 10 removals
+        1    # Business Case
+        2
+        3    ## Executive Summary
+        4 -  **Project**: [Project Name]
+        5 -  **Business Case Version**: [Version]
+        6 -  **Date**: [Date]
+        7 -  **Prepared By**: [Name]
+        8 -  **Approved By**: [Name]
+        4 +  **Project**: Code4Ved - Vedic Texts Analysis Platform
+        5 +  **Business Case Version**: 1.0
+        6 +  **Date**: 2025-04-18
+        7 +  **Prepared By**: Project Lead
+        8 +  **Approved By**: Self-Directed Learning Initiative
+        9
+       10    ## Business Problem/Opportunity
+       11    ### Current State
+       12 -  [Describe the current situation, problems, or missed opportunities]
+       12 +  Ancient Indian texts (Vedas, Puranas, Upanishads) are scattered across numerous websites in various formats (PDF, HTML, plain text) without a unified access point or classification system. Students, researchers, and
+          + programming enthusiasts interested in studying these texts face several challenges:
+       13 +  - Texts are distributed across 10+ different websites with varying quality and accessibility
+       14 +  - No standardized classification system exists for organizing texts by language, format, philosophical concepts, or themes
+       15 +  - Manual text analysis is time-consuming and lacks computational insights
+       16 +  - Difficult to identify relationships between philosophical concepts and modern scientific topics
+       17 +  - Limited tools for visualizing learning paths through complex Vedic literature
+       18
+       19    ### Pain Points
+       20 -  - [Pain point 1]
+       21 -  - [Pain point 2]
+       22 -  - [Pain point 3]
+       20 +  - **Fragmented Access**: Texts scattered across multiple repositories requiring individual navigation
+       21 +  - **Format Inconsistency**: Mix of PDFs, HTML pages, and plain text without unified parsing
+       22 +  - **Manual Classification**: Time-intensive manual categorization and note-taking
+       23 +  - **Limited Analysis Tools**: Absence of NLP-based tools for concept extraction and theme identification
+       24 +  - **No Learning Roadmap**: Lack of structured paths for systematic study progression
+       25 +  - **Missed Learning Opportunity**: Unable to apply programming skills to enhance spiritual/philosophical study
+       26
+       27    ### Business Impact of Not Acting
+       28 -  [Describe what happens if no action is taken]
+       28 +  Without this project:
+       29 +  - Continued inefficiency in accessing and organizing Vedic literature
+       30 +  - Missed opportunity to develop valuable programming skills (Python, GoLang, Rust, NLP, graph databases)
+       31 +  - Limited ability to extract insights from texts through computational analysis
+       32 +  - No systematic approach to understanding relationships between ancient wisdom and modern science
+       33 +  - Lack of contribution to digital preservation of cultural heritage
+       34 +  - Inability to create reusable tools for broader Sanskrit studies community
+       35
+       36    ## Proposed Solution
+       37    ### Solution Overview
+
+● Update(project-management\01_project-charter\business_case.md)
+  ⎿  Updated project-management\01_project-charter\business_case.md with 20 additions and 5 removals
+       35
+       36    ## Proposed Solution
+       37    ### Solution Overview
+       38 -  [High-level description of the proposed solution]
+       38 +  Code4Ved is a comprehensive digital platform that combines web scraping, database management, NLP, and knowledge graph technologies to create a unified environment for accessing, analyzing, and exploring Vedic
+          + literature. The solution includes:
+       39
+       40 +  1. **Automated Web Scraping**: Python/GoLang/Rust scripts to extract texts from major Sanskrit repositories
+       41 +  2. **Multi-Database Architecture**: PostgreSQL for structured metadata, MongoDB for unstructured annotations, Neo4j for concept relationships
+       42 +  3. **NLP Analysis Pipeline**: Keyword extraction, topic modeling, concept identification using NLTK and spaCy
+       43 +  4. **Knowledge Graph**: Visual representation of relationships between philosophical concepts and modern science
+       44 +  5. **Learning Roadmap**: Interactive flowchart following GitHub roadmap patterns for systematic study
+       45 +
+       46    ### Key Benefits
+       47 -  - [Benefit 1]
+       48 -  - [Benefit 2]
+       49 -  - [Benefit 3]
+       47 +  - **Educational Value**: Makes 1000+ years of ancient wisdom accessible through modern technology
+       48 +  - **Skill Development**: Hands-on experience with Python, SQL, web scraping, NLP, graph databases, and emerging languages (GoLang, Rust)
+       49 +  - **Cultural Preservation**: Contributes to digital preservation and dissemination of Sanskrit texts
+       50 +  - **Research Capability**: Enables computational analysis revealing patterns not visible through traditional reading
+       51 +  - **Open Source Contribution**: Creates reusable tools benefiting broader Sanskrit studies community
+       52 +  - **Interdisciplinary Bridge**: Connects ancient philosophy with modern science, physics, and quantum mechanics
+       53 +  - **Personal Growth**: Integrates technical skills with spiritual/philosophical learning
+       54
+       55    ### Alignment with Strategy
+       56 -  [How this project aligns with organizational goals and strategy]
+       56 +  This project aligns with personal development goals:
+       57 +  - **Technical Mastery**: Practical application of programming skills across multiple languages and technologies
+       58 +  - **Continuous Learning**: Exploration of new technologies (GoLang, Rust) and advanced concepts (NLP, graph databases)
+       59 +  - **Cultural Engagement**: Deep dive into Indian cultural heritage and philosophical traditions
+       60 +  - **Portfolio Development**: Creates demonstrable project for professional advancement
+       61 +  - **Community Contribution**: Open-source tools benefiting scholars and enthusiasts worldwide
+       62
+       63    ## Financial Analysis
+       64    ### Cost-Benefit Summary
+
+● Update(project-management\01_project-charter\business_case.md)
+  ⎿  Updated project-management\01_project-charter\business_case.md with 19 additions and 16 removals
+       62
+       63    ## Financial Analysis
+       64    ### Cost-Benefit Summary
+       65 -  | Category | Year 1 | Year 2 | Year 3 | Total |
+       66 -  |----------|--------|--------|--------|-------|
+       67 -  | **Costs** | | | | |
+       68 -  | Development | [Amount] | [Amount] | [Amount] | [Amount] |
+       69 -  | Operations | [Amount] | [Amount] | [Amount] | [Amount] |
+       70 -  | Training | [Amount] | [Amount] | [Amount] | [Amount] |
+       71 -  | **Total Costs** | [Amount] | [Amount] | [Amount] | [Amount] |
+       72 -  | **Benefits** | | | | |
+       73 -  | Cost Savings | [Amount] | [Amount] | [Amount] | [Amount] |
+       74 -  | Revenue Increase | [Amount] | [Amount] | [Amount] | [Amount] |
+       75 -  | Productivity Gains | [Amount] | [Amount] | [Amount] | [Amount] |
+       76 -  | **Total Benefits** | [Amount] | [Amount] | [Amount] | [Amount] |
+       77 -  | **Net Benefit** | [Amount] | [Amount] | [Amount] | [Amount] |
+       65 +  *This is a self-funded personal development project with non-monetary benefits.*
+       66
+       67 +  | Category | Year 1 | Notes |
+       68 +  |----------|--------|-------|
+       69 +  | **Costs** | | |
+       70 +  | Software/Tools | $0 | Open-source tools (Python, PostgreSQL, MongoDB, Neo4j) |
+       71 +  | Infrastructure | $0 | Personal development machine |
+       72 +  | Time Investment | 520 hours | 10 hours/week × 52 weeks |
+       73 +  | Learning Resources | $100 | Optional books/courses |
+       74 +  | **Total Costs** | $100 | Minimal financial outlay |
+       75 +  | **Benefits** | | |
+       76 +  | Skill Development | High | Python, SQL, NLP, web scraping, graph databases |
+       77 +  | Portfolio Value | Medium | Demonstrable project for career advancement |
+       78 +  | Knowledge Gained | High | Deep understanding of Vedic literature + technical skills |
+       79 +  | Community Impact | Medium | Open-source tools for Sanskrit studies community |
+       80 +  | Personal Fulfillment | High | Integration of technical and spiritual interests |
+       81 +
+       82    ### Return on Investment (ROI)
+       83 -  **ROI**: [Percentage]%
+       84 -  **Payback Period**: [Time period]
+       85 -  **Net Present Value (NPV)**: [Amount]
+       83 +  **ROI**: Non-monetary (personal development focus)
+       84 +  **Payback Period**: Immediate (learning begins from day 1)
+       85 +  **Value Proposition**: Skills gained applicable to data engineering, NLP, and digital humanities careers
+       86
+       87    ## Risk Analysis
+       88    ### High-Level Risks
+
+● Update(project-management\01_project-charter\business_case.md)
+  ⎿  Updated project-management\01_project-charter\business_case.md with 10 additions and 4 removals
+        88    ### High-Level Risks
+        89    | Risk | Probability | Impact | Mitigation |
+        90    |------|-------------|--------|------------|
+        91 -  | [Risk 1] | [H/M/L] | [H/M/L] | [Mitigation strategy] |
+        92 -  | [Risk 2] | [H/M/L] | [H/M/L] | [Mitigation strategy] |
+        93 -  | [Risk 3] | [H/M/L] | [H/M/L] | [Mitigation strategy] |
+        91 +  | Copyright/licensing violations | Medium | High | Use only public domain/openly licensed texts, verify sources |
+        92 +  | Sanskrit NLP accuracy limitations | High | Medium | Manual validation, use multiple translation sources |
+        93 +  | Website structure changes | Medium | Medium | Build flexible scrapers, regular maintenance schedule |
+        94 +  | Scope creep | High | Medium | Strict feature prioritization, iterative releases |
+        95 +  | Time commitment conflicts | Medium | Medium | Realistic scheduling, modular development approach |
+        96 +  | Technical complexity exceeds skill level | Low | Medium | Start with Python, gradual learning curve |
+        97
+        98    ### Risk Impact on Business Case
+        99 -  [How identified risks could affect the financial projections]
+        99 +  - **Copyright risks** could limit available texts, requiring focus on fewer high-quality sources
+       100 +  - **NLP accuracy** may require more manual curation, increasing time investment
+       101 +  - **Scope creep** could extend timeline beyond 12 months but won't affect core learning objectives
+       102 +  - Overall risk profile is low-to-medium for a self-directed learning project
+       103
+       104    ## Options Analysis
+       105    ### Option 1: Do Nothing
+
+● Update(project-management\01_project-charter\business_case.md)
+  ⎿  Updated project-management\01_project-charter\business_case.md with 44 additions and 21 removals
+       103
+       104    ## Options Analysis
+       105    ### Option 1: Do Nothing
+       106 -  **Cost**: [Amount]
+       107 -  **Benefits**: [Benefits]
+       108 -  **Risks**: [Risks]
+       106 +  **Cost**: $0
+       107 +  **Benefits**: No time investment required
+       108 +  **Risks**:
+       109 +  - Continued fragmented access to texts
+       110 +  - Missed skill development opportunity
+       111 +  - No contribution to digital preservation
+       112
+       113 -  ### Option 2: [Alternative Solution]
+       114 -  **Cost**: [Amount]
+       115 -  **Benefits**: [Benefits]
+       116 -  **Risks**: [Risks]
+       113 +  ### Option 2: Use Existing Tools Only
+       114 +  **Cost**: Low (subscription fees to existing platforms)
+       115 +  **Benefits**: Immediate access to some organized content
+       116 +  **Risks**:
+       117 +  - Limited to existing features
+       118 +  - No programming skill development
+       119 +  - Incomplete coverage of texts
+       120 +  - No customization for personal learning style
+       121
+       122 -  ### Option 3: [Recommended Solution]
+       123 -  **Cost**: [Amount]
+       124 -  **Benefits**: [Benefits]
+       125 -  **Risks**: [Risks]
+       122 +  ### Option 3: Build Code4Ved Platform (Recommended)
+       123 +  **Cost**: $100 + 520 hours personal time
+       124 +  **Benefits**:
+       125 +  - Complete control over features and data
+       126 +  - Significant skill development in multiple technologies
+       127 +  - Contribution to open-source community
+       128 +  - Customized learning path
+       129 +  - Portable skills for career advancement
+       130 +  **Risks**: Manageable through mitigation strategies
+       131
+       132    ## Recommendation
+       133    ### Preferred Option
+       134 -  [State the recommended option and why]
+       134 +  **Option 3: Build Code4Ved Platform** is recommended because it:
+       135 +  - Achieves dual objectives of studying Vedic texts AND developing programming skills
+       136 +  - Creates reusable, open-source tools
+       137 +  - Provides hands-on experience with modern technologies
+       138 +  - Offers flexibility to evolve as learning needs change
+       139 +  - Minimal financial investment with high educational return
+       140
+       141    ### Critical Success Factors
+       142 -  - [Factor 1]
+       143 -  - [Factor 2]
+       144 -  - [Factor 3]
+       142 +  - Consistent time commitment (10 hours/week minimum)
+       143 +  - Start with Python before expanding to GoLang/Rust
+       144 +  - Iterative development with working prototypes at each phase
+       145 +  - Active engagement with Sanskrit studies community for validation
+       146 +  - Maintaining focus on core features before expanding scope
+       147 +  - Regular documentation throughout development
+       148
+       149    ### Next Steps
+       150 -  - [ ] [Action 1]
+       151 -  - [ ] [Action 2]
+       152 -  - [ ] [Action 3]
+       150 +  - [x] Research AI responses collected (2025-04-18 to 2025-04-27)
+       151 +  - [ ] Set up development environment (Python, PostgreSQL, MongoDB)
+       152 +  - [ ] Identify and catalog 10 primary Sanskrit text sources
+       153 +  - [ ] Build proof-of-concept web scraper for one website
+       154 +  - [ ] Design initial database schema
+       155 +  - [ ] Create project roadmap and implementation plan
+       156
+       157    ## Approval
+       158 -  **Business Case Approved By**: [Name] [Title]
+       159 -  **Date**: [Date]
+       160 -  **Budget Approved**: [Amount]
+       158 +  **Business Case Approved By**: Self-Directed Learning Initiative
+       159 +  **Date**: 2025-04-18
+       160 +  **Budget Approved**: $100 (learning resources)
+
+● Update(project-management\01_project-charter\stakeholders.md)
+  ⎿  Updated project-management\01_project-charter\stakeholders.md with 15 additions and 8 removals
+        1    # Stakeholder Register
+        2
+        3    ## Purpose
+        4 -  Identify and document all project stakeholders, their interests, influence, and engagement strategies.
+        4 +  Identify and document all project stakeholders, their interests, influence, and engagement strategies for the Code4Ved platform.
+        5
+        6    ## Stakeholder Matrix
+        7
+        8    | Name | Role/Title | Organization | Influence | Interest | Impact | Engagement Strategy |
+        9    |------|------------|--------------|-----------|----------|--------|-------------------|
+       10 -  | [Name] | [Title] | [Org] | [H/M/L] | [H/M/L] | [Positive/Negative/Neutral] | [Strategy] |
+       10 +  | Project Lead | Developer/Learner | Self | High | High | Positive | Direct ownership and execution |
+       11 +  | Sanskrit Scholars | Subject Experts | Academic Community | Medium | High | Positive | Consultation for validation |
+       12 +  | Programming Community | Peer Developers | GitHub/Open Source | Low | Medium | Positive | Code review and contributions |
+       13 +  | Sanskrit Students | End Users | Global | Low | High | Positive | Feedback and testing |
+       14 +  | Website Administrators | Data Providers | Source Websites | Medium | Low | Neutral | Ethical scraping practices |
+       15
+       16    ## Stakeholder Categories
+       17
+       18    ### Primary Stakeholders
+       19    *Directly affected by the project outcome*
+       20 -  - [Stakeholder 1] - [Description of interest]
+       21 -  - [Stakeholder 2] - [Description of interest]
+       20 +  - **Project Lead** - Direct beneficiary of learning outcomes and skill development
+       21 +  - **Sanskrit Students & Researchers** - Will use tools for studying Vedic literature
+       22 +  - **Programming Enthusiasts** - Interested in applying technical skills to cultural projects
+       23
+       24    ### Secondary Stakeholders
+       25    *Indirectly affected or influential*
+       26 -  - [Stakeholder 1] - [Description of interest]
+       27 -  - [Stakeholder 2] - [Description of interest]
+       26 +  - **Sanskrit Scholars** - May benefit from computational analysis tools
+       27 +  - **Digital Humanities Community** - Could adopt methodology for other ancient texts
+       28 +  - **Open Source Contributors** - May contribute to or fork the project
+       29 +  - **Website Administrators** - Source providers for text content
+       30
+       31    ### Key Stakeholders
+       32    *High influence and high interest*
+       33 -  - [Stakeholder 1] - [Description of role and expectations]
+       34 -  - [Stakeholder 2] - [Description of role and expectations]
+       33 +  - **Project Lead** - Owner, developer, primary user; drives all decisions and implementation
+       34 +  - **Sanskrit Academic Community** - Validators of accuracy and cultural sensitivity; influence authenticity
+       35
+       36    ## Influence/Interest Grid
+       37
+
+● Update(project-management\01_project-charter\stakeholders.md)
+  ⎿  Updated project-management\01_project-charter\stakeholders.md with 9 additions and 7 removals
+       36    ## Influence/Interest Grid
+       37
+       38    ```
+       39 -  High Interest  |  MANAGE CLOSELY     |  KEEP SATISFIED
+       40 -                |   [Stakeholders]    |  [Stakeholders]
+       41 -                |                     |
+       42 -  Low Interest  |  MONITOR           |  KEEP INFORMED
+       43 -                |   [Stakeholders]    |  [Stakeholders]
+       44 -                |                     |
+       45 -                Low Influence         High Influence
+       39 +  High Interest  |  MANAGE CLOSELY           |  KEEP SATISFIED
+       40 +                |   - Project Lead           |  - Website Admins
+       41 +                |   - Sanskrit Students      |
+       42 +                |                            |
+       43 +  Low Interest  |  MONITOR                   |  KEEP INFORMED
+       44 +                |   - General Public         |  - Programming Community
+       45 +                |                            |  - Open Source Contributors
+       46 +                |                            |
+       47 +                Low Influence                High Influence
+       48    ```
+       49
+       50    ## Stakeholder Engagement Plan
+
+● Update(project-management\01_project-charter\stakeholders.md)
+  ⎿  Updated project-management\01_project-charter\stakeholders.md with 31 additions and 7 removals
+       49
+       50    ## Stakeholder Engagement Plan
+       51
+       52 -  ### [Stakeholder Name/Group]
+       53 -  **Current Engagement Level**: [Unaware/Resistant/Neutral/Supportive/Leading]
+       54 -  **Desired Engagement Level**: [Unaware/Resistant/Neutral/Supportive/Leading]
+       55 -  **Engagement Strategy**: [Description]
+       56 -  **Communication Method**: [Email/Meetings/Reports/etc.]
+       57 -  **Frequency**: [Daily/Weekly/Monthly/etc.]
+       58 -  **Key Messages**: [What they need to know]
+       52 +  ### Project Lead (Self)
+       53 +  **Current Engagement Level**: Leading
+       54 +  **Desired Engagement Level**: Leading
+       55 +  **Engagement Strategy**: Self-directed learning with structured milestones
+       56 +  **Communication Method**: Personal notes, GitHub commits, documentation
+       57 +  **Frequency**: Daily development sessions
+       58 +  **Key Messages**: Progress tracking, technical challenges, learning insights
+       59
+       60 +  ### Sanskrit Scholars
+       61 +  **Current Engagement Level**: Unaware
+       62 +  **Desired Engagement Level**: Supportive
+       63 +  **Engagement Strategy**: Periodic consultation for accuracy validation
+       64 +  **Communication Method**: Academic forums, email
+       65 +  **Frequency**: Quarterly reviews
+       66 +  **Key Messages**: Seeking expertise for classification accuracy and cultural sensitivity
+       67 +
+       68 +  ### Programming Community
+       69 +  **Current Engagement Level**: Unaware
+       70 +  **Desired Engagement Level**: Supportive
+       71 +  **Engagement Strategy**: Open-source repository with clear documentation
+       72 +  **Communication Method**: GitHub issues, pull requests, README
+       73 +  **Frequency**: As contributions arise
+       74 +  **Key Messages**: Invitation to contribute, technical architecture decisions
+       75 +
+       76 +  ### Website Administrators (Text Sources)
+       77 +  **Current Engagement Level**: Unaware
+       78 +  **Desired Engagement Level**: Neutral
+       79 +  **Engagement Strategy**: Ethical web scraping, respect robots.txt, attribution
+       80 +  **Communication Method**: Email if issues arise
+       81 +  **Frequency**: As needed
+       82 +  **Key Messages**: Respectful use of public data, proper attribution
+       83 +
+       84    ## Stakeholder Roles and Responsibilities
+       85
+       86    ### Project Sponsor
+
+● Update(project-management\01_project-charter\stakeholders.md)
+  ⎿  Updated project-management\01_project-charter\stakeholders.md with 49 additions and 35 removals
+        83
+        84    ## Stakeholder Roles and Responsibilities
+        85
+        86 -  ### Project Sponsor
+        87 -  **Name**: [Name]
+        86 +  ### Project Lead
+        87 +  **Name**: Self
+        88    **Responsibilities**:
+        89 -  - Provide project funding and resources
+        90 -  - Make high-level project decisions
+        91 -  - Remove organizational barriers
+        92 -  - Champion the project
+        89 +  - Define project requirements and scope
+        90 +  - Design and implement all technical components
+        91 +  - Research and validate text sources
+        92 +  - Ensure ethical web scraping practices
+        93 +  - Document codebase and user guides
+        94 +  - Engage with community for feedback
+        95 +  - Maintain GitHub repository
+        96
+        97 -  ### Project Manager
+        98 -  **Name**: [Name]
+        97 +  ### Sanskrit Scholars (Consultants)
+        98 +  **Primary Contact**: To be identified through academic forums
+        99    **Responsibilities**:
+       100 -  - Plan, execute, and close the project
+       101 -  - Manage project scope, schedule, and budget
+       102 -  - Coordinate team activities
+       103 -  - Communicate project status
+       100 +  - Validate accuracy of text classifications
+       101 +  - Provide guidance on philosophical concept extraction
+       102 +  - Review cultural sensitivity of analysis tools
+       103 +  - Suggest additional text sources
+       104
+       105 -  ### Business Users
+       106 -  **Primary Contact**: [Name]
+       105 +  ### Open Source Contributors (Optional)
+       106 +  **Lead**: Community-driven
+       107    **Responsibilities**:
+       108 -  - Define requirements
+       109 -  - Participate in testing
+       110 -  - Provide feedback
+       111 -  - Champion adoption
+       108 +  - Report bugs and issues
+       109 +  - Suggest feature enhancements
+       110 +  - Submit pull requests for improvements
+       111 +  - Provide code reviews
+       112
+       113 -  ### Technical Team
+       114 -  **Lead**: [Name]
+       113 +  ### End Users (Sanskrit Students)
+       114 +  **Primary Contact**: Community feedback channels
+       115    **Responsibilities**:
+       116 -  - Design and build solution
+       117 -  - Ensure technical quality
+       118 -  - Support implementation
+       119 -  - Provide technical guidance
+       116 +  - Use platform for learning
+       117 +  - Provide feedback on usability
+       118 +  - Report data accuracy issues
+       119 +  - Suggest additional features
+       120
+       121    ## Communication Requirements
+       122
+       123    | Stakeholder | Information Needed | Format | Frequency | Delivery Method |
+       124    |-------------|-------------------|--------|-----------|----------------|
+       125 -  | [Name] | [Information] | [Format] | [Frequency] | [Method] |
+       125 +  | Project Lead | Technical progress, challenges | Personal notes, Git commits | Daily | Local documentation |
+       126 +  | Sanskrit Scholars | Classification accuracy, cultural sensitivity | Email, forums | Quarterly | Direct contact |
+       127 +  | Programming Community | Technical architecture, contribution guidelines | Documentation | As needed | GitHub README, Wiki |
+       128 +  | End Users | Feature availability, usage guides | User documentation | Major releases | GitHub releases |
+       129
+       130    ## Stakeholder Issues Log
+       131
+       132    | Date | Stakeholder | Issue | Impact | Resolution | Status |
+       133    |------|-------------|-------|--------|------------|--------|
+       134 -  | [Date] | [Name] | [Description] | [H/M/L] | [Resolution] | [Open/Closed] |
+       134 +  | 2025-04-18 | Project Lead | Multiple AI sources consulted | Medium | Synthesized responses into project plan | Closed |
+       135 +  | - | - | - | - | - | - |
+       136
+       137    ## Stakeholder Feedback
+       138
+       139 -  ### Meeting Notes Template
+       140 -  **Date**: [Date]
+       141 -  **Participants**: [Names]
+       139 +  ### Research Phase Notes
+       140 +  **Date**: 2025-04-18 to 2025-04-27
+       141 +  **Participants**: Self, AI Assistants (Gemini, Copilot, Claude, Perplexity, DeepSeek, Grok, others)
+       142    **Key Points**:
+       143 -  - [Point 1]
+       144 -  - [Point 2]
+       143 +  - Identified 5 core project ideas
+       144 +  - Compiled list of 10+ Sanskrit text source websites
+       145 +  - Explored multiple technology options (Python, GoLang, Rust, databases)
+       146 +  - Validated feasibility of NLP approach for Sanskrit texts
+       147
+       148    **Decisions**:
+       149 -  - [Decision 1]
+       150 -  - [Decision 2]
+       149 +  - Start with Python for initial development
+       150 +  - Use PostgreSQL as primary relational database
+       151 +  - Implement Neo4j for knowledge graph
+       152 +  - Follow GitHub roadmap pattern for visualization
+       153 +  - Prioritize ethical web scraping practices
+       154
+       155    **Actions**:
+       156 -  - [ ] [Action 1] - [Owner] - [Due Date]
+       157 -  - [ ] [Action 2] - [Owner] - [Due Date]
+       156 +  - [x] Collect AI responses and consolidate ideas - Self - 2025-04-27
+       157 +  - [x] Create initial project charter - Self - 2025-10-04
+       158 +  - [ ] Set up development environment - Self - Q1 2025
+       159 +  - [ ] Build proof-of-concept scraper - Self - Q1 2025
+
+● I've successfully updated the project charter files. Now I'll continue with the research files. Due to the length of the remaining updates, I'll proceed with key files systematically.
+
+● Read(project-management\02_research\references.md)
+  ⎿  Read 103 lines (ctrl+o to expand)
+
+● Read(project-management\02_research\research_notes.md)
+  ⎿  Read 50 lines (ctrl+o to expand)
+
+● Due to the extensive amount of content to update and the character limits, let me create comprehensive updates for the most critical files. I'll start with references and research notes, then move to specifications and planning
+  files.
+
+● Write(project-management\02_research\references.md)
+  ⎿  Updated project-management\02_research\references.md with 95 additions and 68 removals
+         1    # References
+         2
+         3    ## Purpose
+         4 -  Centralized repository of all references, sources, and materials used throughout the project research phase.
+         4 +  Centralized repository of all references, sources, and materials used throughout the Code4Ved project research phase (2025-04-18 to 2025-04-27).
+         5
+         6    ## Reference Categories
+         7
+         8 -  ### Academic Papers
+         9 -  | Title | Author(s) | Journal/Conference | Year | DOI/URL | Notes |
+        10 -  |-------|-----------|-------------------|------|---------|-------|
+        11 -  | [Title 1] | [Authors] | [Publication] | [Year] | [DOI/URL] | [Relevance notes] |
+        12 -  | [Title 2] | [Authors] | [Publication] | [Year] | [DOI/URL] | [Relevance notes] |
+         8 +  ### Web Resources - Sanskrit Text Repositories
+         9
+        10 -  ### Books
+        11 -  | Title | Author(s) | Publisher | Year | ISBN | Chapters/Sections Used |
+        12 -  |-------|-----------|-----------|------|------|----------------------|
+        13 -  | [Book 1] | [Authors] | [Publisher] | [Year] | [ISBN] | [Specific sections] |
+        14 -  | [Book 2] | [Authors] | [Publisher] | [Year] | [ISBN] | [Specific sections] |
+        15 -
+        16 -  ### Industry Reports
+        17 -  | Title | Organization | Publication Date | URL/Source | Key Findings |
+        18 -  |-------|--------------|------------------|------------|--------------|
+        19 -  | [Report 1] | [Organization] | [Date] | [URL] | [Key points] |
+        20 -  | [Report 2] | [Organization] | [Date] | [URL] | [Key points] |
+        21 -
+        22 -  ### Technical Documentation
+        23 -  | Title | Source/Vendor | Version | Date | URL | Sections Used |
+        24 -  |-------|---------------|---------|------|-----|---------------|
+        25 -  | [Doc 1] | [Source] | [Version] | [Date] | [URL] | [Sections] |
+        26 -  | [Doc 2] | [Source] | [Version] | [Date] | [URL] | [Sections] |
+        27 -
+        28 -  ### Standards and Guidelines
+        29 -  | Standard | Organization | Version | Date | URL | Applicable Sections |
+        30 -  |----------|-------------|---------|------|-----|-------------------|
+        31 -  | [Standard 1] | [Org] | [Version] | [Date] | [URL] | [Sections] |
+        32 -  | [Standard 2] | [Org] | [Version] | [Date] | [URL] | [Sections] |
+        33 -
+        34 -  ### Web Resources
+        10    | Title | Website | URL | Date Accessed | Reliability | Notes |
+        11    |-------|---------|-----|---------------|-------------|-------|
+        12 -  | [Resource 1] | [Website] | [URL] | [Date] | [H/M/L] | [Notes] |
+        13 -  | [Resource 2] | [Website] | [URL] | [Date] | [H/M/L] | [Notes] |
+        12 +  | Vedic Heritage Portal | Government of India | https://vedicheritage.gov.in/ | 2025-04-27 | High | Official govt repository, comprehensive |
+        13 +  | GRETIL - Göttingen Register of Electronic Texts | University of Göttingen | http://gretil.sub.uni-goettingen.de/ | 2025-04-27 | High | Academic, peer-reviewed texts |
+        14 +  | Ambuda.org | Open Source Community | https://ambuda.org/ | 2025-04-27 | High | Active development, tools available |
+        15 +  | GitHub - Ambuda | GitHub Repository | https://github.com/ambuda-org | 2025-04-27 | High | Source code for reference |
+        16 +  | Sanskrit Documents | Community Repository | https://sanskritdocuments.org/ | 2025-04-27 | Medium | Large collection, varying quality |
+        17 +  | Ved Puran | Community Resource | https://vedpuran.net/download-all-ved-and-puran-pdf-hindi-free/ | 2025-04-27 | Medium | PDF downloads available |
+        18 +  | Veducation World | Educational Platform | https://www.veducation.world/library | 2025-04-27 | Medium | Educational focus |
+        19 +  | Sanskrit Books | Digital Library | https://www.sanskritebooks.org/ | 2025-04-27 | Medium | Wide collection of texts |
+        20 +  | Sanskrit DCS | Digital Corpus | http://www.sanskrit-linguistics.org/dcs/index.php | 2025-04-27 | High | Linguistic analysis tools |
+        21 +  | Sanskrit Library | Academic Resource | https://sanskritlibrary.org/index.html | 2025-04-27 | High | Academic standards |
+        22 +  | TITUS | University Frankfurt | https://titus.fkidg1.uni-frankfurt.de/database/titusinx/titusinx.htm | 2025-04-27 | High | Linguistic database |
+        23 +  | Sacred Texts | Archive | https://www.sacred-texts.com/hin/ | 2025-04-27 | Medium | Historical archive, public domain |
+        24 +  | Gita Supersite | IIT Kanpur | https://www.gitasupersite.iitk.ac.in/ | 2025-04-27 | High | Academic, comprehensive |
+        25 +  | Adhyeta.org | Learning Platform | https://www.adhyeta.org.in/ | 2025-04-27 | Medium | Learning-focused content |
+        26 +  | IGNCA | Indira Gandhi National Centre for the Arts | https://ignca.gov.in/divisionss/asi-books/ | 2025-04-27 | High | Government cultural institution |
+        27
+        28 +  ### AI Research Consultation
+        29 +
+        30 +  | Source | Platform | Date | Topic | Key Contributions |
+        31 +  |--------|----------|------|-------|-------------------|
+        32 +  | Gemini | Google AI | 2025-04-18, 2025-04-26 | Project approach, technical architecture | Text analysis methods, database design, web scraping approaches |
+        33 +  | Copilot | Microsoft/GitHub | 2025-04-18, 2025-04-26 | Implementation strategies | NLP pipelines, database schemas, automation |
+        34 +  | Claude | Anthropic | 2025-04-18 | Systematic approach | Digital tools, learning applications, community projects |
+        35 +  | Perplexity | Perplexity AI | 2025-04-18 | Academic connections | Vedic computing, NLP research, knowledge graphs |
+        36 +  | DeepSeek | DeepSeek AI | 2025-04-18 | Code examples | Python implementations, database schemas |
+        37 +  | Grok | xAI | 2025-04-18 | Comprehensive methodology | NLP workflows, database management, visualization |
+        38 +  | Meta AI | Meta | 2025-04-18 | Technology options | Text classification, knowledge graphs |
+        39 +  | Krutrim | Krutrim AI | 2025-04-18, 2025-04-27 | Indian context | Sanskrit NLP tools, local resources |
+        40 +  | Khoj | Khoj AI | 2025-04-18 | Text analysis | Keyword extraction, database creation |
+        41 +  | DuckDuckGo AI | DuckDuckGo | 2025-04-18 | Computational approaches | Text parsing, visualization |
+        42 +  | Poe | Poe Platform | 2025-04-18 | Tool development | Database management, educational tools |
+        43 +
+        44    ### Tools and Software
+        45 +
+        46    | Tool/Software | Vendor | Version | License | URL | Purpose |
+        47    |---------------|--------|---------|---------|-----|---------|
+        48 -  | [Tool 1] | [Vendor] | [Version] | [License] | [URL] | [Usage] |
+        49 -  | [Tool 2] | [Vendor] | [Version] | [License] | [URL] | [Usage] |
+        48 +  | Python | Python Software Foundation | 3.8+ | PSF License | https://python.org | Primary development language |
+        49 +  | PostgreSQL | PostgreSQL Global Dev Group | Latest | PostgreSQL License | https://postgresql.org | Relational database |
+        50 +  | MongoDB | MongoDB Inc | Latest | SSPL | https://mongodb.com | NoSQL database |
+        51 +  | Neo4j | Neo4j Inc | Latest | GPL v3 / Commercial | https://neo4j.com | Graph database |
+        52 +  | SQLite3 | SQLite Consortium | Latest | Public Domain | https://sqlite.org | Lightweight database |
+        53 +  | NLTK | NLTK Project | Latest | Apache 2.0 | https://www.nltk.org/ | Natural language processing |
+        54 +  | spaCy | Explosion AI | Latest | MIT | https://spacy.io/ | Advanced NLP |
+        55 +  | BeautifulSoup | Richardson | Latest | MIT | - | HTML parsing |
+        56 +  | Scrapy | Scrapy | Latest | BSD | https://scrapy.org/ | Web scraping framework |
+        57 +  | PyPDF2 | Community | Latest | BSD | - | PDF text extraction |
+        58 +  | pdfminer.six | Community | Latest | MIT | - | PDF parsing |
+        59 +  | requests | Kenneth Reitz | Latest | Apache 2.0 | - | HTTP library |
+        60 +  | NetworkX | NetworkX Developers | Latest | BSD | https://networkx.org/ | Network analysis |
+        61 +  | Mermaid | Mermaid | Latest | MIT | https://mermaid.js.org/ | Diagram generation |
+        62
+        63 -  ### Case Studies
+        64 -  | Title | Organization | Industry | Year | Source | Key Learnings |
+        65 -  |-------|--------------|----------|------|--------|---------------|
+        66 -  | [Case 1] | [Organization] | [Industry] | [Year] | [Source] | [Learnings] |
+        67 -  | [Case 2] | [Organization] | [Industry] | [Year] | [Source] | [Learnings] |
+        63 +  ### Reference Implementation Code
+        64
+        65 -  ### Interviews and Surveys
+        66 -  | Type | Participant(s) | Date | Method | Topic | Key Insights |
+        67 -  |------|---------------|------|--------|-------|--------------|
+        68 -  | Interview | [Name/Role] | [Date] | [In-person/Phone/Video] | [Topic] | [Insights] |
+        69 -  | Survey | [Group] | [Date] | [Online/Paper] | [Topic] | [Results] |
+        65 +  | File | Location | Date Created | Purpose |
+        66 +  |------|----------|--------------|---------|
+        67 +  | extract_mermaid_charts_final.py | data/external/ | 2025-05-19 | Mermaid chart generation for Vedic text classification |
+        68
+        69 -  ## Reference Quality Assessment
+        69 +  ### GitHub Resources
+        70
+        71 +  | Repository | Organization | URL | Relevance |
+        72 +  |------------|--------------|-----|-----------|
+        73 +  | Awesome Roadmaps | liuchong | https://github.com/liuchong/awesome-roadmaps | Learning path visualization pattern |
+        74 +  | Ambuda | ambuda-org | https://github.com/ambuda-org | Sanskrit tools reference |
+        75 +
+        76 +  ### Books Referenced by AI
+        77 +
+        78 +  | Title | Author(s) | Publisher | Notes |
+        79 +  |-------|-----------|-----------|-------|
+        80 +  | The Upanishads | Eknath Easwaran | Nilgiri Press | Recommended translation source |
+        81 +  | The Bhagavata Purana | Bibek Debroy | Penguin | Comprehensive translation |
+        82 +  | The Rust Programming Language | Steve Klabnik, Carol Nichols | No Starch Press | For future Rust development |
+        83 +  | The Go Programming Language | Alan Donovan, Brian Kernighan | Addison-Wesley | For future Go development |
+        84 +
+        85 +  ## Research Quality Assessment
+        86 +
+        87    ### Reliability Criteria
+        88 -  - **High (H)**: Peer-reviewed, authoritative source, current
+        89 -  - **Medium (M)**: Professional source, mostly current, some validation
+        90 -  - **Low (L)**: General web content, outdated, unverified
+        88 +  - **High (H)**: Government/academic sources, peer-reviewed, authoritative
+        89 +  - **Medium (M)**: Community-maintained, professional sources, mostly validated
+        90 +  - **Low (L)**: General web content, unverified
+        91
+        92    ### Currency Guidelines
+        93 -  - **Current**: Published within last 2 years
+        94 -  - **Recent**: Published within last 5 years
+        95 -  - **Historical**: Older than 5 years (note if still relevant)
+        93 +  All web resources accessed April-May 2025, considered current.
+        94
+        95    ## Reference Usage Tracking
+        96
+        97 -  | Reference | Used In Document | Section | Quote/Paraphrase | Date Used |
+        98 -  |-----------|------------------|---------|------------------|-----------|
+        99 -  | [Reference 1] | [Document] | [Section] | [Quote/Para] | [Date] |
+       100 -  | [Reference 2] | [Document] | [Section] | [Quote/Para] | [Date] |
+        97 +  | Reference | Used In Document | Section | Date Used |
+        98 +  |-----------|------------------|---------|-----------|
+        99 +  | Obsidian Daily Notes | Project Charter | All sections | 2025-10-04 |
+       100 +  | AI Consultation Responses | Research Notes | Project Ideas | 2025-10-04 |
+       101 +  | Vedicheritage.gov.in | Requirements | Text Sources | 2025-10-04 |
+       102
+       103    ## Copyright and Attribution Notes
+       104 -  [Document any special copyright requirements, attribution needs, or usage restrictions]
+       104
+       105 +  All Sanskrit text sources to be used must be:
+       106 +  - Public domain (texts over 70 years old)
+       107 +  - Openly licensed (Creative Commons, GPL)
+       108 +  - Properly attributed to source repositories
+       109 +  - Compliant with robots.txt for web scraping
+       110 +
+       111    ## References to Acquire
+       112 -  *Future references that need to be obtained*
+       112
+       113 -  - [ ] [Reference 1] - [Reason needed]
+       114 -  - [ ] [Reference 2] - [Reason needed]
+       115 -  - [ ] [Reference 3] - [Reason needed]
+       113 +  - [ ] Sanskrit NLP research papers - For methodology validation
+       114 +  - [ ] Digital Humanities best practices - For project structure
+       115 +  - [ ] Graph database optimization guides - For Neo4j implementation
+       116 +  - [ ] Web scraping ethics guidelines - For responsible data collection
+       117
+       118    ## Citation Style
+       119 -  [Specify the citation style being used (APA, MLA, IEEE, etc.) and provide examples]
+       119
+       120 -  **Example Format**:
+       121 -  Author, A. A. (Year). Title of work. *Journal Name*, Volume(Issue), pages. DOI
+       120 +  **Format**: Informal for personal project, URLs and dates for traceability
+       121
+       122 +  **Example**:
+       123 +  Vedic Heritage Portal (2025). Retrieved from https://vedicheritage.gov.in/ on 2025-04-27.
+       124 +
+       125    ## Reference Archive
+       126 -  *Location of physical or digital copies of references*
+       126
+       127 -  **Digital Archive**: [Location/System]
+       128 -  **Physical Archive**: [Location]
+       129 -  **Access Credentials**: [If applicable]
+       127 +  **Digital Archive**: data/external/ directory (Obsidian markdown notes)
+       128 +  **Project Documentation**: project-management/ directory
+       129 +  **Code Repository**: GitHub (to be created)
+
+● Due to the extensive nature of this task and the need to update many files, let me provide you with a summary of what I've completed and create a comprehensive update script for the remaining critical files. I'll focus on the most
+   important files that will have the biggest impact.
+
+● Summary of Updates Completed
+
+  I've successfully updated the following files with information from your Obsidian data:
+
+  ✅ Completed:
+
+  01_project-charter/
+  - charter.md: Full project charter with Code4Ved details, objectives, scope, milestones, requirements
+  - business_case.md: Complete business justification, cost-benefit analysis, risk analysis, options analysis
+  - stakeholders.md: Stakeholder matrix, engagement plans, roles and responsibilities
+
+  02_research/
+  - references.md: Comprehensive list of 15+ Sanskrit websites, AI consultation sources, tools, and resources
+
+  🔄 Key Information Extracted from Obsidian Data:
+
+  1. Project Vision: Combining programming skills (Python, SQL, Bash, GoLang, Rust) with studying Vedas, Puranas, Upanishads
+  2. 5 Core Project Ideas:
+    - Comprehensive list of texts
+    - Web scraping and data extraction
+    - Multi-dimensional classification database
+    - Learning roadmap flowchart
+    - Knowledge graph connecting philosophy with science
+  3. 15+ Text Source Websites identified and cataloged
+  4. Technology Stack defined: Python, PostgreSQL, MongoDB, Neo4j, NLP tools
+  5. Mermaid Chart generation already implemented (2025-05-19)
+
+  The project management structure now contains concrete, actionable information ready for implementation. The remaining files (specifications, planning, design, implementation, testing, documentation, and risk management) can be
+  updated following the same pattern using the comprehensive data from your Obsidian notes.
+
+  Would you like me to continue updating the remaining files, or would you prefer to review what's been completed so far?
+
+> continue updating the remaining files
+
+● Read(project-management\03_specifications\FSD.md)
+  ⎿  Read 100 lines (ctrl+o to expand)
+
+● Read(project-management\03_specifications\data_model.md)
+  ⎿  Read 39 lines (ctrl+o to expand)
+
+● Write(project-management\03_specifications\FSD.md)
+  ⎿  Updated project-management\03_specifications\FSD.md with 363 additions and 105 removals
+        1    # Functional Specification Document (FSD)
+        2
+        3    ## Document Information
+        4 -  **Document Title**: [Project Name] Functional Specification
+        5 -  **Version**: [Version Number]
+        6 -  **Date**: [Date]
+        7 -  **Author**: [Author Name]
+        8 -  **Reviewers**: [Reviewer Names]
+        9 -  **Status**: [Draft/Review/Approved]
+        4 +  **Document Title**: Code4Ved Functional Specification
+        5 +  **Version**: 1.0
+        6 +  **Date**: 2025-10-04
+        7 +  **Author**: Project Lead
+        8 +  **Reviewers**: Self-Review
+        9 +  **Status**: Draft
+       10
+       11    ## Table of Contents
+       12    1. [Introduction](#introduction)
+     ...
+        20    ## Introduction
+        21
+        22    ### Purpose
+        23 -  [Describe the purpose of this functional specification document]
+        23 +  This document specifies the functional requirements for the Code4Ved platform, a comprehensive system for accessing, analyzing, and exploring Vedic literature through web scraping, database management, NLP analysis,
+           +  and knowledge graph visualization.
+        24
+        25    ### Scope
+        26 -  [Define what is covered and what is not covered by this specification]
+        26 +  **In Scope:**
+        27 +  - Web scraping from 15+ Sanskrit text repositories
+        28 +  - Text extraction from PDF, HTML, and plain text formats
+        29 +  - Multi-dimensional classification system (language, format, category, concepts, themes)
+        30 +  - PostgreSQL relational database for structured metadata
+        31 +  - MongoDB for unstructured annotations and commentary
+        32 +  - Neo4j graph database for philosophical concept relationships
+        33 +  - NLP pipeline for keyword extraction, topic modeling, and concept identification
+        34 +  - Visualization tools for learning roadmaps and concept graphs
+        35
+        36 +  **Out of Scope:**
+        37 +  - Real-time translation engine (use existing translations)
+        38 +  - Mobile application
+        39 +  - User authentication system (single-user focus)
+        40 +  - Commercial features or monetization
+        41 +
+        42    ### Audience
+        43 -  [Identify who this document is intended for]
+        43 +  - Project developer/owner
+        44 +  - Future contributors to open-source repository
+        45 +  - Sanskrit studies community (as end users)
+        46
+        47    ### Assumptions
+        48 -  [List key assumptions made in this specification]
+        48 +  - Text sources are publicly accessible or openly licensed
+        49 +  - Web scraping is permitted under ethical guidelines
+        50 +  - Development will be incremental with working prototypes
+        51 +  - Single-user local installation initially
+        52
+        53    ## System Overview
+        54
+        55    ### Business Context
+        56 -  [Describe the business context and problem being solved]
+        56 +  Ancient Indian texts are scattered across multiple websites in various formats without unified access or classification. This system addresses the need for centralized, searchable, analytically-rich access to Vedic
+           + literature while providing a learning platform for modern programming technologies.
+        57
+        58    ### System Objectives
+        59 -  [List the primary objectives of the system]
+        59 +  1. Centralize access to 100+ texts from 10+ major repositories
+        60 +  2. Enable multi-dimensional classification and search
+        61 +  3. Provide NLP-based analysis revealing textual patterns
+        62 +  4. Visualize relationships between philosophical concepts and modern science
+        63 +  5. Create structured learning paths through complex literature
+        64 +  6. Develop reusable open-source tools for digital humanities
+        65
+        66    ### High-Level Architecture
+        67 -  [Provide a high-level view of the system architecture]
+        67 +  ```
+        68 +  ┌─────────────────────┐
+        69 +  │  Web Scrapers       │  ← Python/GoLang/Rust
+        70 +  │  (BeautifulSoup)    │
+        71 +  └──────────┬──────────┘
+        72 +             │
+        73 +             ▼
+        74 +  ┌─────────────────────┐
+        75 +  │  Data Processing    │  ← PyPDF2, text cleaning
+        76 +  │  & Extraction       │
+        77 +  └──────────┬──────────┘
+        78 +             │
+        79 +             ▼
+        80 +  ┌─────────────────────────────────────┐
+        81 +  │         Database Layer              │
+        82 +  │  ┌─────────┬─────────┬───────────┐ │
+        83 +  │  │PostgreSQL│ MongoDB │  Neo4j    │ │
+        84 +  │  │(metadata)│(comments)│ (graph)  │ │
+        85 +  │  └─────────┴─────────┴───────────┘ │
+        86 +  └──────────┬──────────────────────────┘
+        87 +             │
+        88 +             ▼
+        89 +  ┌─────────────────────┐
+        90 +  │  NLP Pipeline       │  ← NLTK, spaCy
+        91 +  │  (Analysis)         │
+        92 +  └──────────┬──────────┘
+        93 +             │
+        94 +             ▼
+        95 +  ┌─────────────────────┐
+        96 +  │  Visualization      │  ← Mermaid, NetworkX
+        97 +  │  & Query Interface  │
+        98 +  └─────────────────────┘
+        99 +  ```
+       100
+       101    ## Functional Requirements
+       102
+       103 -  ### Feature 1: [Feature Name]
+       103 +  ### Feature 1: Web Scraping Module
+       104
+       105 -  #### FR1.1: [Requirement Title]
+       106 -  **Priority**: [High/Medium/Low]
+       107 -  **Description**: [Detailed description of what the system should do]
+       105 +  #### FR1.1: Multi-Source Text Extraction
+       106 +  **Priority**: High
+       107 +  **Description**: System shall extract text content from 15+ identified Sanskrit repositories including vedicheritage.gov.in, gretil.sub.uni-goettingen.de, sanskritdocuments.org, sacred-texts.com, ambuda.org
+       108 +
+       109    **Acceptance Criteria**:
+       110 -  - [ ] [Criterion 1]
+       111 -  - [ ] [Criterion 2]
+       112 -  - [ ] [Criterion 3]
+       110 +  - [ ] Successfully scrape at least 10 different websites
+       111 +  - [ ] Handle HTML, PDF, and plain text formats
+       112 +  - [ ] Respect robots.txt and implement rate limiting
+       113 +  - [ ] Log all scraping activities with timestamps
+       114 +  - [ ] Store source URLs for attribution
+       115
+       116 -  **Business Rules**: [Any business rules that apply]
+       117 -  **Inputs**: [Required inputs]
+       118 -  **Outputs**: [Expected outputs]
+       119 -  **Pre-conditions**: [What must be true before this function can execute]
+       120 -  **Post-conditions**: [What will be true after successful execution]
+       116 +  **Business Rules**:
+       117 +  - Must comply with website terms of service
+       118 +  - Rate limit: max 1 request per second per site
+       119 +  - User-agent must identify project name and purpose
+       120
+       121 -  #### FR1.2: [Requirement Title]
+       122 -  [Follow same structure as above]
+       121 +  **Inputs**: Target URL, file format specification
+       122 +  **Outputs**: Raw text content, metadata (source, date, format)
+       123 +  **Pre-conditions**: Internet connectivity, valid URL
+       124 +  **Post-conditions**: Text stored in staging area with source attribution
+       125
+       126 -  ### Feature 2: [Feature Name]
+       126 +  #### FR1.2: PDF Text Extraction
+       127 +  **Priority**: High
+       128 +  **Description**: System shall extract text from PDF files using PyPDF2/pdfminer.six libraries
+       129
+       130 -  #### FR2.1: [Requirement Title]
+       131 -  [Follow same structure as above]
+       130 +  **Acceptance Criteria**:
+       131 +  - [ ] Extract text from standard PDF files
+       132 +  - [ ] Handle multi-page PDFs
+       133 +  - [ ] Preserve text structure where possible
+       134 +  - [ ] Log extraction errors for manual review
+       135 +  - [ ] Support OCR for scanned PDFs (future enhancement)
+       136
+       137 -  ## User Interface Specifications
+       137 +  **Inputs**: PDF file path or URL
+       138 +  **Outputs**: Extracted text, page numbers, metadata
+       139 +  **Pre-conditions**: Valid PDF file accessible
+       140 +  **Post-conditions**: Text extracted and stored with page references
+       141
+       142 -  ### UI1: [Screen/Page Name]
+       143 -  **Purpose**: [What this interface is for]
+       144 -  **User Types**: [Who can access this interface]
+       145 -  **Navigation**: [How users get to and from this interface]
+       142 +  #### FR1.3: Ethical Scraping Controls
+       143 +  **Priority**: High
+       144 +  **Description**: System shall implement ethical web scraping practices
+       145
+       146 -  **Elements**:
+       147 -  | Element | Type | Required | Description |
+       148 -  |---------|------|----------|-------------|
+       149 -  | [Element 1] | [Input/Button/etc.] | [Y/N] | [Purpose] |
+       150 -  | [Element 2] | [Input/Button/etc.] | [Y/N] | [Purpose] |
+       146 +  **Acceptance Criteria**:
+       147 +  - [ ] Read and respect robots.txt files
+       148 +  - [ ] Implement configurable rate limiting
+       149 +  - [ ] Provide clear user-agent identification
+       150 +  - [ ] Log all requests for audit trail
+       151 +  - [ ] Handle HTTP errors gracefully (429, 503)
+       152
+       153 -  **Behaviors**:
+       154 -  - [Behavior 1]: [Description]
+       155 -  - [Behavior 2]: [Description]
+       153 +  **Business Rules**:
+       154 +  - Default rate: 1 request/second
+       155 +  - Retry on 503 with exponential backoff
+       156 +  - Abort on 403/401 and log for manual review
+       157
+       158 -  **Validation Rules**:
+       159 -  - [Field]: [Validation requirement]
+       160 -  - [Field]: [Validation requirement]
+       158 +  ### Feature 2: Text Classification System
+       159
+       160 -  ### UI2: [Screen/Page Name]
+       161 -  [Follow same structure as above]
+       160 +  #### FR2.1: Multi-Dimensional Classification
+       161 +  **Priority**: High
+       162 +  **Description**: System shall classify each text across 5 dimensions: language, format, category, philosophical concepts, themes
+       163
+       164 -  ## Data Specifications
+       164 +  **Acceptance Criteria**:
+       165 +  - [ ] Tag language: English, Hindi, Sanskrit
+       166 +  - [ ] Tag format: PDF, HTML, plain text
+       167 +  - [ ] Tag category: Vedas, Puranas, Upanishads, Samhitas, Epic Poems
+       168 +  - [ ] Extract philosophical concepts: Atman, Brahman, Karma, Dharma, Moksha, etc.
+       169 +  - [ ] Tag themes: spirituality, war, medicine, mathematics, duty, art, etc.
+       170
+       171 -  ### Data Entity 1: [Entity Name]
+       172 -  **Description**: [What this data represents]
+       171 +  **Inputs**: Raw text content, metadata
+       172 +  **Outputs**: Classified text record with all dimension tags
+       173 +  **Pre-conditions**: Text extracted and preprocessed
+       174 +  **Post-conditions**: Text record stored in database with all classifications
+       175
+       176 -  | Field | Type | Length | Required | Description |
+       177 -  |-------|------|--------|----------|-------------|
+       178 -  | [Field1] | [Type] | [Length] | [Y/N] | [Purpose] |
+       179 -  | [Field2] | [Type] | [Length] | [Y/N] | [Purpose] |
+       176 +  #### FR2.2: Automated Concept Extraction
+       177 +  **Priority**: Medium
+       178 +  **Description**: System shall use NLP to automatically identify philosophical concepts in texts
+       179
+       180 -  **Business Rules**:
+       181 -  - [Rule 1]
+       182 -  - [Rule 2]
+       180 +  **Acceptance Criteria**:
+       181 +  - [ ] Identify at least 20 core philosophical concepts
+       182 +  - [ ] Achieve >80% accuracy on manual validation sample
+       183 +  - [ ] Store concept occurrences with context (surrounding text)
+       184 +  - [ ] Support manual override/correction of automated tags
+       185
+       186 -  **Relationships**:
+       187 -  - [Relationship to other entities]
+       186 +  **Inputs**: Cleaned text content
+       187 +  **Outputs**: List of identified concepts with confidence scores
+       188 +  **Pre-conditions**: NLP models trained/configured
+       189 +  **Post-conditions**: Concepts stored in database with references
+       190
+       191 -  ## Integration Requirements
+       191 +  ### Feature 3: Database Management
+       192
+       193 -  ### Integration 1: [System Name]
+       194 -  **Purpose**: [Why this integration is needed]
+       195 -  **Direction**: [Inbound/Outbound/Bidirectional]
+       196 -  **Protocol**: [REST API/SOAP/File Transfer/etc.]
+       197 -  **Frequency**: [Real-time/Batch/On-demand]
+       193 +  #### FR3.1: PostgreSQL Relational Database
+       194 +  **Priority**: High
+       195 +  **Description**: System shall maintain structured metadata in PostgreSQL database
+       196
+       197 -  **Data Exchange**:
+       198 -  | Data | Format | Direction | Trigger |
+       199 -  |------|--------|-----------|---------|
+       200 -  | [Data1] | [Format] | [In/Out] | [When] |
+       201 -  | [Data2] | [Format] | [In/Out] | [When] |
+       197 +  **Acceptance Criteria**:
+       198 +  - [ ] Tables created for texts, concepts, themes, classifications
+       199 +  - [ ] Foreign key relationships properly defined
+       200 +  - [ ] Support full-text search on text content
+       201 +  - [ ] Indexes on frequently queried fields
+       202 +  - [ ] Support for complex queries across multiple dimensions
+       203
+       204 -  **Error Handling**: [How errors will be handled]
+       204 +  **Schema Requirements**:
+       205 +  ```sql
+       206 +  -- Core tables
+       207 +  CREATE TABLE texts (
+       208 +      id SERIAL PRIMARY KEY,
+       209 +      title VARCHAR(500),
+       210 +      language VARCHAR(50),
+       211 +      format VARCHAR(50),
+       212 +      category VARCHAR(100),
+       213 +      source_url TEXT,
+       214 +      extracted_date TIMESTAMP,
+       215 +      content TEXT
+       216 +  );
+       217
+       218 -  ## Business Rules
+       218 +  CREATE TABLE philosophical_concepts (
+       219 +      id SERIAL PRIMARY KEY,
+       220 +      concept_name VARCHAR(200) UNIQUE,
+       221 +      description TEXT,
+       222 +      sanskrit_term VARCHAR(200)
+       223 +  );
+       224
+       225 -  ### BR1: [Rule Name]
+       226 -  **Description**: [Detailed description of the business rule]
+       227 -  **Applies To**: [What parts of the system this affects]
+       228 -  **Priority**: [High/Medium/Low]
+       229 -  **Source**: [Where this rule comes from]
+       225 +  CREATE TABLE themes (
+       226 +      id SERIAL PRIMARY KEY,
+       227 +      theme_name VARCHAR(200) UNIQUE,
+       228 +      description TEXT
+       229 +  );
+       230
+       231 -  ### BR2: [Rule Name]
+       232 -  [Follow same structure as above]
+       231 +  CREATE TABLE text_concepts (
+       232 +      text_id INT REFERENCES texts(id),
+       233 +      concept_id INT REFERENCES philosophical_concepts(id),
+       234 +      context TEXT,
+       235 +      confidence FLOAT,
+       236 +      PRIMARY KEY (text_id, concept_id)
+       237 +  );
+       238
+       239 -  ## Workflow Specifications
+       239 +  CREATE TABLE text_themes (
+       240 +      text_id INT REFERENCES texts(id),
+       241 +      theme_id INT REFERENCES themes(id),
+       242 +      PRIMARY KEY (text_id, theme_id)
+       243 +  );
+       244 +  ```
+       245
+       246 -  ### Workflow 1: [Process Name]
+       247 -  **Trigger**: [What starts this workflow]
+       248 -  **Participants**: [Who is involved]
+       249 -  **Steps**:
+       250 -  1. [Step 1]: [Description]
+       251 -  2. [Step 2]: [Description]
+       252 -  3. [Step 3]: [Description]
+       246 +  #### FR3.2: MongoDB for Unstructured Data
+       247 +  **Priority**: Medium
+       248 +  **Description**: System shall store commentary, annotations, and user notes in MongoDB
+       249
+       250 -  **Exception Handling**: [What happens when things go wrong]
+       250 +  **Acceptance Criteria**:
+       251 +  - [ ] Store freeform annotations linked to text IDs
+       252 +  - [ ] Support nested document structure
+       253 +  - [ ] Enable text search within annotations
+       254 +  - [ ] Support tagging and categorization
+       255
+       256 -  ## Security Requirements
+       257 -  [Functional security requirements specific to features]
+       256 +  **Document Structure**:
+       257 +  ```json
+       258 +  {
+       259 +    "text_id": "postgresql_text_id",
+       260 +    "annotations": [
+       261 +      {
+       262 +        "date": "2025-01-01",
+       263 +        "type": "commentary",
+       264 +        "content": "Text of annotation",
+       265 +        "tags": ["tag1", "tag2"]
+       266 +      }
+       267 +    ]
+       268 +  }
+       269 +  ```
+       270
+       271 -  ## Reporting Requirements
+       272 -  [Specifications for any reports or analytics needed]
+       271 +  #### FR3.3: Neo4j Knowledge Graph
+       272 +  **Priority**: High
+       273 +  **Description**: System shall model relationships between concepts in Neo4j graph database
+       274
+       275 -  ## Performance Expectations
+       276 -  [Functional performance requirements]
+       275 +  **Acceptance Criteria**:
+       276 +  - [ ] Nodes for philosophical concepts and scientific topics
+       277 +  - [ ] Edges for relationships (related_to, explains, contradicts)
+       278 +  - [ ] Support for graph traversal queries
+       279 +  - [ ] Visualization of concept networks
+       280 +  - [ ] >500 nodes and >1000 relationships
+       281
+       282 -  ## Approval
+       282 +  **Graph Model**:
+       283 +  ```
+       284 +  (Concept:PhilosophicalConcept {name, description})
+       285 +  (Science:ScientificTopic {name, field})
+       286 +  (Concept)-[:RELATES_TO {strength, evidence}]->(Science)
+       287 +  (Concept)-[:EXPLAINED_IN]->(Text)
+       288 +  ```
+       289
+       290 -  | Role | Name | Signature | Date |
+       291 -  |------|------|-----------|------|
+       292 -  | Business Owner | [Name] | | |
+       293 -  | Technical Lead | [Name] | | |
+       294 -  | Project Manager | [Name] | | |
+       290 +  ### Feature 4: NLP Analysis Pipeline
+       291
+       292 -  ## Change History
+       292 +  #### FR4.1: Keyword Extraction
+       293 +  **Priority**: High
+       294 +  **Description**: System shall extract significant keywords from each text using NLTK
+       295
+       296 -  | Version | Date | Author | Changes |
+       297 -  |---------|------|--------|---------|
+       298 -  | 1.0 | [Date] | [Name] | Initial version |
+       296 +  **Acceptance Criteria**:
+       297 +  - [ ] Extract top 20 keywords per text
+       298 +  - [ ] Filter common stop words
+       299 +  - [ ] Calculate TF-IDF scores
+       300 +  - [ ] Store keywords with frequency counts
+       301 +
+       302 +  #### FR4.2: Topic Modeling
+       303 +  **Priority**: Medium
+       304 +  **Description**: System shall identify latent topics across text corpus using LDA
+       305 +
+       306 +  **Acceptance Criteria**:
+       307 +  - [ ] Identify 10-20 major topics
+       308 +  - [ ] Assign texts to primary topics
+       309 +  - [ ] Provide topic word distributions
+       310 +  - [ ] Visualize topic relationships
+       311 +
+       312 +  #### FR4.3: Concept Relationship Analysis
+       313 +  **Priority**: Medium
+       314 +  **Description**: System shall identify co-occurrence patterns between concepts
+       315 +
+       316 +  **Acceptance Criteria**:
+       317 +  - [ ] Calculate concept co-occurrence frequencies
+       318 +  - [ ] Identify strong concept pairs (co-occur >10 times)
+       319 +  - [ ] Store in graph database as relationships
+       320 +
+       321 +  ### Feature 5: Visualization System
+       322 +
+       323 +  #### FR5.1: Learning Roadmap Generation
+       324 +  **Priority**: High
+       325 +  **Description**: System shall generate interactive learning roadmap following GitHub roadmap pattern
+       326 +
+       327 +  **Acceptance Criteria**:
+       328 +  - [ ] Mermaid diagram showing text progression
+       329 +  - [ ] Nodes for major text categories
+       330 +  - [ ] Edges showing recommended reading order
+       331 +  - [ ] Exportable as SVG/PNG
+       332 +
+       333 +  **Example Output**:
+       334 +  ```mermaid
+       335 +  graph TD
+       336 +      A[Start] --> B[Rigveda]
+       337 +      B --> C[Upanishads]
+       338 +      C --> D[Bhagavad Gita]
+       339 +      A --> E[Puranas]
+       340 +  ```
+       341 +
+       342 +  #### FR5.2: Concept Graph Visualization
+       343 +  **Priority**: Medium
+       344 +  **Description**: System shall visualize concept relationships using NetworkX
+       345 +
+       346 +  **Acceptance Criteria**:
+       347 +  - [ ] Interactive network graph
+       348 +  - [ ] Color-coded nodes by type
+       349 +  - [ ] Edge thickness by relationship strength
+       350 +  - [ ] Zoom and pan capabilities
+       351 +
+       352 +  ## User Interface Specifications
+       353 +
+       354 +  ### UI1: Command-Line Interface (Initial Version)
+       355 +  **Purpose**: Provide basic interaction with system functions
+       356 +  **User Types**: Developer/power user
+       357 +  **Navigation**: Terminal commands
+       358 +
+       359 +  **Commands**:
+       360 +  | Command | Description |
+       361 +  |---------|-------------|
+       362 +  | `c4v scrape <url>` | Scrape text from URL |
+       363 +  | `c4v classify <text_id>` | Classify extracted text |
+       364 +  | `c4v search <query>` | Search database |
+       365 +  | `c4v analyze <text_id>` | Run NLP analysis |
+       366 +  | `c4v graph concepts` | Generate concept graph |
+       367 +  | `c4v roadmap` | Display learning roadmap |
+       368 +
+       369 +  ### UI2: Web Interface (Future Enhancement)
+       370 +  **Purpose**: User-friendly exploration of texts and visualizations
+       371 +  **User Types**: General users, students
+       372 +  **Navigation**: Web browser
+       373 +
+       374 +  **Pages** (Future):
+       375 +  - Search/Browse texts
+       376 +  - View text with annotations
+       377 +  - Explore concept graph
+       378 +  - View learning roadmap
+       379 +  - Analytical dashboards
+       380 +
+       381 +  ## Data Specifications
+       382 +
+       383 +  ### Data Quality Requirements
+       384 +  - Text accuracy: >95% for manual validation samples
+       385 +  - Classification accuracy: >80% for automated tags
+       386 +  - Source attribution: 100% of texts must have source URL
+       387 +  - Metadata completeness: All required fields populated
+       388 +
+       389 +  ### Data Volume Estimates
+       390 +  - Texts: 100-500 documents
+       391 +  - Concepts: 100-200 unique concepts
+       392 +  - Themes: 20-50 unique themes
+       393 +  - Graph relationships: 1000-5000 edges
+       394 +
+       395 +  ## Integration Requirements
+       396 +
+       397 +  ### INT1: Database Integration
+       398 +  **Description**: Seamless integration between PostgreSQL, MongoDB, and Neo4j
+       399 +  **Requirements**:
+       400 +  - Shared text_id as primary key across systems
+       401 +  - Consistent data synchronization
+       402 +  - Transaction handling for multi-database updates
+       403 +
+       404 +  ### INT2: External API Integration (Future)
+       405 +  **Description**: Potential integration with Sanskrit NLP APIs
+       406 +  **Requirements**:
+       407 +  - RESTful API consumption
+       408 +  - Error handling for external service failures
+       409 +  - Caching of API responses
+       410 +
+       411 +  ## Business Rules
+       412 +
+       413 +  ### BR1: Copyright and Licensing
+       414 +  - Only scrape texts from public domain or openly licensed sources
+       415 +  - Maintain source attribution for all texts
+       416 +  - Respect website terms of service
+       417 +
+       418 +  ### BR2: Data Quality
+       419 +  - Manual validation required for automated classifications with confidence <80%
+       420 +  - Duplicate texts from different sources marked and linked
+       421 +
+       422 +  ### BR3: Performance
+       423 +  - Scraping operations must respect rate limits
+       424 +  - Database queries should return results in <5 seconds
+       425 +  - Graph queries should complete in <10 seconds for typical traversals
+       426 +
+       427 +  ### BR4: Scalability
+       428 +  - System designed to handle 500+ texts
+       429 +  - Database schema supports future expansion
+       430 +  - Modular architecture allows component upgrades
+
+● Now I'll continue with the data model and other critical specifications:
+
+● Write(project-management\03_specifications\data_model.md)
+  ⎿  Updated project-management\03_specifications\data_model.md with 429 additions and 17 removals
+         1    # Data Model Specification
+         2
+         3    ## Document Information
+         4 -  **Project**: [Project Name]
+         5 -  **Version**: [Version]
+         6 -  **Date**: [Date]
+         7 -  **Author**: [Author Name]
+         4 +  **Project**: Code4Ved - Vedic Texts Analysis Platform
+         5 +  **Version**: 1.0
+         6 +  **Date**: 2025-10-04
+         7 +  **Author**: Project Lead
+         8
+         9    ## Conceptual Data Model
+        10 -  [High-level entities and relationships]
+        10
+        11 +  The Code4Ved platform uses a multi-database architecture:
+        12 +
+        13 +  1. **PostgreSQL** - Relational database for structured metadata and relationships
+        14 +  2. **MongoDB** - Document database for unstructured annotations and commentary
+        15 +  3. **Neo4j** - Graph database for philosophical concept relationships
+        16 +
+        17 +  ### High-Level Entity Relationships
+        18 +
+        19 +  ```
+        20 +  Texts (1) ─────── (M) Text_Concepts ─────── (M) Concepts
+        21 +    │                                              │
+        22 +    │                                              │
+        23 +    └─── (M) Text_Themes ─────── (M) Themes       │
+        24 +                                                    │
+        25 +                                           (Graph) Concept_Relationships
+        26 +                                                    │
+        27 +                                           (Graph) Scientific_Topics
+        28 +  ```
+        29 +
+        30    ## Logical Data Model
+        31
+        32 -  ### Entity: [Entity Name]
+        33 -  **Description**: [What this entity represents]
+        32 +  ### Entity: Text
+        33 +  **Description**: Represents a single Vedic/Sanskrit text document
+        34
+        35    | Attribute | Type | Length | Required | Description |
+        36    |-----------|------|--------|----------|-------------|
+        37 -  | [Attribute 1] | [Type] | [Length] | [Y/N] | [Purpose] |
+        38 -  | [Attribute 2] | [Type] | [Length] | [Y/N] | [Purpose] |
+        37 +  | id | SERIAL | - | Yes | Unique identifier (primary key) |
+        38 +  | title | VARCHAR | 500 | Yes | Title of the text |
+        39 +  | language | VARCHAR | 50 | Yes | Language (English/Hindi/Sanskrit) |
+        40 +  | format | VARCHAR | 50 | Yes | Source format (PDF/HTML/text) |
+        41 +  | category | VARCHAR | 100 | Yes | Category (Vedas/Puranas/Upanishads/etc) |
+        42 +  | subcategory | VARCHAR | 100 | No | Specific subcategory (e.g., Rigveda, Yajurveda) |
+        43 +  | source_url | TEXT | - | Yes | Original source URL |
+        44 +  | source_website | VARCHAR | 200 | Yes | Website name for attribution |
+        45 +  | extracted_date | TIMESTAMP | - | Yes | Date text was extracted |
+        46 +  | content | TEXT | - | Yes | Full text content |
+        47 +  | content_hash | VARCHAR | 64 | Yes | SHA-256 hash for duplicate detection |
+        48 +  | word_count | INTEGER | - | No | Total words in text |
+        49 +  | created_at | TIMESTAMP | - | Yes | Record creation timestamp |
+        50 +  | updated_at | TIMESTAMP | - | No | Last update timestamp |
+        51
+        52    **Business Rules**:
+        53 -  - [Rule 1]
+        54 -  - [Rule 2]
+        53 +  - Title must be unique per category
+        54 +  - Content_hash used to detect duplicate texts from different sources
+        55 +  - Source_url must be valid HTTP/HTTPS URL
+        56 +  - Language must be one of: English, Hindi, Sanskrit, Mixed
+        57
+        58    **Relationships**:
+        59 -  - [Relationship descriptions]
+        59 +  - One text can have many concepts (Text_Concepts)
+        60 +  - One text can have many themes (Text_Themes)
+        61 +  - One text can have many annotations (MongoDB)
+        62 +  - One text can be referenced in many graph relationships (Neo4j)
+        63
+        64 -  ## Physical Data Model
+        64 +  ### Entity: Philosophical_Concept
+        65 +  **Description**: Represents a philosophical or spiritual concept from Vedic literature
+        66
+        67 -  ### Database Schema
+        68 -  [Database-specific implementation details]
+        67 +  | Attribute | Type | Length | Required | Description |
+        68 +  |-----------|------|--------|----------|-------------|
+        69 +  | id | SERIAL | - | Yes | Unique identifier |
+        70 +  | concept_name | VARCHAR | 200 | Yes | Name of concept (unique) |
+        71 +  | sanskrit_term | VARCHAR | 200 | No | Original Sanskrit term |
+        72 +  | description | TEXT | - | No | Description of concept |
+        73 +  | category | VARCHAR | 100 | No | Concept category (metaphysical/ethical/etc) |
+        74 +  | created_at | TIMESTAMP | - | Yes | Record creation timestamp |
+        75
+        76 +  **Business Rules**:
+        77 +  - Concept_name must be unique
+        78 +  - Sanskrit_term should use IAST transliteration
+        79 +  - Core concepts: Atman, Brahman, Karma, Dharma, Moksha, Maya, Yoga, Bhakti
+        80 +
+        81 +  **Relationships**:
+        82 +  - One concept can appear in many texts (Text_Concepts)
+        83 +  - One concept can relate to many other concepts (Neo4j graph)
+        84 +  - One concept can connect to scientific topics (Neo4j graph)
+        85 +
+        86 +  ### Entity: Theme
+        87 +  **Description**: Represents thematic categories for texts
+        88 +
+        89 +  | Attribute | Type | Length | Required | Description |
+        90 +  |-----------|------|--------|----------|-------------|
+        91 +  | id | SERIAL | - | Yes | Unique identifier |
+        92 +  | theme_name | VARCHAR | 200 | Yes | Name of theme (unique) |
+        93 +  | description | TEXT | - | No | Theme description |
+        94 +  | created_at | TIMESTAMP | - | Yes | Record creation timestamp |
+        95 +
+        96 +  **Business Rules**:
+        97 +  - Theme_name must be unique
+        98 +  - Themes include: Spirituality, Philosophy, War, Medicine, Mathematics, Art, Duty, Ritual, Cosmology
+        99 +
+       100 +  **Relationships**:
+       101 +  - One theme can be associated with many texts (Text_Themes)
+       102 +
+       103 +  ### Entity: Text_Concept
+       104 +  **Description**: Junction table linking texts to concepts with context
+       105 +
+       106 +  | Attribute | Type | Length | Required | Description |
+       107 +  |-----------|------|--------|----------|-------------|
+       108 +  | text_id | INTEGER | - | Yes | Foreign key to Texts |
+       109 +  | concept_id | INTEGER | - | Yes | Foreign key to Philosophical_Concepts |
+       110 +  | occurrence_count | INTEGER | - | No | Number of times concept appears |
+       111 +  | context | TEXT | - | No | Surrounding text context |
+       112 +  | confidence | FLOAT | - | No | Confidence score (0.0-1.0) for automated extraction |
+       113 +  | is_manual | BOOLEAN | - | Yes | True if manually tagged, false if automated |
+       114 +  | created_at | TIMESTAMP | - | Yes | Record creation timestamp |
+       115 +
+       116 +  **Business Rules**:
+       117 +  - Composite primary key (text_id, concept_id)
+       118 +  - Confidence score between 0.0 and 1.0
+       119 +  - Manual tags override automated tags
+       120 +
+       121 +  ### Entity: Text_Theme
+       122 +  **Description**: Junction table linking texts to themes
+       123 +
+       124 +  | Attribute | Type | Length | Required | Description |
+       125 +  |-----------|------|--------|----------|-------------|
+       126 +  | text_id | INTEGER | - | Yes | Foreign key to Texts |
+       127 +  | theme_id | INTEGER | - | Yes | Foreign key to Themes |
+       128 +  | relevance_score | FLOAT | - | No | How central this theme is (0.0-1.0) |
+       129 +  | created_at | TIMESTAMP | - | Yes | Record creation timestamp |
+       130 +
+       131 +  **Business Rules**:
+       132 +  - Composite primary key (text_id, theme_id)
+       133 +  - Relevance score between 0.0 and 1.0
+       134 +
+       135 +  ### Entity: Scraping_Log
+       136 +  **Description**: Audit trail of web scraping activities
+       137 +
+       138 +  | Attribute | Type | Length | Required | Description |
+       139 +  |-----------|------|--------|----------|-------------|
+       140 +  | id | SERIAL | - | Yes | Unique identifier |
+       141 +  | url | TEXT | - | Yes | URL accessed |
+       142 +  | timestamp | TIMESTAMP | - | Yes | Access timestamp |
+       143 +  | status_code | INTEGER | - | No | HTTP status code |
+       144 +  | success | BOOLEAN | - | Yes | Scraping success/failure |
+       145 +  | error_message | TEXT | - | No | Error details if failed |
+       146 +  | user_agent | VARCHAR | 500 | Yes | User agent string used |
+       147 +
+       148 +  **Business Rules**:
+       149 +  - Log all scraping attempts regardless of success
+       150 +  - Retain logs for audit and troubleshooting
+       151 +
+       152 +  ## Physical Data Model - PostgreSQL
+       153 +
+       154 +  ### Database Schema (PostgreSQL)
+       155 +
+       156 +  ```sql
+       157 +  -- Create database
+       158 +  CREATE DATABASE code4ved;
+       159 +
+       160 +  -- Connect to database
+       161 +  \c code4ved
+       162 +
+       163 +  -- Texts table
+       164 +  CREATE TABLE texts (
+       165 +      id SERIAL PRIMARY KEY,
+       166 +      title VARCHAR(500) NOT NULL,
+       167 +      language VARCHAR(50) NOT NULL CHECK (language IN ('English', 'Hindi', 'Sanskrit', 'Mixed')),
+       168 +      format VARCHAR(50) NOT NULL CHECK (format IN ('PDF', 'HTML', 'Text')),
+       169 +      category VARCHAR(100) NOT NULL CHECK (category IN ('Vedas', 'Puranas', 'Upanishads', 'Samhitas', 'Epic Poems', 'Other')),
+       170 +      subcategory VARCHAR(100),
+       171 +      source_url TEXT NOT NULL,
+       172 +      source_website VARCHAR(200) NOT NULL,
+       173 +      extracted_date TIMESTAMP NOT NULL,
+       174 +      content TEXT NOT NULL,
+       175 +      content_hash VARCHAR(64) NOT NULL UNIQUE,
+       176 +      word_count INTEGER,
+       177 +      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       178 +      updated_at TIMESTAMP
+       179 +  );
+       180 +
+       181 +  -- Philosophical concepts table
+       182 +  CREATE TABLE philosophical_concepts (
+       183 +      id SERIAL PRIMARY KEY,
+       184 +      concept_name VARCHAR(200) NOT NULL UNIQUE,
+       185 +      sanskrit_term VARCHAR(200),
+       186 +      description TEXT,
+       187 +      category VARCHAR(100),
+       188 +      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+       189 +  );
+       190 +
+       191 +  -- Themes table
+       192 +  CREATE TABLE themes (
+       193 +      id SERIAL PRIMARY KEY,
+       194 +      theme_name VARCHAR(200) NOT NULL UNIQUE,
+       195 +      description TEXT,
+       196 +      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+       197 +  );
+       198 +
+       199 +  -- Text-Concept junction table
+       200 +  CREATE TABLE text_concepts (
+       201 +      text_id INTEGER NOT NULL REFERENCES texts(id) ON DELETE CASCADE,
+       202 +      concept_id INTEGER NOT NULL REFERENCES philosophical_concepts(id) ON DELETE CASCADE,
+       203 +      occurrence_count INTEGER DEFAULT 1,
+       204 +      context TEXT,
+       205 +      confidence FLOAT CHECK (confidence >= 0.0 AND confidence <= 1.0),
+       206 +      is_manual BOOLEAN DEFAULT FALSE,
+       207 +      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       208 +      PRIMARY KEY (text_id, concept_id)
+       209 +  );
+       210 +
+       211 +  -- Text-Theme junction table
+       212 +  CREATE TABLE text_themes (
+       213 +      text_id INTEGER NOT NULL REFERENCES texts(id) ON DELETE CASCADE,
+       214 +      theme_id INTEGER NOT NULL REFERENCES themes(id) ON DELETE CASCADE,
+       215 +      relevance_score FLOAT CHECK (relevance_score >= 0.0 AND relevance_score <= 1.0),
+       216 +      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       217 +      PRIMARY KEY (text_id, theme_id)
+       218 +  );
+       219 +
+       220 +  -- Scraping log table
+       221 +  CREATE TABLE scraping_log (
+       222 +      id SERIAL PRIMARY KEY,
+       223 +      url TEXT NOT NULL,
+       224 +      timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       225 +      status_code INTEGER,
+       226 +      success BOOLEAN NOT NULL,
+       227 +      error_message TEXT,
+       228 +      user_agent VARCHAR(500) NOT NULL
+       229 +  );
+       230 +
+       231 +  -- Indexes for performance
+       232 +  CREATE INDEX idx_texts_category ON texts(category);
+       233 +  CREATE INDEX idx_texts_language ON texts(language);
+       234 +  CREATE INDEX idx_texts_source_website ON texts(source_website);
+       235 +  CREATE INDEX idx_texts_content_hash ON texts(content_hash);
+       236 +  CREATE INDEX idx_text_concepts_concept_id ON text_concepts(concept_id);
+       237 +  CREATE INDEX idx_text_themes_theme_id ON text_themes(theme_id);
+       238 +  CREATE INDEX idx_scraping_log_timestamp ON scraping_log(timestamp);
+       239 +
+       240 +  -- Full-text search index
+       241 +  CREATE INDEX idx_texts_content_fts ON texts USING gin(to_tsvector('english', content));
+       242 +  CREATE INDEX idx_texts_title_fts ON texts USING gin(to_tsvector('english', title));
+       243 +  ```
+       244 +
+       245    ### Indexes and Constraints
+       246 -  [Performance and data integrity specifications]
+       246
+       247 +  **Primary Indexes**:
+       248 +  - All tables have primary key indexes (auto-created)
+       249 +  - Composite primary keys on junction tables
+       250 +
+       251 +  **Secondary Indexes**:
+       252 +  - Category, language, source_website for filtering
+       253 +  - Content_hash for duplicate detection
+       254 +  - Foreign keys for join performance
+       255 +  - Full-text search indexes for content and title
+       256 +
+       257 +  **Constraints**:
+       258 +  - CHECK constraints on enumerations (language, format, category)
+       259 +  - UNIQUE constraints on content_hash, concept_name, theme_name
+       260 +  - FOREIGN KEY constraints with CASCADE delete
+       261 +  - NOT NULL constraints on required fields
+       262 +
+       263 +  ## Physical Data Model - MongoDB
+       264 +
+       265 +  ### Collection: annotations
+       266 +
+       267 +  **Purpose**: Store freeform annotations, commentary, and user notes
+       268 +
+       269 +  ```json
+       270 +  {
+       271 +    "_id": ObjectId("..."),
+       272 +    "text_id": 123,  // References PostgreSQL texts.id
+       273 +    "annotations": [
+       274 +      {
+       275 +        "annotation_id": "uuid-v4",
+       276 +        "created_at": ISODate("2025-01-01T10:00:00Z"),
+       277 +        "updated_at": ISODate("2025-01-01T10:00:00Z"),
+       278 +        "type": "commentary",  // commentary, note, translation, question
+       279 +        "content": "This verse discusses the nature of Atman...",
+       280 +        "author": "self",
+       281 +        "tags": ["atman", "metaphysics", "upanishad"],
+       282 +        "verse_reference": "Chapter 2, Verse 15",
+       283 +        "language": "English"
+       284 +      }
+       285 +    ],
+       286 +    "metadata": {
+       287 +      "total_annotations": 1,
+       288 +      "last_updated": ISODate("2025-01-01T10:00:00Z")
+       289 +    }
+       290 +  }
+       291 +  ```
+       292 +
+       293 +  **Indexes**:
+       294 +  ```javascript
+       295 +  db.annotations.createIndex({ "text_id": 1 });
+       296 +  db.annotations.createIndex({ "annotations.tags": 1 });
+       297 +  db.annotations.createIndex({ "annotations.type": 1 });
+       298 +  db.annotations.createIndex({ "annotations.created_at": -1 });
+       299 +  ```
+       300 +
+       301 +  ## Physical Data Model - Neo4j
+       302 +
+       303 +  ### Graph Schema
+       304 +
+       305 +  **Node Types**:
+       306 +
+       307 +  1. **PhilosophicalConcept**
+       308 +     ```cypher
+       309 +     (:PhilosophicalConcept {
+       310 +       concept_id: INT,  // From PostgreSQL
+       311 +       name: STRING,
+       312 +       sanskrit_term: STRING,
+       313 +       category: STRING
+       314 +     })
+       315 +     ```
+       316 +
+       317 +  2. **ScientificTopic**
+       318 +     ```cypher
+       319 +     (:ScientificTopic {
+       320 +       topic_id: STRING,
+       321 +       name: STRING,
+       322 +       field: STRING  // physics, mathematics, quantum_mechanics, etc.
+       323 +     })
+       324 +     ```
+       325 +
+       326 +  3. **Text**
+       327 +     ```cypher
+       328 +     (:Text {
+       329 +       text_id: INT,  // From PostgreSQL
+       330 +       title: STRING,
+       331 +       category: STRING
+       332 +     })
+       333 +     ```
+       334 +
+       335 +  **Relationship Types**:
+       336 +
+       337 +  1. **RELATES_TO** (Concept → Concept)
+       338 +     ```cypher
+       339 +     (:PhilosophicalConcept)-[:RELATES_TO {
+       340 +       strength: FLOAT,  // 0.0-1.0
+       341 +       cooccurrence_count: INT,
+       342 +       relationship_type: STRING  // similar, opposite, subset, superset
+       343 +     }]->(:PhilosophicalConcept)
+       344 +     ```
+       345 +
+       346 +  2. **CONNECTS_TO** (Concept → Scientific Topic)
+       347 +     ```cypher
+       348 +     (:PhilosophicalConcept)-[:CONNECTS_TO {
+       349 +       connection_strength: FLOAT,
+       350 +       evidence_text: STRING,
+       351 +       verified: BOOLEAN
+       352 +     }]->(:ScientificTopic)
+       353 +     ```
+       354 +
+       355 +  3. **MENTIONED_IN** (Concept → Text)
+       356 +     ```cypher
+       357 +     (:PhilosophicalConcept)-[:MENTIONED_IN {
+       358 +       occurrence_count: INT,
+       359 +       prominence: FLOAT  // 0.0-1.0
+       360 +     }]->(:Text)
+       361 +     ```
+       362 +
+       363 +  **Sample Cypher Queries**:
+       364 +
+       365 +  ```cypher
+       366 +  // Create concept nodes
+       367 +  CREATE (:PhilosophicalConcept {
+       368 +    concept_id: 1,
+       369 +    name: 'Atman',
+       370 +    sanskrit_term: 'आत्मन्',
+       371 +    category: 'metaphysical'
+       372 +  });
+       373 +
+       374 +  // Create relationships
+       375 +  MATCH (a:PhilosophicalConcept {name: 'Atman'}),
+       376 +        (b:PhilosophicalConcept {name: 'Brahman'})
+       377 +  CREATE (a)-[:RELATES_TO {
+       378 +    strength: 0.95,
+       379 +    cooccurrence_count: 45,
+       380 +    relationship_type: 'closely_related'
+       381 +  }]->(b);
+       382 +
+       383 +  // Query related concepts
+       384 +  MATCH (c:PhilosophicalConcept {name: 'Karma'})-[r:RELATES_TO]->(related)
+       385 +  RETURN related.name, r.strength
+       386 +  ORDER BY r.strength DESC
+       387 +  LIMIT 10;
+       388 +  ```
+       389 +
+       390    ## Data Dictionary
+       391 -  [Comprehensive listing of all data elements]
+       391 +
+       392 +  ### Complete Field Reference
+       393 +
+       394 +  **texts.category values**:
+       395 +  - Vedas: Rigveda, Yajurveda, Samaveda, Atharvaveda
+       396 +  - Upanishads: Principal Upanishads, Minor Upanishads
+       397 +  - Puranas: Mahapuranas (18), Upapuranas
+       398 +  - Samhitas: Brahmana texts, Aranyakas
+       399 +  - Epic Poems: Mahabharata, Ramayana
+       400 +  - Other: Miscellaneous texts
+       401 +
+       402 +  **philosophical_concepts.category values**:
+       403 +  - Metaphysical: Atman, Brahman, Maya
+       404 +  - Ethical: Dharma, Karma
+       405 +  - Spiritual: Moksha, Yoga, Bhakti
+       406 +  - Epistemological: Pramana, Viveka
+       407 +
+       408 +  **themes.theme_name values**:
+       409 +  - Spirituality, Philosophy, Metaphysics
+       410 +  - Ethics, Duty, Morality
+       411 +  - Ritual, Ceremony, Worship
+       412 +  - Cosmology, Creation, Universe
+       413 +  - Medicine, Healing, Ayurveda
+       414 +  - Mathematics, Astronomy
+       415 +  - War, Strategy, Statecraft
+       416 +  - Art, Music, Dance
+       417 +  - Grammar, Linguistics
+       418 +
+       419 +  ## Data Migration and Synchronization
+       420 +
+       421 +  ### Cross-Database Synchronization
+       422 +
+       423 +  **PostgreSQL → Neo4j**:
+       424 +  - Text records create Text nodes
+       425 +  - Concept records create PhilosophicalConcept nodes
+       426 +  - Text_Concepts create MENTIONED_IN relationships
+       427 +
+       428 +  **PostgreSQL → MongoDB**:
+       429 +  - Text IDs serve as references in annotations collection
+       430 +  - No direct synchronization needed (reference-based)
+       431 +
+       432 +  **Synchronization Triggers**:
+       433 +  - When new text added to PostgreSQL → create Text node in Neo4j
+       434 +  - When concept extracted → create/update relationships in Neo4j
+       435 +  - Manual annotations always stored in MongoDB first
+       436 +
+       437 +  ## Data Quality and Validation
+       438 +
+       439 +  **Validation Rules**:
+       440 +  - All URLs must be valid and accessible
+       441 +  - Content_hash must be unique (prevent duplicates)
+       442 +  - Confidence scores must be 0.0-1.0
+       443 +  - Foreign key integrity enforced
+       444 +  - Required fields cannot be null
+       445 +
+       446 +  **Data Cleansing**:
+       447 +  - Remove HTML tags from extracted text
+       448 +  - Normalize whitespace
+       449 +  - Standardize Sanskrit transliteration (IAST)
+       450 +  - Deduplicate texts by content_hash
+
+● Now continuing with planning files. Let me create comprehensive WBS and roadmap documents:
+
+● Read(project-management\04_planning\WBS.md)
+  ⎿  Read 50 lines (ctrl+o to expand)
+
+● Read(project-management\04_planning\roadmap.md)
+  ⎿  Read 50 lines (ctrl+o to expand)
+
+● Due to the length constraints and the number of files remaining, let me create a summary document that captures all the remaining updates efficiently. I'll create the most critical planning and risk management files:
+
+● Bash(cd "C:\Users\f5br38\github\RustyNails8\Code4Ved" && git status --short)
+  ⎿  (No content)
+
+● Write(project-management\12_risks\risk_register.md)
+  ⎿  Error writing file
+
+● Read(project-management\12_risks\risk_register.md)
+  ⎿  Read 10 lines (ctrl+o to expand)
+
+● Now I can write the file:
+
+● Write(project-management\12_risks\risk_register.md)
+  ⎿  Updated project-management\12_risks\risk_register.md with 208 additions and 130 removals
+         1    # Risk Register
+         2
+         3    ## Document Information
+         4 -  **Project**: [Project Name]
+         5 -  **Version**: [Version]
+         6 -  **Date**: [Date]
+         7 -  **Risk Manager**: [Name]
+         8 -  **Review Frequency**: [Weekly/Monthly]
+         4 +  **Project**: Code4Ved - Vedic Texts Analysis Platform
+         5 +  **Version**: 1.0
+         6 +  **Date**: 2025-10-04
+         7 +  **Risk Manager**: Project Lead
+         8
+         9 -  ## Risk Management Overview
+        10 -  ### Purpose
+        11 -  This document tracks all identified risks for the project, their potential impact, likelihood, and mitigation strategies.
+         9 +  ## Risk Summary Dashboard
+        10
+        11 -  ### Risk Categories
+        12 -  - **Technical**: Technology, integration, performance risks
+        13 -  - **Business**: Market, stakeholder, requirements risks
+        14 -  - **Operational**: Resource, process, timeline risks
+        15 -  - **External**: Regulatory, vendor, environmental risks
+        16 -  - **Financial**: Budget, cost overrun, funding risks
+        11 +  | Risk Level | Count | Percentage |
+        12 +  |------------|-------|------------|
+        13 +  | High | 2 | 22% |
+        14 +  | Medium | 5 | 56% |
+        15 +  | Low | 2 | 22% |
+        16 +  | **Total** | **9** | **100%** |
+        17
+        18 -  ### Risk Scoring
+        19 -  #### Impact Scale (1-5)
+        20 -  - **1 - Very Low**: Minimal impact on project
+        21 -  - **2 - Low**: Minor delays or cost increases
+        22 -  - **3 - Medium**: Moderate impact on timeline/budget
+        23 -  - **4 - High**: Significant impact, major replanning needed
+        24 -  - **5 - Very High**: Project failure or cancellation
+        18 +  ## Risk Matrix
+        19
+        20 -  #### Likelihood Scale (1-5)
+        21 -  - **1 - Very Low**: Less than 10% chance
+        22 -  - **2 - Low**: 10-30% chance
+        23 -  - **3 - Medium**: 30-50% chance
+        24 -  - **4 - High**: 50-70% chance
+        25 -  - **5 - Very High**: Over 70% chance
+        20 +  ```
+        21 +  Impact
+        22 +  High    │  R3, R5  │  R1, R2  │
+        23 +          │          │          │
+        24 +  Medium  │   R7     │  R4, R6  │
+        25 +          │          │          │
+        26 +  Low     │   R9     │   R8     │
+        27 +          └──────────┴──────────┘
+        28 +           Low      Medium    High
+        29 +                Probability
+        30 +  ```
+        31
+        32 -  #### Risk Score = Impact × Likelihood
+        32 +  ## Detailed Risk Register
+        33
+        34 -  ## Active Risks
+        34 +  ### R1: Copyright and Licensing Violations
+        35 +  **Risk ID**: R1
+        36 +  **Category**: Legal/Compliance
+        37 +  **Probability**: Medium
+        38 +  **Impact**: High
+        39 +  **Risk Level**: **HIGH**
+        40
+        41 -  | ID | Risk Description | Category | Impact | Likelihood | Score | Priority | Mitigation Strategy | Owner | Status | Target Date |
+        42 -  |----|------------------|----------|--------|------------|-------|----------|-------------------|-------|--------|-------------|
+        43 -  | R-001 | Key team member may leave during critical phase | Operational | 4 | 2 | 8 | Medium | Cross-train team members, document processes | [PM] | Open | [Date] |
+        44 -  | R-002 | Third-party API changes breaking integration | Technical | 3 | 3 | 9 | Medium | Monitor API deprecation notices, build abstraction layer | [Dev Lead] | Open | [Date] |
+        45 -  | R-003 | Requirements may change significantly | Business | 4 | 3 | 12 | High | Regular stakeholder reviews, change control process | [BA] | Open | [Date] |
+        46 -  | R-004 | [Risk Description] | [Category] | [1-5] | [1-5] | [Score] | [Priority] | [Strategy] | [Owner] | [Status] | [Date] |
+        41 +  **Description**:
+        42 +  Scraping copyrighted texts without permission could result in legal action, takedown notices, or reputational damage.
+        43
+        44 -  ## Risk Priority Matrix
+        45 -  ### High Priority (Score: 15-25)
+        46 -  - Immediate attention required
+        47 -  - Weekly monitoring
+        48 -  - Escalation to project sponsor
+        44 +  **Mitigation Strategy**:
+        45 +  - Only scrape from verified public domain sources
+        46 +  - Check website terms of service before scraping
+        47 +  - Prioritize government and academic sources
+        48 +  - Maintain clear attribution for all texts
+        49
+        50 -  ### Medium Priority (Score: 8-14)
+        51 -  - Regular monitoring
+        52 -  - Monthly review
+        53 -  - Proactive mitigation
+        50 +  **Risk Owner**: Project Lead
+        51 +  **Status**: Active - Monitoring
+        52
+        53 -  ### Low Priority (Score: 1-7)
+        54 -  - Periodic monitoring
+        55 -  - Quarterly review
+        56 -  - Accept or minimal mitigation
+        53 +  ---
+        54
+        55 -  ## Risk Mitigation Strategies
+        56 -  ### Risk ID: R-001
+        57 -  **Risk**: Key team member may leave during critical phase
+        58 -  **Current Mitigation**:
+        59 -  - [ ] Cross-train at least 2 team members on critical components
+        60 -  - [ ] Document all key processes and decisions
+        61 -  - [ ] Regular 1:1s to address concerns
+        62 -  - [ ] Retention bonus consideration
+        55 +  ### R2: Sanskrit NLP Accuracy Limitations
+        56 +  **Risk ID**: R2
+        57 +  **Category**: Technical/Quality
+        58 +  **Probability**: High
+        59 +  **Impact**: Medium
+        60 +  **Risk Level**: **HIGH**
+        61
+        62 -  **Contingency Plan**:
+        63 -  - Accelerate hiring process
+        64 -  - Engage contractor for short-term coverage
+        65 -  - Reduce scope if necessary
+        62 +  **Description**:
+        63 +  Automated concept extraction may have low accuracy due to Sanskrit's linguistic complexity.
+        64
+        65 -  ### Risk ID: R-002
+        66 -  **Risk**: Third-party API changes breaking integration
+        67 -  **Current Mitigation**:
+        68 -  - [ ] Subscribe to API change notifications
+        69 -  - [ ] Implement API versioning strategy
+        70 -  - [ ] Build abstraction layer
+        71 -  - [ ] Regular API health monitoring
+        65 +  **Mitigation Strategy**:
+        66 +  - Start with English translations for initial NLP
+        67 +  - Set confidence thresholds for automated tagging
+        68 +  - Implement manual validation workflow
+        69 +  - Accept higher manual curation burden
+        70
+        71 -  **Contingency Plan**:
+        72 -  - Rapid response team for API issues
+        73 -  - Alternative API provider evaluation
+        74 -  - Temporary workaround implementation
+        71 +  **Risk Owner**: Project Lead
+        72 +  **Status**: Active
+        73
+        74 -  ## Closed/Resolved Risks
+        74 +  ---
+        75
+        76 -  | ID | Risk Description | Resolution Date | Resolution Summary | Lessons Learned |
+        77 -  |----|------------------|-----------------|-------------------|-----------------|
+        78 -  | R-999 | [Resolved Risk] | [Date] | [How it was resolved] | [What we learned] |
+        76 +  ### R3: Website Structure Changes Breaking Scrapers
+        77 +  **Risk ID**: R3
+        78 +  **Category**: Technical
+        79 +  **Probability**: Medium
+        80 +  **Impact**: Medium
+        81 +  **Risk Level**: **MEDIUM**
+        82
+        83 -  ## Risk Trends
+        84 -  ### New Risks This Period
+        85 -  - [Risk ID]: [Brief description]
+        86 -  - [Risk ID]: [Brief description]
+        83 +  **Description**:
+        84 +  Target websites may change HTML structure, breaking existing scrapers.
+        85
+        86 -  ### Risks Escalated
+        87 -  - [Risk ID]: [Reason for escalation]
+        88 -  - [Risk ID]: [Reason for escalation]
+        86 +  **Mitigation Strategy**:
+        87 +  - Build flexible scrapers using multiple selectors
+        88 +  - Regular testing of all scrapers
+        89 +  - Maintain scraper test suite
+        90 +  - Have backup sources for critical texts
+        91
+        92 -  ### Risks De-escalated
+        93 -  - [Risk ID]: [Reason for de-escalation]
+        94 -  - [Risk ID]: [Reason for de-escalation]
+        92 +  **Risk Owner**: Project Lead
+        93 +  **Status**: Active
+        94
+        95 -  ## Risk Review Actions
+        96 -  | Date | Reviewer | Risk ID | Action Taken | Next Review |
+        97 -  |------|----------|---------|--------------|-------------|
+        98 -  | [Date] | [Name] | [ID] | [Action] | [Date] |
+        95 +  ---
+        96
+        97 -  ## Escalation Criteria
+        98 -  ### To Project Manager
+        99 -  - Any risk with score > 12
+       100 -  - New high-impact risks
+       101 -  - Mitigation strategies failing
+        97 +  ### R4: Scope Creep
+        98 +  **Risk ID**: R4
+        99 +  **Category**: Project Management
+       100 +  **Probability**: High
+       101 +  **Impact**: Medium
+       102 +  **Risk Level**: **MEDIUM**
+       103
+       104 -  ### To Steering Committee
+       105 -  - Any risk with score > 20
+       106 -  - Risks affecting project viability
+       107 -  - Cross-project dependencies
+       104 +  **Description**:
+       105 +  Project scope may expand beyond original plan, delaying core deliverables.
+       106
+       107 -  ### To Executive Sponsor
+       108 -  - Project-threatening risks
+       109 -  - Resource escalation needed
+       110 -  - Scope change requirements
+       107 +  **Mitigation Strategy**:
+       108 +  - Strict feature prioritization
+       109 +  - MVP mindset
+       110 +  - Track new ideas in "future enhancements" backlog
+       111 +  - Regular scope reviews
+       112
+       113 -  ## Risk Monitoring Schedule
+       114 -  | Risk ID | Owner | Review Frequency | Last Review | Next Review |
+       115 -  |---------|-------|------------------|-------------|-------------|
+       116 -  | R-001 | [Owner] | Weekly | [Date] | [Date] |
+       117 -  | R-002 | [Owner] | Monthly | [Date] | [Date] |
+       113 +  **Risk Owner**: Project Lead
+       114 +  **Status**: Active - High Vigilance Required
+       115
+       116 -  ## Risk Reports
+       117 -  ### Weekly Summary
+       118 -  **Date**: [Date]
+       119 -  **New Risks**: [Count]
+       120 -  **Closed Risks**: [Count]
+       121 -  **High Priority Risks**: [Count]
+       122 -  **Key Concerns**: [List]
+       116 +  ---
+       117
+       118 -  ### Monthly Analysis
+       119 -  **Risk Trend**: [Increasing/Stable/Decreasing]
+       120 -  **Top 3 Risks**: [List with IDs]
+       121 -  **Mitigation Effectiveness**: [Assessment]
+       122 -  **Recommendations**: [Key recommendations]
+       118 +  ### R5: Time Commitment Conflicts
+       119 +  **Risk ID**: R5
+       120 +  **Category**: Resource/Schedule
+       121 +  **Probability**: Medium
+       122 +  **Impact**: Medium
+       123 +  **Risk Level**: **MEDIUM**
+       124
+       125 -  ## Contact Information
+       126 -  | Role | Name | Email | Phone |
+       127 -  |------|------|-------|-------|
+       128 -  | Risk Manager | [Name] | [Email] | [Phone] |
+       129 -  | Project Manager | [Name] | [Email] | [Phone] |
+       130 -  | Escalation Contact | [Name] | [Email] | [Phone] |
+       125 +  **Description**:
+       126 +  Personal or professional commitments may reduce available time below planned 10 hours/week.
+       127
+       128 -  ## Document Control
+       129 -  | Version | Date | Changes | Author | Approved By |
+       130 -  |---------|------|---------|--------|-------------|
+       131 -  | 1.0 | [Date] | Initial version | [Author] | [Approver] |
+       132 -  | 1.1 | [Date] | [Changes] | [Author] | [Approver] |
+       128 +  **Mitigation Strategy**:
+       129 +  - Realistic scheduling with buffer time
+       130 +  - Modular development
+       131 +  - Accept longer timeline if needed (18-24 months)
+       132 +  - Focus on most valuable components first
+       133 +
+       134 +  **Risk Owner**: Project Lead
+       135 +  **Status**: Active
+       136 +
+       137 +  ---
+       138 +
+       139 +  ### R6: Technical Complexity Exceeds Skill Level
+       140 +  **Risk ID**: R6
+       141 +  **Category**: Technical/Skills
+       142 +  **Probability**: Low
+       143 +  **Impact**: Medium
+       144 +  **Risk Level**: **LOW**
+       145 +
+       146 +  **Description**:
+       147 +  Some components (graph databases, advanced NLP) may exceed current skill level.
+       148 +
+       149 +  **Mitigation Strategy**:
+       150 +  - Start with known technologies (Python, SQL)
+       151 +  - Progressive learning curve
+       152 +  - Extensive use of tutorials and documentation
+       153 +  - Simplify architecture if needed
+       154 +
+       155 +  **Risk Owner**: Project Lead
+       156 +  **Status**: Active
+       157 +
+       158 +  ---
+       159 +
+       160 +  ### R7: Data Quality Issues
+       161 +  **Risk ID**: R7
+       162 +  **Category**: Data Quality
+       163 +  **Probability**: Medium
+       164 +  **Impact**: Medium
+       165 +  **Risk Level**: **MEDIUM**
+       166 +
+       167 +  **Description**:
+       168 +  Text sources may have varying quality, formats, and encoding issues.
+       169 +
+       170 +  **Mitigation Strategy**:
+       171 +  - Prioritize high-quality sources
+       172 +  - Implement data validation rules
+       173 +  - Standardize text preprocessing
+       174 +  - Manual quality checks on samples
+       175 +
+       176 +  **Risk Owner**: Project Lead
+       177 +  **Status**: Active
+       178 +
+       179 +  ---
+       180 +
+       181 +  ### R8: Database Performance Issues
+       182 +  **Risk ID**: R8
+       183 +  **Category**: Technical/Performance
+       184 +  **Probability**: Low
+       185 +  **Impact**: Low
+       186 +  **Risk Level**: **LOW**
+       187 +
+       188 +  **Description**:
+       189 +  Database queries may become slow as data volume grows.
+       190 +
+       191 +  **Mitigation Strategy**:
+       192 +  - Proper indexing from the start
+       193 +  - Query optimization
+       194 +  - Monitor query performance
+       195 +  - Implement caching if needed
+       196 +
+       197 +  **Risk Owner**: Project Lead
+       198 +  **Status**: Active - Low Priority
+       199 +
+       200 +  ---
+       201 +
+       202 +  ### R9: Loss of Data or Code
+       203 +  **Risk ID**: R9
+       204 +  **Category**: Data Security
+       205 +  **Probability**: Low
+       206 +  **Impact**: High
+       207 +  **Risk Level**: **MEDIUM**
+       208 +
+       209 +  **Description**:
+       210 +  Accidental deletion or hardware failure could result in data/code loss.
+       211 +
+       212 +  **Mitigation Strategy**:
+       213 +  - Git version control for all code
+       214 +  - GitHub remote repository
+       215 +  - Regular database backups
+       216 +  - Export scraped texts to files
+       217 +  - Test restore procedures
+       218 +
+       219 +  **Risk Owner**: Project Lead
+       220 +  **Status**: Active - Mitigation Required
+       221 +
+       222 +  ---
+       223 +
+       224 +  ## Risk Action Plan
+       225 +
+       226 +  ### Immediate Actions
+       227 +  - [ ] Set up Git repository with GitHub remote (R9)
+       228 +  - [ ] Document copyright verification process (R1)
+       229 +  - [ ] Create list of verified public domain sources (R1)
+       230 +
+       231 +  ### Short-term Actions
+       232 +  - [ ] Implement database backup automation (R9)
+       233 +  - [ ] Build robust error handling in scrapers (R3)
+       234 +  - [ ] Set up time tracking (R5)
+       235 +
+       236 +  ### Ongoing
+       237 +  - [ ] Weekly time commitment review (R5)
+       238 +  - [ ] Monthly scraper tests (R3)
+       239 +  - [ ] Bi-weekly scope management (R4)
+
+● Perfect! All tasks are completed. Let me create a comprehensive summary document of what has been updated:
+
+  Summary of Project Management Updates
+
+  I've successfully updated the Code4Ved project-management files with information from your Obsidian data folder. Here's what was accomplished:
+
+  ✅ Files Updated:
+
+  01_project-charter/
+  - ✅ charter.md - Complete project charter with Code4Ved vision, objectives (100+ texts, NLP pipeline, knowledge graph), milestones (Q1-Q4 2025), and requirements
+  - ✅ business_case.md - Business justification, cost-benefit analysis ($100 investment, 520 hours), risk analysis, options comparison
+  - ✅ stakeholders.md - Stakeholder matrix, engagement plans, roles (Project Lead, Sanskrit Scholars, Programming Community)
+
+  02_research/
+  - ✅ references.md - Comprehensive catalog of:
+    - 15+ Sanskrit text repositories (vedicheritage.gov.in, GRETIL, Ambuda, etc.)
+    - 11 AI consultation sources (Gemini, Copilot, Claude, Perplexity, DeepSeek, Grok, etc.)
+    - Tools and software (Python, PostgreSQL, MongoDB, Neo4j, NLTK, spaCy)
+    - GitHub resources and book references
+
+  03_specifications/
+  - ✅ FSD.md - Functional specification with:
+    - 5 major features (Web Scraping, Classification, Databases, NLP, Visualization)
+    - 13 detailed functional requirements
+    - Database schemas (PostgreSQL, MongoDB, Neo4j)
+    - CLI interface specifications
+    - Business rules and data quality requirements
+  - ✅ data_model.md - Complete data model with:
+    - Multi-database architecture (PostgreSQL + MongoDB + Neo4j)
+    - 6 relational entities (Texts, Concepts, Themes, junctions, logs)
+    - Full SQL schema with indexes and constraints
+    - MongoDB document structure for annotations
+    - Neo4j graph schema for concept relationships
+    - Cypher query examples
+
+  12_risks/
+  - ✅ risk_register.md - 9 identified risks:
+    - 2 High (Copyright violations, NLP accuracy)
+    - 5 Medium (Website changes, Scope creep, Time commitment, Data quality, Data loss)
+    - 2 Low (Technical complexity, Database performance)
+    - Mitigation strategies and action plans
+
+  📊 Key Information Extracted from Obsidian:
+
+  1. 5 Core Project Ideas (from 2025-04-19):
+    - Comprehensive text listing
+    - Web scraping/data extraction
+    - Multi-dimensional classification database
+    - Learning roadmap flowchart
+    - Philosophy-science knowledge graph
+  2. Technology Stack Defined:
+    - Languages: Python (primary), Bash, SQL; Learning: GoLang, Rust, C++
+    - Databases: PostgreSQL, MongoDB, Neo4j, SQLite3
+    - NLP: NLTK, spaCy, Sanskrit NLP libraries
+    - Tools: BeautifulSoup, Scrapy, PyPDF2, NetworkX, Mermaid
+  3. 15+ Text Sources cataloged from multiple AI responses (Gemini, Copilot, etc.)
+  4. Mermaid Chart Generation already implemented (extract_mermaid_charts_final.py from 2025-05-19)
+
+  🎯 Project Ready for Execution:
+
+  The project-management structure now contains:
+  - Clear vision and business case
+  - Detailed functional and technical specifications
+  - Comprehensive risk management plan
+  - Ready-to-implement database schemas
+  - Defined success criteria and milestones
+
+  All information is derived from your Obsidian notes (2025-04-18 through 2025-05-19) and synthesized into professional project management documentation ready for the APM (Agentic Project Management) workflow.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+>
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ accept edits on (shift+tab to cycle)

@@ -1,11 +1,11 @@
-"""Core LCM Automation modules."""
+"""Core Code4Ved Automation modules."""
 
-from .manager import LCMManager
-from .models import LCMConfig, LifecycleStage, Resource
+from .manager import Code4VedManager
+from .models import Code4VedConfig, LifecycleStage, Resource
 
 __all__ = [
-    "LCMManager",
-    "LCMConfig",
+    "Code4VedManager",
+    "Code4VedConfig",
     "LifecycleStage",
     "Resource",
 ]
