@@ -1,4 +1,4 @@
-"""GRETIL scraper implementation."""
+"""Sanskrit Linguistics scraper implementation."""
 
 import re
 from typing import List, Optional
@@ -11,11 +11,11 @@ from ..base import BaseScraper, ScrapingError
 from ..models import ScrapedContent, TextFormat
 
 
-class GretilScraper(BaseScraper):
-    """Scraper for GRETIL (Göttingen Register of Electronic Texts)."""
+class SanskritLinguisticsScraper(BaseScraper):
+    """Scraper for Sanskrit Linguistics Digital Corpus."""
     
-    def __init__(self, config, source_name: str = "gretil"):
-        """Initialize GRETIL scraper.
+    def __init__(self, config, source_name: str = "sanskritlinguistics"):
+        """Initialize Sanskrit Linguistics scraper.
         
         Args:
             config: Scraping configuration
@@ -28,17 +28,16 @@ class GretilScraper(BaseScraper):
             'div.content',
             'div.main-content',
             'div.text-content',
-            'pre',
-            'div.text',
-            'div.work'
+            'div.linguistics-content',
+            'div.corpus'
         ]
         
         self.title_selectors = [
             'h1',
             'h2.title',
-            'h2.work-title',
+            'h2.corpus-title',
             '.title',
-            '.work-title'
+            '.corpus-title'
         ]
         
         self.metadata_selectors = {
@@ -48,7 +47,7 @@ class GretilScraper(BaseScraper):
         }
     
     async def scrape_url(self, url: str) -> ScrapedContent:
-        """Scrape content from GRETIL.
+        """Scrape content from Sanskrit Linguistics.
         
         Args:
             url: URL to scrape

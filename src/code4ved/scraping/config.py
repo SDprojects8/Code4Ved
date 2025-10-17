@@ -58,6 +58,10 @@ class ScrapingConfig(BaseModel):
     validate_content: bool = Field(default=True, description="Validate scraped content")
     validate_encoding: bool = Field(default=True, description="Validate text encoding")
     
+    # SSL settings
+    verify_ssl: bool = Field(default=True, description="Verify SSL certificates")
+    ssl_warnings: bool = Field(default=True, description="Show SSL warnings")
+    
     @validator('storage_path')
     def validate_storage_path(cls, v):
         """Validate and create storage path if needed."""
@@ -88,7 +92,30 @@ class ScrapingConfig(BaseModel):
         with open(config_path, 'r', encoding='utf-8') as f:
             config_data = yaml.safe_load(f)
         
-        return cls(**config_data)
+        # Extract sources from the YAML structure
+        sources_data = config_data.pop('sources', {})
+        
+        # Create config instance with remaining data
+        config = cls(**config_data)
+        
+        # Parse and add sources
+        for source_name, source_config in sources_data.items():
+            # Convert format strings to TextFormat enums
+            if 'supported_formats' in source_config:
+                formats = []
+                for fmt in source_config['supported_formats']:
+                    try:
+                        formats.append(TextFormat(fmt.upper()))
+                    except ValueError:
+                        # Skip invalid formats
+                        continue
+                source_config['supported_formats'] = formats
+            
+            # Create SourceMetadata object
+            source_metadata = SourceMetadata(**source_config)
+            config.add_source(source_metadata)
+        
+        return config
     
     @classmethod
     def from_env(cls) -> "ScrapingConfig":
@@ -112,6 +139,8 @@ class ScrapingConfig(BaseModel):
             'C4V_LOG_LEVEL': 'log_level',
             'C4V_LOG_FILE': 'log_file',
             'C4V_MAX_CONCURRENT': 'max_concurrent_requests',
+            'C4V_VERIFY_SSL': 'verify_ssl',
+            'C4V_SSL_WARNINGS': 'ssl_warnings',
         }
         
         for env_var, config_field in env_mapping.items():
@@ -122,7 +151,7 @@ class ScrapingConfig(BaseModel):
                     config_data[config_field] = int(value)
                 elif config_field in ['default_rate_limit']:
                     config_data[config_field] = float(value)
-                elif config_field in ['respect_robots', 'create_directories', 'duplicate_detection', 'validate_content', 'validate_encoding']:
+                elif config_field in ['respect_robots', 'create_directories', 'duplicate_detection', 'validate_content', 'validate_encoding', 'verify_ssl', 'ssl_warnings']:
                     config_data[config_field] = value.lower() in ('true', '1', 'yes', 'on')
                 elif config_field in ['storage_path', 'log_file']:
                     config_data[config_field] = Path(value)
@@ -192,11 +221,21 @@ class ScrapingConfig(BaseModel):
 
 
 def get_default_config() -> ScrapingConfig:
-    """Get default configuration with built-in source definitions.
+    """Get default configuration from YAML file.
     
     Returns:
-        ScrapingConfig with default source configurations
+        ScrapingConfig with source configurations from YAML file
     """
+    # Try to load from YAML file first
+    config_path = Path("config/scraping.yaml")
+    if config_path.exists():
+        try:
+            return ScrapingConfig.from_file(config_path)
+        except Exception as e:
+            print(f"Warning: Failed to load config from {config_path}: {e}")
+            print("Falling back to built-in configuration")
+    
+    # Fallback to built-in configuration
     config = ScrapingConfig()
     
     # Add default source configurations

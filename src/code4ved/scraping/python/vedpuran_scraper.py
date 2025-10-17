@@ -1,4 +1,4 @@
-"""GRETIL scraper implementation."""
+"""VedPuran scraper implementation."""
 
 import re
 from typing import List, Optional
@@ -11,11 +11,11 @@ from ..base import BaseScraper, ScrapingError
 from ..models import ScrapedContent, TextFormat
 
 
-class GretilScraper(BaseScraper):
-    """Scraper for GRETIL (Göttingen Register of Electronic Texts)."""
+class VedPuranScraper(BaseScraper):
+    """Scraper for VedPuran (Ved and Puran PDF Downloads)."""
     
-    def __init__(self, config, source_name: str = "gretil"):
-        """Initialize GRETIL scraper.
+    def __init__(self, config, source_name: str = "vedpuran"):
+        """Initialize VedPuran scraper.
         
         Args:
             config: Scraping configuration
@@ -28,17 +28,16 @@ class GretilScraper(BaseScraper):
             'div.content',
             'div.main-content',
             'div.text-content',
-            'pre',
-            'div.text',
-            'div.work'
+            'div.pdf-content',
+            'div.document'
         ]
         
         self.title_selectors = [
             'h1',
             'h2.title',
-            'h2.work-title',
+            'h2.pdf-title',
             '.title',
-            '.work-title'
+            '.pdf-title'
         ]
         
         self.metadata_selectors = {
@@ -48,7 +47,7 @@ class GretilScraper(BaseScraper):
         }
     
     async def scrape_url(self, url: str) -> ScrapedContent:
-        """Scrape content from GRETIL.
+        """Scrape content from VedPuran.
         
         Args:
             url: URL to scrape
@@ -79,7 +78,7 @@ class GretilScraper(BaseScraper):
                 url=url,
                 source=self.source_name,
                 format=TextFormat.HTML,
-                language=metadata.get('language', 'en'),
+                language=metadata.get('language', 'hi'),
                 category=metadata.get('category'),
                 author=metadata.get('author'),
                 file_size=len(response.content),
@@ -140,7 +139,7 @@ class GretilScraper(BaseScraper):
             'title': '',
             'author': None,
             'category': None,
-            'language': 'en',
+            'language': 'hi',
             'date': None
         }
         

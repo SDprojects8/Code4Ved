@@ -105,6 +105,14 @@ class BaseScraper(ABC):
             'Connection': 'keep-alive',
         })
         
+        # Configure SSL verification
+        session.verify = self.config.verify_ssl
+        
+        # Disable SSL warnings if requested
+        if not self.config.ssl_warnings:
+            import urllib3
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        
         return session
     
     async def _apply_rate_limit(self) -> None:
@@ -139,6 +147,12 @@ class BaseScraper(ABC):
             # Parse robots.txt URL
             robots_url = self.source_config.robots_txt_url
             response = self.session.get(robots_url, timeout=self.config.timeout)
+            
+            # Handle 404 (robots.txt doesn't exist) gracefully
+            if response.status_code == 404:
+                self.logger.debug(f"robots.txt not found at {robots_url}, allowing access")
+                return True
+            
             response.raise_for_status()
             
             # Simple robots.txt parsing (can be enhanced with robotparser)
@@ -162,6 +176,13 @@ class BaseScraper(ABC):
             
             return True
             
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 404:
+                self.logger.debug(f"robots.txt not found at {robots_url}, allowing access")
+                return True
+            else:
+                self.logger.warning(f"HTTP error checking robots.txt: {e}")
+                return True  # Allow if robots.txt check fails
         except Exception as e:
             self.logger.warning(f"Failed to check robots.txt: {e}")
             return True  # Allow if robots.txt check fails

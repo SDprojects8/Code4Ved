@@ -14,7 +14,13 @@ from .base import BaseScraper
 from .config import ScrapingConfig, get_default_config
 from .models import ScrapedContent, ScrapingResult, ScrapingStatus, ScrapingTask
 from .storage import FileSystemStorage
-from .python import VedicHeritageScraper, GretilScraper, AmbudaScraper
+from .python import (
+    VedicHeritageScraper, GretilScraper, AmbudaScraper,
+    SanskritDocumentsScraper, VedPuranScraper, VeducationScraper,
+    IgncaScraper, SanskritEbooksScraper, SanskritLinguisticsScraper,
+    SanskritLibraryScraper, TitusScraper, TemplePurohitScraper,
+    VyasaOnlineScraper, GitaSupersiteScraper, AdhyetaScraper
+)
 
 
 class ScrapingOrchestrator:
@@ -51,6 +57,7 @@ class ScrapingOrchestrator:
     
     def _initialize_scrapers(self) -> None:
         """Initialize available scrapers."""
+        # Original scrapers
         try:
             self.scrapers['vedicheritage'] = VedicHeritageScraper(self.config)
             self.logger.info("Initialized Vedic Heritage scraper")
@@ -68,6 +75,79 @@ class ScrapingOrchestrator:
             self.logger.info("Initialized Ambuda scraper")
         except Exception as e:
             self.logger.warning(f"Failed to initialize Ambuda scraper: {e}")
+        
+        # New scrapers
+        try:
+            self.scrapers['sanskritdocuments'] = SanskritDocumentsScraper(self.config)
+            self.logger.info("Initialized Sanskrit Documents scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Sanskrit Documents scraper: {e}")
+        
+        try:
+            self.scrapers['vedpuran'] = VedPuranScraper(self.config)
+            self.logger.info("Initialized VedPuran scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize VedPuran scraper: {e}")
+        
+        try:
+            self.scrapers['veducation'] = VeducationScraper(self.config)
+            self.logger.info("Initialized Veducation scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Veducation scraper: {e}")
+        
+        try:
+            self.scrapers['ignca'] = IgncaScraper(self.config)
+            self.logger.info("Initialized IGNCA scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize IGNCA scraper: {e}")
+        
+        try:
+            self.scrapers['sanskritebooks'] = SanskritEbooksScraper(self.config)
+            self.logger.info("Initialized Sanskrit E-books scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Sanskrit E-books scraper: {e}")
+        
+        try:
+            self.scrapers['sanskritlinguistics'] = SanskritLinguisticsScraper(self.config)
+            self.logger.info("Initialized Sanskrit Linguistics scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Sanskrit Linguistics scraper: {e}")
+        
+        try:
+            self.scrapers['sanskritlibrary'] = SanskritLibraryScraper(self.config)
+            self.logger.info("Initialized Sanskrit Library scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Sanskrit Library scraper: {e}")
+        
+        try:
+            self.scrapers['titus'] = TitusScraper(self.config)
+            self.logger.info("Initialized TITUS scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize TITUS scraper: {e}")
+        
+        try:
+            self.scrapers['templepurohit'] = TemplePurohitScraper(self.config)
+            self.logger.info("Initialized Temple Purohit scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Temple Purohit scraper: {e}")
+        
+        try:
+            self.scrapers['vyasaonline'] = VyasaOnlineScraper(self.config)
+            self.logger.info("Initialized Vyasa Online scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Vyasa Online scraper: {e}")
+        
+        try:
+            self.scrapers['gitasupersite'] = GitaSupersiteScraper(self.config)
+            self.logger.info("Initialized Gita Supersite scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Gita Supersite scraper: {e}")
+        
+        try:
+            self.scrapers['adhyeta'] = AdhyetaScraper(self.config)
+            self.logger.info("Initialized Adhyeta scraper")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize Adhyeta scraper: {e}")
     
     async def scrape_source(self, source_name: str, 
                            urls: Optional[List[str]] = None,
