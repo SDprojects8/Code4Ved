@@ -1,0 +1,81 @@
+# Code4Ved Web Scraping Configuration
+
+# General settings
+user_agent: "Code4Ved/1.0"
+timeout: 30
+max_retries: 3
+respect_robots: true
+
+# Rate limiting
+default_rate_limit: 1.0
+burst_size: 5
+
+# Content filtering
+min_text_length: 100
+max_text_length: 1000000
+allowed_formats:
+  - html
+  - pdf
+  - plaintext
+  - xml
+  - json
+
+# Storage settings
+storage_path: "data/raw"
+create_directories: true
+duplicate_detection: true
+
+# Logging
+log_level: "INFO"
+log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+log_file: null
+
+# Performance settings
+max_concurrent_requests: 5
+request_queue_size: 100
+
+# Validation settings
+validate_content: true
+validate_encoding: true
+
+# Source configurations
+sources:
+  vedicheritage:
+    name: "vedicheritage"
+    base_url: "https://vedicheritage.gov.in"
+    description: "Government of India Vedic Heritage Portal"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://vedicheritage.gov.in/robots.txt"
+    rate_limit: 1.0
+    max_pages: 1000
+    supported_formats:
+      - html
+      - pdf
+
+  gretil:
+    name: "gretil"
+    base_url: "http://gretil.sub.uni-goettingen.de"
+    description: "Göttingen Register of Electronic Texts"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "http://gretil.sub.uni-goettingen.de/robots.txt"
+    rate_limit: 0.5
+    max_pages: 500
+    supported_formats:
+      - html
+      - plaintext
+      - xml
+
+  ambuda:
+    name: "ambuda"
+    base_url: "https://ambuda.org"
+    description: "Open Source Sanskrit Platform"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://ambuda.org/robots.txt"
+    rate_limit: 1.0
+    max_pages: 2000
+    supported_formats:
+      - html
+      - json
