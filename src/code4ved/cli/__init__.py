@@ -1,5 +1,7 @@
-"""CLI modules for Code4Ved Automation."""
+"""CLI package for Code4Ved Automation.
 
-from .main import main
+Keep this __init__ minimal to avoid side effects when running
+`python -m code4ved.cli.main`. Do not import submodules here.
+"""
 
-__all__ = ["main"]
+__all__ = []
