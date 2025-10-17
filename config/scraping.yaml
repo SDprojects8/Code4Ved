@@ -1,0 +1,247 @@
+# Code4Ved Web Scraping Configuration
+
+# General settings
+user_agent: "Code4Ved/1.0"
+timeout: 30
+max_retries: 3
+respect_robots: true
+
+# Rate limiting
+default_rate_limit: 1.0
+burst_size: 5
+
+# Content filtering
+min_text_length: 100
+max_text_length: 1000000
+allowed_formats:
+  - html
+  - pdf
+  - plaintext
+  - xml
+  - json
+
+# Storage settings
+storage_path: "data/raw"
+create_directories: true
+duplicate_detection: true
+
+# Logging
+log_level: "INFO"
+log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+log_file: null
+
+# Performance settings
+max_concurrent_requests: 5
+request_queue_size: 100
+
+# Validation settings
+validate_content: true
+validate_encoding: true
+
+# SSL settings
+verify_ssl: false  # Disable SSL verification for development
+ssl_warnings: false  # Disable SSL warnings
+
+# Source configurations
+sources:
+  vedicheritage:
+    name: "vedicheritage"
+    base_url: "https://vedicheritage.gov.in"
+    description: "Government of India Vedic Heritage Portal"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://vedicheritage.gov.in/robots.txt"
+    rate_limit: 1.0
+    max_pages: 1000
+    supported_formats:
+      - html
+      - pdf
+
+  gretil:
+    name: "gretil"
+    base_url: "http://gretil.sub.uni-goettingen.de"
+    description: "Göttingen Register of Electronic Texts"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "http://gretil.sub.uni-goettingen.de/robots.txt"
+    rate_limit: 0.5
+    max_pages: 500
+    supported_formats:
+      - html
+      - plaintext
+      - xml
+
+  ambuda:
+    name: "ambuda"
+    base_url: "https://ambuda.org"
+    description: "Open Source Sanskrit Platform"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://ambuda.org/robots.txt"
+    rate_limit: 1.0
+    max_pages: 2000
+    supported_formats:
+      - html
+      - json
+
+  sanskritdocuments:
+    name: "sanskritdocuments"
+    base_url: "https://sanskritdocuments.org"
+    description: "Sanskrit Documents Archive"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://sanskritdocuments.org/robots.txt"
+    rate_limit: 0.5
+    max_pages: 1000
+    supported_formats:
+      - html
+      - pdf
+      - plaintext
+
+  vedpuran:
+    name: "vedpuran"
+    base_url: "https://vedpuran.net"
+    description: "Ved and Puran PDF Downloads"
+    language: "hi"
+    encoding: "utf-8"
+    robots_txt_url: "https://vedpuran.net/robots.txt"
+    rate_limit: 0.5
+    max_pages: 500
+    supported_formats:
+      - pdf
+      - html
+
+  veducation:
+    name: "veducation"
+    base_url: "https://www.veducation.world"
+    description: "Vedic Education Library"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.veducation.world/robots.txt"
+    rate_limit: 1.0
+    max_pages: 800
+    supported_formats:
+      - html
+      - pdf
+
+  ignca:
+    name: "ignca"
+    base_url: "https://ignca.gov.in"
+    description: "Indira Gandhi National Centre for the Arts"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://ignca.gov.in/robots.txt"
+    rate_limit: 0.5
+    max_pages: 1000
+    supported_formats:
+      - html
+      - pdf
+
+  sanskritebooks:
+    name: "sanskritebooks"
+    base_url: "https://www.sanskritebooks.org"
+    description: "Sanskrit E-books Collection"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.sanskritebooks.org/robots.txt"
+    rate_limit: 0.5
+    max_pages: 600
+    supported_formats:
+      - html
+      - pdf
+      - plaintext
+
+  sanskritlinguistics:
+    name: "sanskritlinguistics"
+    base_url: "http://www.sanskrit-linguistics.org"
+    description: "Sanskrit Linguistics Digital Corpus"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "http://www.sanskrit-linguistics.org/robots.txt"
+    rate_limit: 0.3
+    max_pages: 400
+    supported_formats:
+      - html
+      - xml
+      - plaintext
+
+  sanskritlibrary:
+    name: "sanskritlibrary"
+    base_url: "https://sanskritlibrary.org"
+    description: "Sanskrit Library Digital Repository"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://sanskritlibrary.org/robots.txt"
+    rate_limit: 0.5
+    max_pages: 800
+    supported_formats:
+      - html
+      - xml
+      - pdf
+
+  titus:
+    name: "titus"
+    base_url: "https://titus.fkidg1.uni-frankfurt.de"
+    description: "TITUS Database of Indo-European Texts"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://titus.fkidg1.uni-frankfurt.de/robots.txt"
+    rate_limit: 0.3
+    max_pages: 500
+    supported_formats:
+      - html
+      - xml
+      - plaintext
+
+  templepurohit:
+    name: "templepurohit"
+    base_url: "https://www.templepurohit.com"
+    description: "Temple Purohit - Hindu Texts and Resources"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.templepurohit.com/robots.txt"
+    rate_limit: 0.5
+    max_pages: 300
+    supported_formats:
+      - html
+      - pdf
+
+  vyasaonline:
+    name: "vyasaonline"
+    base_url: "https://www.vyasaonline.com"
+    description: "Vyasa Online - Maha Puranas Collection"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.vyasaonline.com/robots.txt"
+    rate_limit: 0.5
+    max_pages: 400
+    supported_formats:
+      - html
+      - pdf
+
+  gitasupersite:
+    name: "gitasupersite"
+    base_url: "https://www.gitasupersite.iitk.ac.in"
+    description: "Gita Supersite - IIT Kanpur Bhagavad Gita Portal"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.gitasupersite.iitk.ac.in/robots.txt"
+    rate_limit: 0.5
+    max_pages: 200
+    supported_formats:
+      - html
+      - pdf
+      - xml
+
+  adhyeta:
+    name: "adhyeta"
+    base_url: "https://www.adhyeta.org.in"
+    description: "Adhyeta - Vedic Learning Platform"
+    language: "en"
+    encoding: "utf-8"
+    robots_txt_url: "https://www.adhyeta.org.in/robots.txt"
+    rate_limit: 0.5
+    max_pages: 300
+    supported_formats:
+      - html
+      - pdf

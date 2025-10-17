@@ -10,9 +10,13 @@ from rich.table import Table
 from .. import __version__
 from ..core import Code4VedManager
 from ..core.models import Resource, LifecycleStage, ResourceStatus
+from . import scrape
 
 app = typer.Typer(help="Code4Ved Automation CLI")
 console = Console()
+
+# Add scraping commands
+app.add_typer(scrape.app, name="scrape", help="Web scraping operations")
 
 # Global manager instance
 manager: Optional[Code4VedManager] = None
@@ -50,13 +54,11 @@ def status():
     console.print(table)
 
 
-@app.group()
-def resource():
-    """Resource management commands."""
-    pass
+resource_app = typer.Typer(help="Resource management commands")
+app.add_typer(resource_app, name="resource")
 
 
-@resource.command("list")
+@resource_app.command("list")
 def list_resources():
     """List all resources."""
     mgr = get_manager()
@@ -78,7 +80,7 @@ def list_resources():
     console.print(table)
 
 
-@resource.command("add")
+@resource_app.command("add")
 def add_resource(
     resource_id: str = typer.Argument(..., help="Resource ID"),
     name: str = typer.Option(..., "--name", "-n", help="Resource name"),
@@ -102,7 +104,7 @@ def add_resource(
         raise typer.Exit(1)
 
 
-@resource.command("remove")
+@resource_app.command("remove")
 def remove_resource(
     resource_id: str = typer.Argument(..., help="Resource ID to remove")
 ):
@@ -117,7 +119,7 @@ def remove_resource(
         raise typer.Exit(1)
 
 
-@resource.command("show")
+@resource_app.command("show")
 def show_resource(
     resource_id: str = typer.Argument(..., help="Resource ID to show")
 ):
@@ -147,13 +149,11 @@ def show_resource(
         raise typer.Exit(1)
 
 
-@app.group()
-def stage():
-    """Lifecycle stage management commands."""
-    pass
+stage_app = typer.Typer(help="Lifecycle stage management commands")
+app.add_typer(stage_app, name="stage")
 
 
-@stage.command("add")
+@stage_app.command("add")
 def add_stage(
     name: str = typer.Argument(..., help="Stage name"),
     description: str = typer.Option(None, "--description", "-d", help="Stage description"),
@@ -172,7 +172,7 @@ def add_stage(
     console.print(f"✅ Stage '{name}' added successfully.")
 
 
-@stage.command("execute")
+@stage_app.command("execute")
 def execute_stage(
     stage_name: str = typer.Argument(..., help="Stage name to execute"),
     resource_id: str = typer.Argument(..., help="Resource ID to process"),

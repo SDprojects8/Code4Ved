@@ -3,8 +3,8 @@
 A comprehensive Life Cycle Management automation toolkit.
 """
 
-__version__ = "0.1.0"
-__author__ = "Code4Ved Team"
+__version__ = "0.2.0"
+__author__ = "Sumit Das"
 __email__ = "team@Code4Ved.com"
 
 from .core import Code4VedManager
